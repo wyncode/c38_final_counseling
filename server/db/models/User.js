@@ -2,8 +2,8 @@ const mongoose = require('mongoose'),
   moment = require('moment'),
   validator = require('validator'),
   bcrypt = require('bcryptjs'),
-  jwt = require('jsonwebtoken'),
-  Task = require('./task');
+  jwt = require('jsonwebtoken')
+
 //Creating Enum Options for User Selections
 const Race = Object.freeze({
   Asian: 'Asian',
