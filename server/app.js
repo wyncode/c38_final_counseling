@@ -2,7 +2,8 @@ require('./db/config');
 const express = require('express'),
   path = require('path'),
   openRoutes = require('./routes/open'),
-  secureJournalRoutes = require('./routes/secure/journals');
+  secureUserRoutes = require('./routes/secure/users'),
+  passport = require('./middleware/authentication');
 
 const app = express();
 
@@ -11,6 +12,15 @@ app.use(express.json());
 
 // Unauthenticated routes
 app.use(openRoutes);
+
+app.use(
+  passport.authenticate('jwt', {
+    session: false
+  })
+);
+
+// Secure User routes
+app.use(secureUserRoutes);
 
 // Serve any static files
 if (process.env.NODE_ENV === 'production') {

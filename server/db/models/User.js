@@ -2,10 +2,11 @@ const mongoose = require('mongoose'),
   moment = require('moment'),
   validator = require('validator'),
   bcrypt = require('bcryptjs'),
-  jwt = require('jsonwebtoken')
+  jwt = require('jsonwebtoken');
+const Journal = require('./Journal');
 
 //Creating Enum Options for User Selections
-const Race = Object.freeze({
+const Race = {
   Asian: 'Asian',
   AfricanAmerican: 'Black or African American',
   Hispanic: 'Latin/Latinx/Latina/Latino/Hispanic',
@@ -16,20 +17,23 @@ const Race = Object.freeze({
   White: 'White or European American',
   Other: 'Other',
   NA: 'Rather not say'
-});
-const Genders = Object.freeze({
+};
+const Genders = {
   Male: 'male',
   Female: 'female',
   NonBinary: 'Non Binary/Trans',
   NA: 'Rather not say'
+};
+const SexualOrientation = Object.freeze({
+  Heterosexual: 'Heterosexual',
+  Gay: 'Gay',
+  Lesbian: 'Lesbian',
+  Bisexual: 'Bisexual',
+  Pansexual: 'Pansexual',
+  Asexual: 'Asexual',
+  Queer: 'Queer'
 });
-//   const SexualOrientation = Object.freeze({
-//     Male: 'Male',
-//     Female: 'Female',
-//     NonBinary: 'Non Binary/Trans',
-//     NA: 'Rather not say',
-//   });
-//Creating User Schema
+// Creating User Schema
 const userSchema = new mongoose.Schema(
   {
     name: {
@@ -39,26 +43,21 @@ const userSchema = new mongoose.Schema(
     },
     race: {
       type: String,
-      enum: Object.values(Race),
-      required: true
+      enum: Object.values(Race)
     },
     age: {
-      type: String,
-      required: true
+      type: String
     },
     gender: {
       type: String,
-      enum: Object.values(Genders),
-      required: true
+      enum: Object.values(Genders)
     },
     sexualOrientation: {
       type: String,
-      enum: Object.values(SexualOrientation),
-      required: true
+      enum: Object.values(SexualOrientation)
     },
     children: {
-      type: String,
-      required: true
+      type: String
     },
     avatar: {
       type: String
@@ -67,6 +66,14 @@ const userSchema = new mongoose.Schema(
       {
         therapist: {
           type: mongoose.Schema.Types.ObjectId
+        }
+      }
+    ],
+    tokens: [
+      {
+        token: {
+          type: String,
+          required: true
         }
       }
     ],
@@ -102,7 +109,7 @@ const userSchema = new mongoose.Schema(
 );
 // Create relation between User and Journal Entries.
 userSchema.virtual('journal', {
-  ref: Task,
+  ref: Journal,
   localField: '_id',
   foreignField: 'owner'
 });
@@ -149,5 +156,7 @@ userSchema.pre('remove', async function (next) {
   });
   next();
 });
+
 const User = mongoose.model('User', userSchema);
+
 module.exports = User;
