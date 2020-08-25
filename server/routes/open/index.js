@@ -1,4 +1,5 @@
 const router = require('express').Router(),
+  { sendWelcomeEmail } = require('../../emails/index'),
   User = require('../../db/models/User');
 
 // Create User
@@ -17,6 +18,7 @@ router.post('/api/users/', async (req, res) => {
       sameSite: 'Strict',
       secure: process.env.NODE_ENV !== 'production' ? false : true
     });
+    sendWelcomeEmail(user.email, user.name);
     res.status(201).json(user);
   } catch (e) {
     res.status(400).json({ error: e.toString() });

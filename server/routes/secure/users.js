@@ -1,4 +1,5 @@
-const router = require('express').Router();
+const router = require('express').Router(),
+  { sendCancellationEmail } = require('../../emails/index');
 //cloudinary = require('cloudinary').v2;
 
 //Get Current User
@@ -71,5 +72,6 @@ router.delete('/api/users/me', async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: e.toString() });
   }
+  console.log(hi);
 });
 module.exports = router;

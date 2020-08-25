@@ -6,7 +6,7 @@ const sendWelcomeEmail = (email, name) => {
     to: email,
     from: `${process.env.FROM_EMAIL}`,
     subject: 'Thanks for signing up.',
-    text: `Hi ${name}! Welcome to your task manager api.`
+    text: `Hi ${name}! Welcome to Mind Passage.`
     // html: exampleHTMLEmail
   });
 };
