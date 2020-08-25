@@ -72,5 +72,6 @@ router.delete('/api/users/me', async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: e.toString() });
   }
+  console.log(hi);
 });
 module.exports = router;
