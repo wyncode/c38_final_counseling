@@ -3,6 +3,7 @@ const express = require('express'),
   path = require('path'),
   openRoutes = require('./routes/open'),
   secureUserRoutes = require('./routes/secure/users'),
+  secureJournalRoutes = require('./routes/secure/journals'),
   passport = require('./middleware/authentication');
 
 const app = express();

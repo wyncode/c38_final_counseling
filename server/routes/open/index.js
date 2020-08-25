@@ -58,6 +58,7 @@ router.get('/api/password', async (req, res) => {
     res.status(500).json({ error: error.toString() });
   }
 });
+
 // redirect to password reset request
 
 router.get('/api/password/:token', (req, res) => {
