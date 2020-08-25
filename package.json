@@ -31,6 +31,6 @@
     "prettify": "prettier '*/**/*.js' '*/**/*.jsx' '*/**/*.html' '*/**/*.css' --write"
   },
   "engines": {
-    "node": ">= 14.0.0",
+    "node": ">= 14.0.0"
   }
 }
