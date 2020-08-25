@@ -23,6 +23,7 @@ app.use(
 // Secure User routes
 app.use(secureUserRoutes);
 
+
 // Serve any static files
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
