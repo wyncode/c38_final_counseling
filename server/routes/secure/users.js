@@ -1,5 +1,5 @@
-const router = require('express').Router(),
-  cloudinary = require('cloudinary').v2;
+const router = require('express').Router();
+//cloudinary = require('cloudinary').v2;
 
 //Get Current User
 router.get('/api/users/current', async (req, res) => {

@@ -24,7 +24,7 @@ const Genders = {
   NonBinary: 'Non Binary/Trans',
   NA: 'Rather not say'
 };
-const SexualOrientation = Object.freeze({
+const SexualOrientation = {
   Heterosexual: 'Heterosexual',
   Gay: 'Gay',
   Lesbian: 'Lesbian',
@@ -32,7 +32,7 @@ const SexualOrientation = Object.freeze({
   Pansexual: 'Pansexual',
   Asexual: 'Asexual',
   Queer: 'Queer'
-});
+};
 // Creating User Schema
 const userSchema = new mongoose.Schema(
   {
@@ -60,7 +60,8 @@ const userSchema = new mongoose.Schema(
       type: String
     },
     avatar: {
-      type: String
+      type: String,
+
     },
     therapists: [
       {
@@ -100,6 +101,7 @@ const userSchema = new mongoose.Schema(
         if (value.length < 6) {
           throw new Error('password must be at least 6 characters long.');
         }
+
       }
     }
   },
