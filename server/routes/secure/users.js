@@ -1,4 +1,5 @@
-const router = require('express').Router();
+const router = require('express').Router(),
+  { sendCancellationEmail } = require('../../emails/index');
 //cloudinary = require('cloudinary').v2;
 
 //Get Current User
