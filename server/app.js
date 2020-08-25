@@ -13,6 +13,11 @@ app.use(express.json());
 
 // Unauthenticated routes
 app.use(openRoutes);
+//
+if (process.env.NODE_ENV === 'production') {
+  // Serve any static files
+  app.use(express.static(path.join(__dirname, '../client/build')));
+}
 
 app.use(
   passport.authenticate('jwt', {
@@ -25,9 +30,7 @@ app.use(secureUserRoutes);
 
 
 // Serve any static files
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/build')));
-}
+
 
 // Any authentication middleware and related routing would be here.
 app.use(secureJournalRoutes);
