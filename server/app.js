@@ -1,4 +1,4 @@
-require('./db/config');
+require('./db/models');
 const express = require('express'),
   path = require('path'),
   openRoutes = require('./routes/open'),
