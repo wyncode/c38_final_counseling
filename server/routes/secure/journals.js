@@ -58,7 +58,7 @@ router.delete('/api/journal/:id', async (req, res) => {
 // ***********************************************//
 router.patch('/api/journal/:id', async (req, res) => {
   const updates = Object.keys(req.body);
-  const allowedUpdates = ['description', 'completed', 'dueDate'];
+  const allowedUpdates = ['description', 'completed', 'date'];
   const isValidOperation = updates.every((update) =>
     allowedUpdates.includes(update)
   );

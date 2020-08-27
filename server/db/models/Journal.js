@@ -18,6 +18,9 @@ const journalSchema = new mongoose.Schema(
     owner: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User'
+    },
+    date: {
+      type: Date
     }
   },
   {
@@ -27,8 +30,8 @@ const journalSchema = new mongoose.Schema(
 journalSchema.methods.toJSON = function () {
   const journal = this;
   const journalObject = journal.toObject();
-  if (journalObject.dueDate) {
-    journalObject.dueDate = moment(journalObject.dueDate).format('YYYY-MM-DD');
+  if (journalObject.date) {
+    journalObject.date = moment(journalObject.date).format('YYYY-MM-DD');
   }
   return journalObject;
 };
