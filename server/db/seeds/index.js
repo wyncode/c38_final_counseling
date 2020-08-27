@@ -1,9 +1,9 @@
 if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 
-require('./index');
+require('../config');
 
-const Journal = require('../models/journal'),
-  User = require('../models/user'),
+const Journal = require('../models/Journal'),
+  User = require('../models/User'),
   faker = require('faker'),
   mongoose = require('mongoose');
 
@@ -16,16 +16,17 @@ const dbReset = async () => {
 
   await User.countDocuments({}, function (err, count) {
     console.log('Number of users:', count);
+    console.log(err)
   });
   await Journal.countDocuments({}, function (err, count) {
     console.log('Number of journals:', count);
+    console.log(err)
   });
   const userIdArray = [];
 
-  for (let i = 0; i < 1000; i++) {
+  for (let i = 0; i < 100; i++) {
     const me = new User({
       name: `${faker.name.firstName()} ${faker.name.lastName()}`,
-      admin: Boolean(Math.round(Math.random())),
       email: faker.internet.email(),
       password: faker.internet.password()
     });
@@ -33,12 +34,13 @@ const dbReset = async () => {
     userIdArray.push(me._id);
   }
 
-  for (let i = 0; i < 1000; i++) {
+  for (let i = 0; i < 100; i++) {
     const journal = new Journal({
-      description: faker.lorem.paragraph(),
-      completed: Boolean(Math.round(Math.random())),
-      dueDate: faker.date.future(),
-      owner: userIdArray[Math.floor(Math.random() * userIdArray.length)]
+      title: faker.lorem.words(),
+      mood: faker.lorem.word(),
+      body: faker.lorem.paragraph(),
+      owner: userIdArray[Math.floor(Math.random() * userIdArray.length)],
+      date: faker.date.future()
     });
     await journal.save();
   }
