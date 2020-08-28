@@ -73,7 +73,8 @@ router.delete('/api/users/me', async (req, res) => {
     res.status(500).json({ error: e.toString() });
   }
 });
-//Upload Avatar to User
+//Upload Avatar to User 
+// TODO this is a placeholder route, it does not work yet
 router.post('/api/users/avatar', async (req, res) => {
   const { image } = req.body;
   try {
