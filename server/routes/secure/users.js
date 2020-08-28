@@ -72,6 +72,30 @@ router.delete('/api/users/me', async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: e.toString() });
   }
-  console.log(hi);
+});
+//Upload Avatar to User
+router.post('/api/users/avatar', async (req, res) => {
+  const { image } = req.body;
+  try {
+    req.user.avatar = image;
+    const updatedUser = await req.user.save();
+    res.json(updatedUser);
+  } catch (error) {
+    res.status(400).json({ error: error.toString() });
+  }
+});
+
+// ******************************
+// Update password
+// ******************************
+router.put('/api/password', async (req, res) => {
+  try {
+    req.user.password = req.body.password;
+    await req.user.save();
+    res.clearCookie('jwt');
+    res.json({ message: 'password updated successfully' });
+  } catch (e) {
+    res.json({ error: e.toString() });
+  }
 });
 module.exports = router;
