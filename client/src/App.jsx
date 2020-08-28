@@ -1,29 +1,48 @@
-import React, { useState, useEffect } from 'react';
-import { AppContextProvider } from './context/AppContext';
-import ContextDemo from './components/ContextDemo';
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import PrivateRoute from './components/PrivateRoute';
+import AboutPage from './pages/AboutPage';
+import WelcomePage from './pages/WelcomePage';
+import PasswordReset from './pages/PasswordReset';
+import SignUpPage from './pages/SignUpPage';
+import PasswordForgot from './pages/PasswordForgot';
+import Login from './pages/Login';
+import Profile from './pages/Profile';
+import UnhealthyThinking from './pages/UnhealthyThinking';
+import MentalHygiene from './pages/MentalHygiene';
+import JournalPage from './pages/JournalPage';
+import TherapistSearch from './pages/TherapistSearch';
+import MyTherapist from './pages/MyTherapist';
 
-import './App.css';
-
-const App = () => {
-  const [serverMessage, setServerMessage] = useState('');
-
-  const fetchDemoData = () => {
-    fetch('/api/demo')
-      .then((response) => response.json())
-      .then((data) => setServerMessage(data.message));
-  };
-
-  useEffect(fetchDemoData, []);
-
+function App() {
   return (
-    <AppContextProvider>
-      <div id="demo">
-        <h3>Hello from client/src/App.js</h3>
-        <ContextDemo />
-        <h3>{serverMessage}</h3>
-      </div>
-    </AppContextProvider>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/about" component={AboutPage} />
+        <Route exact path="/welcome" component={WelcomePage} />
+        <Route exact path="/password-reset" component={PasswordReset} />
+        <Route exact path="/signup" component={SignUpPage} />
+        <Route exact path="/password-forgot" component={PasswordForgot} />
+        <Route exact path="/login" component={Login} />
+        <PrivateRoute exact path="/home" component={Home} />
+        <PrivateRoute exact path="/profile" component={Profile} />
+        <PrivateRoute
+          exact
+          path="/unheathly-thinking"
+          component={UnhealthyThinking}
+        />
+        <PrivateRoute exact path="/mental-hygiene" component={MentalHygiene} />
+        <PrivateRoute exact path="/journal-page" component={JournalPage} />
+        <PrivateRoute
+          exact
+          path="/therapist-search"
+          component={TherapistSearch}
+        />
+        <PrivateRoute exact path="/my-therapist" component={MyTherapist} />
+      </Switch>
+    </BrowserRouter>
   );
-};
+}
 
 export default App;
