@@ -32,7 +32,7 @@ function App() {
           path="/unheathly-thinking"
           component={UnhealthyThinking}
         />
-        <PrivateRoute exact path="/mental-hygiene" component={MentalHygiene} />
+        <Route exact path="/mental-hygiene" component={MentalHygiene} />
         <PrivateRoute exact path="/journal-page" component={JournalPage} />
         <PrivateRoute
           exact
