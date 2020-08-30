@@ -2,8 +2,6 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import PrivateRoute from './components/PrivateRoute';
-import AboutPage from './pages/AboutPage';
-import WelcomePage from './pages/WelcomePage';
 import PasswordReset from './pages/PasswordReset';
 import SignUpPage from './pages/SignUpPage';
 import PasswordForgot from './pages/PasswordForgot';
@@ -19,8 +17,6 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/about" component={AboutPage} />
-        <Route exact path="/welcome" component={WelcomePage} />
         <Route exact path="/password-reset" component={PasswordReset} />
         <Route exact path="/signup" component={SignUpPage} />
         <Route exact path="/password-forgot" component={PasswordForgot} />
