@@ -1,0 +1,67 @@
+.side-drawer {
+    height: 100%;
+    background: white;
+    box-shadow: 1px 0px 10px rgba(0,0 , 0 , .3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    max-width: 400px;
+    /* The z-index property specifies the stack order of an element. 
+    An element with greater stack order is always in front of an element with a lower stack order. 
+    Note: z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky). */
+    z-index: 200;
+    color: #EDCAA7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* border: 5px solid gold; */
+}
+
+.top-nav-items {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid orange; */
+}
+
+.top-nav-items li {
+    display: flex;
+    justify-content: center;
+}
+
+.top-nav-items a {
+    text-decoration: none;
+    color: #EDCAA7;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    /* border: 2px solid greenyellow; */
+
+}
+
+.bottom-nav-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    /* border: 2px solid pink; */
+}
+
+.bottom-nav-items a{
+    text-decoration: none;
+    color: #EDCAA7;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    /* border: 2px solid black; */
+}
+
+.nav-logo-icon {
+    width: 1.6rem;
+    height: auto;
+}
+
+.top-nav-items a:hover, .bottom-nav-items a:hover {
+    opacity: 0.7;
+}

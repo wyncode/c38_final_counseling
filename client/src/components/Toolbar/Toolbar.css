@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body{ 
+    font-family: 'ITC Avant Garde Gothic Std Extra Light', sans-serif;
+}
+
+.nav-logo-icon img {
+    width: 10rem;
+    height: auto;
+    margin-left: .5rem;
+}
+
+.nav-logo-icon:hover {
+    opacity: 0.8;
+}
+
+.header {
+    align-content: flex-start;
+    width: 100%;
+}
+
+.navigation {
+  background-color: #EDCAA7;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  text-transform: uppercase;
+}
