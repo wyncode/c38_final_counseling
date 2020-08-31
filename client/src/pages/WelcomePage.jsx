@@ -1,4 +1,7 @@
 import React from 'react';
+import '../index.css';
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 
 function WelcomePage() {
   return (
