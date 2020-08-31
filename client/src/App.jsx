@@ -16,11 +16,12 @@ import MentalHygiene from './pages/MentalHygiene';
 import JournalPage from './pages/JournalPage';
 import TherapistSearch from './pages/TherapistSearch';
 import MyTherapist from './pages/MyTherapist';
-import ReactCalendar from './components/Calendar';
+
 import Toolbar from './components/Toolbar/Toolbar';
 import TherapistProfile from './pages/TherapistProfile/TherapistProfile';
 import SideDrawer from './components/SideDrawer/SideDrawer';
-
+import { AppContextProvider } from './context/AppContext';
+import ReactCalendar from './components/Calendar';
 function App() {
   const [open, setOpen] = useState(false)
 
