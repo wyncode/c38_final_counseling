@@ -17,8 +17,8 @@ import TherapistSearch from './pages/TherapistSearch';
 import MyTherapist from './pages/MyTherapist';
 import Toolbar from './components/Toolbar/Toolbar';
 import TherapistProfile from './pages/TherapistProfile/TherapistProfile';
-import SideDrawer from './components/SideDrawer/SideDrawer';
-import Backdrop from './components/Backdrop/Backdrop';
+// import SideDrawer from './components/SideDrawer/SideDrawer';
+// import Backdrop from './components/Backdrop/Backdrop';
 
 function App() {
 
@@ -27,8 +27,8 @@ function App() {
     <div style={{ height: '100%' }}>
       <BrowserRouter>
         <Toolbar />
-        <SideDrawer />
-        <Backdrop />
+        {/* <SideDrawer />
+        <Backdrop /> */}
         <Switch>
           <Route exact path="/about" component={AboutPage} />
           <Route exact path="/welcome" component={WelcomePage} />
