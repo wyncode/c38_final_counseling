@@ -15,6 +15,7 @@ import MentalHygiene from './pages/MentalHygiene';
 import JournalPage from './pages/JournalPage';
 import TherapistSearch from './pages/TherapistSearch';
 import MyTherapist from './pages/MyTherapist';
+import ReactCalendar from './components/Calendar';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={WelcomePage} />
           <Route exact path="/login" component={Login} />
+          <Route exact path="/calendar" component={ReactCalendar} />
           <Route exact path="/signup" component={SignUpPage} />
           <Route exact path="/password-reset" component={PasswordReset} />
           <Route exact path="/password-forgot" component={PasswordForgot} />
@@ -34,7 +36,7 @@ function App() {
             component={UnhealthyThinking}
           />
           <Route exact path="/mental-hygiene" component={MentalHygiene} />
-          <PrivateRoute exact path="/journal-page" component={JournalPage} />
+          <Route exact path="/journal-page" component={JournalPage} />
           <PrivateRoute
             exact
             path="/therapist-search"
