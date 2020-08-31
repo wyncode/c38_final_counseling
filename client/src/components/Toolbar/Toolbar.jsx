@@ -1,15 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom';
-// import Nav from 'react-bootstrap/Nav';
 import Logo from './mind_passage_logo-white.png'
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton'
 import "./Toolbar.css"
 
-const Toolbar = () => {
-    const [menuOpen, setMenuOpen] = useState(false)
-    let handleToggle = () => {
-        setMenuOpen(true);
-    }
+const Toolbar = ({ setOpen, open }) => {
+
 
     return (
         <header className="header">
@@ -19,7 +15,7 @@ const Toolbar = () => {
                     <Link to="/home"><img src={Logo} alt="Mind Passage Home" /></Link>
                 </div>
                 <div>
-                    <DrawerToggleButton onClick={handleToggle} />
+                    <DrawerToggleButton setOpen={setOpen} open={open} />
                 </div>
 
             </nav>

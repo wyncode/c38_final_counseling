@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 //uncomment this once the private routes are back in use after the front end is finalized
@@ -17,18 +17,24 @@ import TherapistSearch from './pages/TherapistSearch';
 import MyTherapist from './pages/MyTherapist';
 import Toolbar from './components/Toolbar/Toolbar';
 import TherapistProfile from './pages/TherapistProfile/TherapistProfile';
-// import SideDrawer from './components/SideDrawer/SideDrawer';
-// import Backdrop from './components/Backdrop/Backdrop';
+import SideDrawer from './components/SideDrawer/SideDrawer';
 
 function App() {
+  const [open, setOpen] = useState(false)
 
 
   return (
     <div style={{ height: '100%' }}>
       <BrowserRouter>
-        <Toolbar />
-        {/* <SideDrawer />
-        <Backdrop /> */}
+        <Toolbar setOpen={setOpen} open={open} />
+        {
+          open ? (
+            <>
+              <SideDrawer />
+            </>
+          ) : null
+        }
+
         <Switch>
           <Route exact path="/about" component={AboutPage} />
           <Route exact path="/welcome" component={WelcomePage} />
