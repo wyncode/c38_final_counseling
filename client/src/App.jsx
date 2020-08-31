@@ -17,9 +17,13 @@ import MentalHygiene from './pages/MentalHygiene';
 import JournalPage from './pages/JournalPage';
 import TherapistSearch from './pages/TherapistSearch';
 import MyTherapist from './pages/MyTherapist';
+
+
+
 import Toolbar from './components/Toolbar/Toolbar';
 import TherapistProfile from './pages/TherapistProfile/TherapistProfile';
 import SideDrawer from './components/SideDrawer/SideDrawer';
+import { AppContextProvider } from './context/AppContext';
 
 function App() {
   const [open, setOpen] = useState(false)
