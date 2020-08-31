@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { AppContextProvider } from './context/AppContext';
+import WelcomePage from './pages/WelcomePage';
 import Home from './pages/Home';
 //uncomment this once the private routes are back in use after the front end is finalized
 // import PrivateRoute from './components/PrivateRoute';
