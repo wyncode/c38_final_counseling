@@ -30,11 +30,7 @@ function App() {
         />
         <Route exact path="/mental-hygiene" component={MentalHygiene} />
         <PrivateRoute exact path="/journal-page" component={JournalPage} />
-        <PrivateRoute
-          exact
-          path="/therapist-search"
-          component={TherapistSearch}
-        />
+        <Route exact path="/therapist-search" component={TherapistSearch} />
         <PrivateRoute exact path="/my-therapist" component={MyTherapist} />
       </Switch>
     </BrowserRouter>
