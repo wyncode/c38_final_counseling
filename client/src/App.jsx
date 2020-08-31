@@ -15,7 +15,7 @@ import MentalHygiene from './pages/MentalHygiene';
 import JournalPage from './pages/JournalPage';
 import TherapistSearch from './pages/TherapistSearch';
 import MyTherapist from './pages/MyTherapist';
-
+import { AppContextProvider } from './context/AppContext';
 function App() {
   return (
     <AppContextProvider>
