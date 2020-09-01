@@ -1,22 +1,38 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect } from "react";
+import axios from 'axios'
 
-export const AppContext = createContext();
+const AppContext = createContext();
 
-export const AppContextProvider = ({ children }) => {
-  const [contextMessage, setContextMessage] = useState('');
-
-  const contextMethod = () => {
-    setContextMessage('Hello from client/src/context/AppContext.jsx');
-  };
+const AppContextProvider = ({ children }) => {
+  const [currentUser, setCurrentUser] = useState(null)
+	const [loading, setLoading] = useState(false)
+	const user = sessionStorage.getItem('user')
+	
+	useEffect(() => {
+	    // incase user refreshes and context is cleared.
+	    if (user && !currentUser) {
+	      axios
+	        .get(`/api/users/me`, {
+	          withCredentials: true
+	        })
+	        .then(({ data }) => {
+	          setCurrentUser(data);
+	        })
+	        .catch((error) => console.error(error));
+	    }
+	  }, [currentUser, user]);
 
   return (
-    <AppContext.Provider
-      value={{
-        contextMessage,
-        contextMethod
-      }}
-    >
+    <AppContext.Provider value={
+      { currentUser, 
+        setCurrentUser,
+				loading,
+				setLoading
+      }
+    }>
       {children}
     </AppContext.Provider>
   );
 };
+
+export { AppContext, AppContextProvider };
