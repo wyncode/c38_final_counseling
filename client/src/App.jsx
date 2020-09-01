@@ -18,7 +18,7 @@ import Toolbar from './components/Toolbar/Toolbar';
 import TherapistProfile from './pages/TherapistProfile/TherapistProfile';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 // import { AppContextProvider } from './context/AppContext';
-
+import ReactCalendar from './components/Calendar';
 function App() {
   const [open, setOpen] = useState(false)
 
@@ -36,7 +36,10 @@ function App() {
         }
 
         <Switch>
-          <Route exact path="/welcome" component={WelcomePage} />
+
+          <Route exact path="/" component={WelcomePage} />
+          <Route exact path="/calendar" component={ReactCalendar} />
+
           <Route exact path="/password-reset" component={PasswordReset} />
           <Route exact path="/signup" component={SignUpPage} />
           <Route exact path="/password-forgot" component={PasswordForgot} />
