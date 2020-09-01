@@ -5,13 +5,13 @@
 
 
 body{ 
-    font-family: 'ITC Avant Garde Gothic Std Extra Light', sans-serif;
+    font-family: sans-serif;
 }
 
 .nav-logo-icon img {
     width: 10rem;
     height: auto;
-    margin-left: .5rem;
+    margin-left: 0.5rem;
 }
 
 .nav-logo-icon:hover {

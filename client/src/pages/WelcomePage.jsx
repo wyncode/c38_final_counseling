@@ -1,8 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Container } from 'react-bootstrap';
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
 
 function WelcomePage() {
   return (
