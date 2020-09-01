@@ -1,14 +1,10 @@
 const mongoose = require('mongoose');
 
 const TherapistSchema = new mongoose.Schema({
-  firstName: {
+  name: {
     type: String,
     required: true,
     trim: true
-  },
-  lastName: {
-    type: String,
-    required: true
   },
   jobTitle: {
     type: String,
@@ -18,14 +14,12 @@ const TherapistSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-
   phoneNumber: {
-    type: Number,
+    type: String,
     required: true
   },
   prefix: {
-    type: String,
-    required: false
+    type: String
   },
   companyName: {
     type: String,
@@ -36,7 +30,7 @@ const TherapistSchema = new mongoose.Schema({
     required: true
   },
   zipCode: {
-    type: Number,
+    type: String,
     required: true
   },
   city: {
@@ -44,24 +38,19 @@ const TherapistSchema = new mongoose.Schema({
     required: true
   },
   race: {
-    type: String,
-    required: true
+    type: String
   },
   specialty: {
-    type: String,
-    required: true
+    type: String
   },
-  treatmentOrientaion: {
-    type: String,
-    required: true
+  treatmentOrientation: {
+    type: String
   },
   language: {
-    type: Array,
-    required: true
+    type: Array
   },
-  Cost: {
-    type: Number,
-    required: true
+  cost: {
+    type: Number
   }
 });
 

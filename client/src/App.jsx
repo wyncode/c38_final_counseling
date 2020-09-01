@@ -5,7 +5,6 @@ import WelcomePage from './pages/WelcomePage';
 import Home from './pages/Home';
 //uncomment this once the private routes are back in use after the front end is finalized
 // import PrivateRoute from './components/PrivateRoute';
-import AboutPage from './pages/AboutPage';
 import WelcomePage from './pages/WelcomePage';
 import PasswordReset from './pages/PasswordReset';
 import SignUpPage from './pages/SignUpPage';
