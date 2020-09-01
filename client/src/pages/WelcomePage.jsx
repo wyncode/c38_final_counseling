@@ -1,6 +1,6 @@
 import React from 'react';
 import '../index.css';
-import { BrowserRouter as Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 
 function WelcomePage() {
