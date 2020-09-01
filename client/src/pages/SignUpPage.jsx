@@ -27,7 +27,7 @@ const SignUpPage = ({ history }) => {
 
   return (
     <Container className="container d-flex flex-column align-items-center justify-content-center fullscreen">
-      <h1 className="mb-4">Task Manager!</h1>
+      <h1 className="mb-4">Sign Up</h1>
       <Form style={{ width: 300 }} onSubmit={handleSubmit}>
         <Form.Group>
           <Form.Label htmlFor="fullName">Full Name</Form.Label>
