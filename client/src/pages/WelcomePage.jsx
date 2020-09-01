@@ -1,13 +1,11 @@
 import React from 'react';
-import '../index.css';
+import './App.css';
+import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-scroll';
 
 function WelcomePage() {
   return (
-    <div>
-      <div>
-        <div className="welcomePage">
+    <Container className="container d-flex flex-column align-items-center justify-content-center fullscreen">
           <section className="section">
             <div className="hero">
               <h1 className="MPTitle">Mind Passage</h1>
@@ -26,11 +24,7 @@ function WelcomePage() {
                     </br>
                   </br>
                 </br>{' '}
-                <ScrollLink
-                  to="anchor"
-                  smooth={true}
-                  style={{ color: '#EDCAA7' }}
-                >
+                
                   <h1>
                     <b>We Welcome All People</b>
                   </h1>
@@ -48,7 +42,7 @@ function WelcomePage() {
                     reminders and a profile page that will keep track of your
                     moods and journal entries.
                   </h5>
-                </ScrollLink>
+                
               </p>
               <Link to={`/login`} activeClassName="active">
                 <button className="loginWelcomeButton"></button>
@@ -69,9 +63,7 @@ function WelcomePage() {
               </Link>
             </div>
           </section>
-        </div>
-      </div>
-    </div>
+      </Container>
   );
 }
 

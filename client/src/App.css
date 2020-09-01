@@ -2,9 +2,13 @@
   outline: 1px dotted black;
 } */
 
-body {
+.welcomePage {
   margin: 0;
   background-color: white;
+  background-image: url(/images/Doorman_with_blob.png);
+  background-position: right;
+
+  position: fixed
 }
 
 .container {
@@ -31,7 +35,7 @@ nav > * {
 .logo {
   height: 50px;
   width: 50px;
-  background-image: url(/images/Mind_Passage_Logo.svg);
+  background-image: url(/images/Mind_Passage_Logo.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -54,14 +58,21 @@ nav > * {
   bottom: 25px;
   left: 25px;
   padding: 25px;
-  background-image: url(Login_Button.svg);
+  background-image: url(/images/Login_Button.png);
 }
 .newUserButton {
   position: absolute;
   bottom: 15px;
   left: 25px;
   padding: 25px;
-  background-image: url(NewUser.svg);
+  background-image: url(/images/NewUser.png);
+}
+.signUpButton {
+  position: absolute;
+  bottom: 15px;
+  left: 25px;
+  padding: 25px;
+  background-image: url(/images/SignUp_Button.png);
 }
 .section2 {
   min-height: 100vh;

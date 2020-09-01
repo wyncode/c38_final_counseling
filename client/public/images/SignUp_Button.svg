@@ -1,6 +1,0 @@
-<svg id="SignUp_Button" xmlns="http://www.w3.org/2000/svg" width="276" height="62.076" viewBox="0 0 276 62.076">
-  <g id="Group_115" data-name="Group 115">
-    <path id="Path_6" data-name="Path 6" d="M31.038,0H244.962a31.038,31.038,0,1,1,0,62.076H31.038A31.038,31.038,0,1,1,31.038,0Z" transform="translate(0 0)" fill="#edcaa7"/>
-    <text id="Sign_Up" data-name="Sign Up" transform="translate(77.233 40.074)" fill="#fff" font-size="27" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">Sign Up</tspan></text>
-  </g>
-</svg>
