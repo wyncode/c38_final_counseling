@@ -7,7 +7,7 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 // unable to get calendar to rinder pushing to get some help while i debug.
 
 const ReactCalendar = ({ history }) => {
-  const [value, onChange] = useState(new Date());
+  const [value, setValue] = useState(new Date());
 
   const handleDayClick = (day) => {
     swal(`${day}`, {
@@ -49,7 +49,7 @@ const ReactCalendar = ({ history }) => {
           <Dropdown.Item as="button">Two weeks ago</Dropdown.Item>
         </DropdownButton>
       </div>
-      <Calendar onChange={onChange} value={value} onClickDay={handleDayClick} />
+      <Calendar onChange={setValue} value={value} onClickDay={handleDayClick} />
     </div>
   );
 };
