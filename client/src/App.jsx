@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { AppContextProvider } from './context/AppContext';
-import WelcomePage from './pages/WelcomePage';
 import Home from './pages/Home';
 //uncomment this once the private routes are back in use after the front end is finalized
 // import PrivateRoute from './components/PrivateRoute';
@@ -16,11 +14,10 @@ import MentalHygiene from './pages/MentalHygiene';
 import JournalPage from './pages/JournalPage';
 import TherapistSearch from './pages/TherapistSearch';
 import MyTherapist from './pages/MyTherapist';
-
 import Toolbar from './components/Toolbar/Toolbar';
 import TherapistProfile from './pages/TherapistProfile/TherapistProfile';
 import SideDrawer from './components/SideDrawer/SideDrawer';
-import { AppContextProvider } from './context/AppContext';
+// import { AppContextProvider } from './context/AppContext';
 import ReactCalendar from './components/Calendar';
 function App() {
   const [open, setOpen] = useState(false)
@@ -39,8 +36,10 @@ function App() {
         }
 
         <Switch>
+
           <Route exact path="/" component={WelcomePage} />
           <Route exact path="/calendar" component={ReactCalendar} />
+
           <Route exact path="/password-reset" component={PasswordReset} />
           <Route exact path="/signup" component={SignUpPage} />
           <Route exact path="/password-forgot" component={PasswordForgot} />
