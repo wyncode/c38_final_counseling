@@ -38,7 +38,7 @@ const SideDrawer = () => {
                     <Link to="/about">About Us</Link>
                 </Nav.Item>
             </Nav>
-        </div >
+        </div>
 
     )
 }
