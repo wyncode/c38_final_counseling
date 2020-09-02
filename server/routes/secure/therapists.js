@@ -3,7 +3,7 @@ const router = require('express').Router(),
   Therapist = require('../../db/models/Therapist');
 // gets the therapist from our search bar needs to be tested after we populate our data base with faker
 //create a therapist
-router.post('/api/therapists/:id', async (req, res) => {
+router.post('/api/therapists', async (req, res) => {
   const {
     name,
     jobTitle,
