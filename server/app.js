@@ -18,7 +18,7 @@ if (process.env.NODE_ENV === 'production') {
   // Serve any static files
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
-app.use(secureJournalRoutes);
+
 
 app.use(
   passport.authenticate('jwt', {
@@ -26,9 +26,10 @@ app.use(
   })
 );
 
+
 // Secure User routes
 app.use(secureUserRoutes);
-
+app.use(secureJournalRoutes);
 // Serve any static files
 
 // Any authentication middleware and related routing would be here.

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import axios from 'axios';
 import { Nav } from 'react-bootstrap'
-import { useHistory, Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { AppContext } from '../context/AppContext';
 import './SideDrawer/SideDrawer.css'
 
@@ -9,16 +9,37 @@ const Logout = ({ setOpen }) => {
     const history = useHistory();
     const { setCurrentUser } = useContext(AppContext);
 
-    const handleSignOut = () => {
-        axios
-            .post('/api/users/logout', { withCredentials: true })
-            .then(() => {
-                setCurrentUser(null);
-                sessionStorage.removeItem('user');
-                setOpen(false)
-                history.push('/login');
+    const handleSignOut = async () => {
+
+        try {
+            const response = await fetch('/api/users/logout', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                }
             })
-            .catch((error) => console.log(error));
+            if (response) {
+                console.log(response);
+                setCurrentUser(null)
+                sessionStorage.removeItem('user')
+                setOpen(false)
+                history.push('/login')
+            }
+        } catch (error) {
+            console.log(error)
+        }
+
+        // axios
+        //     .post('/api/users/logout', { withCredentials: true })
+        //     .then((res) => {
+        //         console.log(res)
+        //         setCurrentUser(null);
+        //         sessionStorage.removeItem('user');
+        //         setOpen(false)
+        //         history.push('/login');
+        //     })
+        //     .catch((error) => console.log(error));
     };
 
     return (

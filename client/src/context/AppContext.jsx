@@ -13,10 +13,11 @@ const AppContextProvider = ({ children }) => {
     // incase user refreshes and context is cleared.
     if (user && !currentUser) {
       axios
-        .get(`/api/users/me`, {
+        .get(`/api/users/current`, {
           withCredentials: true
         })
         .then(({ data }) => {
+          console.log("!!!!!!!!!!!!!", data)
           setCurrentUser(data);
         })
         .catch((error) => console.error(error));
