@@ -1,20 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import Card from 'react-bootstrap/Card';
-import Therapist from '../pages/TherapistSearch';
 
 const TherapistSearch = () => {
   const [therapists, setTherapists] = useState([]);
+  const [city, setCity] = useState('');
+  const [gender, setGender] = useState('');
+  const [race, setRace] = useState('');
+  const [specialty, setSpecialty] = useState('');
+  const [modality, setModality] = useState('');
   useEffect(() => {
-    fetch('/api/therapists', {
-      method: 'post',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json'
+    fetch(
+      `/api/therapists?city=${city}&gender=${gender}&race=${race}&specialty=${specialty}&modality=${modality}`,
+      {
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json'
+        }
       }
-    })
-      .then((data) => {
-        return data.json();
-      })
+    )
+      .then((data) => data.json())
       .then((res) => {
         console.log(res);
         setTherapists(res);
@@ -29,14 +33,15 @@ const TherapistSearch = () => {
     const form = e.target;
     const formData = new FormData(form);
 
-    fetch('/api/therapists', {
-      method: 'post',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(Object.fromEntries(formData))
-    })
+    fetch(
+      `/api/therapists?city=${city}&gender=${gender}&race=${race}&specialty=${specialty}&modality=${modality}`,
+      {
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json'
+        }
+      }
+    )
       .then((data) => {
         return data.json();
       })
@@ -53,7 +58,11 @@ const TherapistSearch = () => {
       <form onSubmit={handleSearch}>
         <div>
           <label>Location</label>
-          <select name="city" id="city">
+          <select
+            name="city"
+            id="city"
+            onChange={(e) => setCity(e.target.value)}
+          >
             <option disabled selected value>
               {' '}
               - Search by City -{' '}
@@ -97,7 +106,11 @@ const TherapistSearch = () => {
         </div>
         <div>
           <label>Race</label>
-          <select name="race" id="race">
+          <select
+            name="race"
+            id="race"
+            onChange={(e) => setRace(e.target.value)}
+          >
             <option disabled selected value>
               {' '}
               - Search by Race -{' '}
@@ -119,7 +132,11 @@ const TherapistSearch = () => {
         </div>
         <div>
           <label>Gender</label>
-          <select name="gender" id="gender">
+          <select
+            name="gender"
+            id="gender"
+            onChange={(e) => setGender(e.target.value)}
+          >
             <option disabled selected value>
               {' '}
               - Search by Gender -{' '}
@@ -129,7 +146,11 @@ const TherapistSearch = () => {
             <option value="nonbinary">NonBinary</option>
           </select>
           <label>Specialty</label>
-          <select name="specialty" id="specialty">
+          <select
+            name="specialty"
+            id="specialty"
+            onChange={(e) => setSpecialty(e.target.value)}
+          >
             <option disabled selected value>
               {' '}
               - Search by Specialty -{' '}
@@ -175,7 +196,11 @@ const TherapistSearch = () => {
             <option value="Trauma and PTSD">Trauma and PTSD</option>
           </select>
           <label>Modality</label>
-          <select name="modality" id="modality">
+          <select
+            name="modality"
+            id="modality"
+            onChange={(e) => setModality(e.target.value)}
+          >
             <option disabled selected value>
               {' '}
               - Search by Modality -{' '}
@@ -192,13 +217,12 @@ const TherapistSearch = () => {
 
       {therapists.map((therapist) => {
         return (
-          <div>
+          <div key={therapist._id}>
             <Card
               style={{
                 width: '70%',
                 marginTop: '2%'
               }}
-              key={therapist._id}
             >
               <Card.Body>
                 <Card.Title>{therapist.name}</Card.Title>

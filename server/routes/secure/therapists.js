@@ -44,31 +44,18 @@ router.post('/api/therapists/:id', async (req, res) => {
   }
 });
 //therapist search
-router.post('/api/therapists', async (req, res) => {
+router.get('/api/therapists', async (req, res) => {
   //sample postman request
   //http://localhost:8080/api/therapists?price=100&location=Miami&race=black
-  const {
-    name,
-    jobTitle,
-    gender,
-    streetAddress,
-    zipCode,
-    city,
-    race,
-    specialty,
-    treatmentOrientation,
-    language,
-    cost
-  } = req.query;
 
-  const updates = Object.keys(req.body);
+  const updates = Object.keys(req.query);
   const searchObject = {};
 
   console.log(1, searchObject);
 
   updates.forEach((update) => {
-    if (!req.body[update]) return null;
-    searchObject[update] = req.body[update];
+    if (!req.query[update]) return null;
+    searchObject[update] = req.query[update];
   });
   console.log(2, searchObject);
   try {

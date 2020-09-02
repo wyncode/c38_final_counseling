@@ -166,7 +166,6 @@ const dbReset = async () => {
       ageSpecialty:
         ageSpecialties[Math.floor(Math.random() * ageSpecialties.length)],
       phoneNumber: faker.phone.phoneNumber(),
-      companyName: faker.company.companyName(),
       streetAddress: faker.address.streetAddress(),
       zipCode: faker.address.zipCode(),
       city: cities[Math.floor(Math.random() * cities.length)],
