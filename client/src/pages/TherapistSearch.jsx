@@ -20,7 +20,6 @@ const TherapistSearch = () => {
     )
       .then((data) => data.json())
       .then((res) => {
-        console.log(res);
         setTherapists(res);
       })
       .catch((err) => {
