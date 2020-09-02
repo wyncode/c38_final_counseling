@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Nav } from 'react-bootstrap'
 import { useHistory, Link } from 'react-router-dom';
 import { AppContext } from '../context/AppContext';
+import './SideDrawer/SideDrawer.css'
 
 const Logout = ({ setOpen }) => {
     const history = useHistory();
@@ -22,7 +23,7 @@ const Logout = ({ setOpen }) => {
 
     return (
         <Nav.Item as="li" onClick={handleSignOut}>
-            <p >Logout</p>
+            <p className="logout">Logout</p>
         </Nav.Item>
 
     );

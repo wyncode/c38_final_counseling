@@ -41,7 +41,7 @@
     list-style-type: none;
 }
 
-.bottom-nav-items a{
+.bottom-nav-items a, p.logout{
     text-decoration: none;
     color: #EDCAA7;
     font-size: 1.2rem;
@@ -54,6 +54,7 @@
     opacity: 1 !important; 
 }
 
-.top-nav-items a:hover, .bottom-nav-items a:hover {
+.top-nav-items a:hover, .bottom-nav-items a:hover, p.logout:hover {
     opacity: 0.7;
 }
+
