@@ -1,9 +1,13 @@
 import React, { useState, useContext } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 import { AppContext } from '../context/AppContext';
-function JournalEntry() {
-  const { setLoading } = useContext(AppContext);
+import swal from 'sweetalert';
+import { useHistory } from 'react-router-dom';
 
+function JournalEntry() {
+  const history = useHistory();
+  const { setLoading } = useContext(AppContext);
+  console.log(history);
   const handleJournalSubmission = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -21,7 +25,10 @@ function JournalEntry() {
       .then((res) => {
         console.log(res);
         form.reset();
+        swal(' Your Journal has been saved!');
+        history.push('/calendar');
       })
+
       .catch((error) => {
         console.log(error);
       });

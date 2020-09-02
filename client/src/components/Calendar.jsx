@@ -12,9 +12,9 @@ const ReactCalendar = ({ history }) => {
     swal(`${day}`, {
       buttons: {
         new: 'Do you want to make a journal entry',
-        delete: {
-          text: 'Delete entry',
-          value: 'delete'
+        view: {
+          text: 'View Journal Entry',
+          value: 'Journal Entry'
         }
       }
     }).then((value) => {

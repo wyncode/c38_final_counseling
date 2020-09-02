@@ -4,6 +4,7 @@ import axios from 'axios';
 import { AppContext } from '../context/AppContext';
 import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
+
 const JournalList = () => {
   const { setJournalList } = useContext(AppContext);
 
@@ -23,11 +24,13 @@ const JournalList = () => {
 
   return (
     <Container>
+      <h6>Filter through your Entries by Mood or by the week Created:</h6>
       <Accordion defaultActiveKey="0">
         <Card>
           <Accordion.Toggle as={Card.Header} eventKey="0">
             View Journal Entrys!
           </Accordion.Toggle>
+
           <Accordion.Collapse eventKey="0">
             <Card.Body>
               <Card style={{ width: '18rem' }}>
