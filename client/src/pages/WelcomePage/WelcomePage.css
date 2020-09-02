@@ -1,202 +1,108 @@
-/* * {
-  outline: 1px dotted black;
-} */
 
-.welcomePage {
-    margin: 0;
-    background-color: white;
-    background-image: url(/images/Doorman_with_blob.png);
-    background-position: right;
-  
-    position: fixed
-  }
-  
-  .container {
+  .main {
     margin: 0 auto;
     width: 100vw;
-    max-width: 1000px;
+    max-width: 1920px;
     min-height: 100vh;
     background-color: white;
-  }
-  
-  nav {
-    height: 100px;
-    width: 100%;
-    background-color: #edcaa7;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  
-  nav > * {
-    margin: 20px;
   }
   
   .logo {
-    height: 50px;
-    width: 50px;
-    background-image: url(/images/Mind_Passage_Logo.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    margin-top: auto;
-  }
-  
-  .hero {
-    width: 100%;
-    height: calc(100vh - 100px);
-    background-image: url();
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  
-    position: relative;
-  }
-  
-  .loginWelcomeButton {
-    position: absolute;
-    bottom: 25px;
-    left: 25px;
-    padding: 25px;
-    background-image: url(/images/Login_Button.png);
-  }
-  .newUserButton {
-    position: absolute;
-    bottom: 15px;
-    left: 25px;
-    padding: 25px;
-    background-image: url(/images/NewUser.png);
-  }
-  .signUpButton {
-    position: absolute;
-    bottom: 15px;
-    left: 25px;
-    padding: 25px;
-    background-image: url(/images/SignUp_Button.png);
-  }
-  .section2 {
-    min-height: 100vh;
-    width: 100%;
-    background-color: white;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .gallery {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  .galleryItem {
-    height: 200px;
-    width: 200px;
-    margin: 20px;
-    background-image: url();
+    justify-content: flex-start;  
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  /* * {
-  outline: 1px dotted black;
-} */
-
-.welcomePage {
-    margin: 0;
-    background-color: white;
-    background-image: url(/images/Doorman_with_blob.png);
-    background-position: right;
-  
-    position: fixed
-  }
-  
-  .container {
-    margin: 0 auto;
-    width: 100vw;
-    max-width: 1000px;
-    min-height: 100vh;
-    background-color: white;
-  }
-  
-  nav {
-    height: 100px;
-    width: 100%;
-    background-color: #edcaa7;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  
-  nav > * {
-    margin: 20px;
-  }
-  
-  .logo {
-    height: 20px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left;
-    margin-top: 120pt;
+    margin-top: 90pt;
     margin-left: 75pt;
   }
   
-  .hero {
-    width: 100%;
-    height: calc(100vh - 100px);
-    background-image: url();
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  
-    position: relative;
-  }
-  
   .loginWelcomeButton {
-    position: absolute;
-    bottom: 25px;
-    left: 25px;
-    padding: 25px;
-    background-image: url(./Login_Button.png);
-  }
-  .newUserButton {
-    position: absolute;
-    bottom: 15px;
-    left: 25px;
-    padding: 25px;
-    background-image: url(./NewUser.png);
-  }
-  .signUpButton {
-    position: absolute;
-    bottom: 15px;
-    left: 25px;
-    padding: 25px;
-    background-image: url(./SignUp_Button.png);
-  }
-  .section2 {
-    min-height: 100vh;
-    width: 100%;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .gallery {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  .galleryItem {
-    height: 200px;
-    width: 200px;
-    margin: 20px;
-    background-image: url();
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-position: left;
+    margin-top: 10pt;
+    margin-left: 75pt;
   }
-  
+
+  .loginWelcomeButton:hover {
+      opacity: 0.8;
+  }
+
+  .newUserButton {
+    background-repeat: no-repeat;
+    background-position: left;
+    margin-top: 50pt;
+    margin-left: 75pt;
+  }
+
+  .newUserButton:hover {
+opacity: 0.8;
+  }
+
+  .signUpButton {
+    background-repeat: no-repeat;
+    background-position: left;
+    margin-top: 50pt;
+  }
+
+  .signUpButton:hover {
+      opacity: 0.8;
+  }
+
+  .findyourtherapist {
+      font-family: avenir next;
+      color: #EDCAA7;
+      font-weight: bold;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-left: 75pt;
+      margin-top: 50pt;
+}  
+
+.headerdescription {
+    font-family: avenir next;
+      color: #EDCAA7;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-left: 75pt;
+      margin-top: 10pt;
+}
+
+.how {
+    font-family: avenir next;
+      color: #EDCAA7;
+      font-weight: bold;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-left: 75pt;
+      margin-top: 40pt;
+}
+
+.how:hover {
+    opacity: 0.8;
+}
+
+.description {
+    display: flex;
+    min-height: 100vh;
+    background-color: white;
+    font-family: avenir next;
+    color: #EDCAA7;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 400px;
+    margin-left: 75pt;
+    margin-top: 600pt;
+  }
+
+  .welcomFooterImage {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background-position: right;
+    flex-direction: column;
+    flex-shrink: 3;
+    }
+
+  .section2 {
+      display: flex;
+      justify-content: space-between;
+  }
