@@ -5,14 +5,15 @@ const router = require('express').Router(),
 // ***********************************************//
 // Create a journal
 // ***********************************************//
-router.post('/api/journal/:id', async (req, res) => {
+router.post('/api/journal', async (req, res) => {
   const { title, mood, body } = req.body;
   try {
     const journal = new Journal({
       title,
       mood,
       body,
-      owner: req.user._id
+      // TODO once authentication is set up, swap this out for req.user._id
+      owner: '5f4ebadbed4e0c3c99c35a0c'
     });
     await journal.save();
     res.status(201).json(journal);
