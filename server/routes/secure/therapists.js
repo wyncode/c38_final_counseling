@@ -54,7 +54,7 @@ router.get('/api/therapists', async (req, res) => {
   console.log(1, searchObject);
 
   updates.forEach((update) => {
-    if (!req.query[update]) return null;
+    //if (!req.query[update]) return null;
     searchObject[update] = req.query[update];
   });
   console.log(2, searchObject);
