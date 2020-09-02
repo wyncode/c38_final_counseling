@@ -1,14 +1,16 @@
 import React, { useEffect, useContext } from 'react';
-import { Container, Table } from 'react-bootstrap';
+import { Container, Button, Form } from 'react-bootstrap';
 import axios from 'axios';
 import { AppContext } from '../context/AppContext';
 import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
-
+import DeleteButton from './DeleteButton';
+import EditButton from './EditButton';
+import SearchbyMood from './SearchbyMood';
 const JournalList = () => {
   const { setJournalList } = useContext(AppContext);
+  const { setLoading } = useContext(AppContext);
 
-  // initital render will set all the todos to the `tasks` state
   useEffect(() => {
     axios
       .get('/api/journal/:id', {
@@ -20,15 +22,15 @@ const JournalList = () => {
       .catch((error) => {
         console.log(error);
       });
-  }, [setJournalList]);
+  }, []);
 
   return (
     <Container>
-      <h6>Filter through your Entries by Mood or by the week Created:</h6>
-      <Accordion defaultActiveKey="0">
+      <Accordion>
         <Card>
-          <Accordion.Toggle as={Card.Header} eventKey="0">
+          <Accordion.Toggle as={Button} variant="link" eventKey="0">
             View Journal Entrys!
+            <SearchbyMood />
           </Accordion.Toggle>
 
           <Accordion.Collapse eventKey="0">
@@ -42,8 +44,8 @@ const JournalList = () => {
                   <Card.Text>
                     I had an amazing interview with a great company today.
                   </Card.Text>
-                  <Card.Link href="#">Edit Journal</Card.Link>
-                  <Card.Link href="#">Delete Journal</Card.Link>
+                  <DeleteButton />
+                  <EditButton />
                 </Card.Body>
               </Card>
             </Card.Body>

@@ -3,6 +3,8 @@ import { Container, Form, Button } from 'react-bootstrap';
 import { AppContext } from '../context/AppContext';
 import swal from 'sweetalert';
 import { useHistory } from 'react-router-dom';
+import DeleteButton from './DeleteButton';
+import EditButton from './EditButton';
 
 function JournalEntry() {
   const history = useHistory();

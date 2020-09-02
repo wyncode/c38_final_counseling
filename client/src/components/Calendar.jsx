@@ -11,7 +11,7 @@ const ReactCalendar = ({ history }) => {
   const handleDayClick = (day) => {
     swal(`${day}`, {
       buttons: {
-        new: 'Do you want to make a journal entry',
+        new: ' Make a journal entry',
         view: {
           text: 'View Journal Entry',
           value: 'Journal Entry'
