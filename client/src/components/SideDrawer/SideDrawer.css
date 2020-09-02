@@ -46,6 +46,7 @@
     color: #EDCAA7;
     font-size: 1.2rem;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .nav-logo-icon {

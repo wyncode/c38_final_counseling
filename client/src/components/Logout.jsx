@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import axios from 'axios';
-import { Nav } from 'react-bootstrap'
+// import axios from 'axios';
+import { Nav } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import { AppContext } from '../context/AppContext';
-import './SideDrawer/SideDrawer.css'
+import './SideDrawer/SideDrawer.css';
 
 const Logout = ({ setOpen }) => {
     const history = useHistory();
