@@ -34,7 +34,7 @@ function App() {
           {
             open ? (
               <>
-                <SideDrawer />
+                <SideDrawer setOpen={setOpen} open={open} />
               </>
             ) : null
           }

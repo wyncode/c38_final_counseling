@@ -51,6 +51,7 @@
 .nav-logo-icon {
     width: 1.6rem;
     height: auto;
+    opacity: 1 !important; 
 }
 
 .top-nav-items a:hover, .bottom-nav-items a:hover {
