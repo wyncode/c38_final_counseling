@@ -1,0 +1,99 @@
+/* Contains All the Article Content */
+.article {
+    margin: 2rem auto;
+    width: 80%;
+}
+
+/* Icon to let people know to scroll down */
+.scroll-down {
+    background-color: #EDCAA7;
+    width: 30px;
+    height: auto;
+    border-radius: 100%;
+    margin-top: 2rem;
+}
+
+/* Parent Container of article-title-author and article-image */
+.article-header {
+    display: flex;
+    justify-content: space-around;
+    margin: 4rem 0;
+}
+
+.article-title-author {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-image {
+    width: 60%;
+    height: auto;
+    background-image: url(https://images.unsplash.com/photo-1597361767826-3047f8305ad7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1282&q=80);
+    background-position: center;
+    background-size: cover;
+    margin-left: 0.8rem;
+}
+
+.article-copy {
+    width: 70%;
+    margin: 2rem auto;
+}
+
+.article-copy p {
+    padding-bottom: 1rem;
+}
+
+/* This is to highlight important information within the text */
+.article-copy span {
+    font-weight: bolder;
+}
+
+/* All Headers */
+h1, h2, h3, h4, h5 {
+    color: #EDCAA7;
+}
+
+/* Article Title */
+h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+/* Section Name and Subheaders */
+h2 {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Author */
+h3 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+
+}
+
+/* Article Date */
+h4 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+/* Article Source at the Bottom of Page */
+.article-source a {
+    font-size: 0.8rem;
+    color: #EDCAA7;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.article-source {
+    margin: 2rem auto;
+    width: fit-content;
+}
+
+
+

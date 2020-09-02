@@ -29,45 +29,45 @@ function App() {
   return (
     <AppContextProvider>
       <div style={{ height: '100%' }}>
-      <BrowserRouter>
-        <Toolbar setOpen={setOpen} open={open} />
-        {
-          open ? (
-            <>
-              <SideDrawer />
-            </>
-          ) : null
-        }
+        <BrowserRouter>
+          <Toolbar setOpen={setOpen} open={open} />
+          {
+            open ? (
+              <>
+                <SideDrawer />
+              </>
+            ) : null
+          }
 
-        <Switch>
+          <Switch>
 
-          <Route exact path="/" component={WelcomePage} />
-          <Route exact path="/calendar" component={ReactCalendar} />
+            <Route exact path="/" component={WelcomePage} />
+            <Route exact path="/calendar" component={ReactCalendar} />
 
-          <Route exact path="/password-reset" component={PasswordReset} />
-          <Route exact path="/signup" component={SignUpPage} />
-          <Route exact path="/password-forgot" component={PasswordForgot} />
-          <Route exact path="/login" component={Login} />
-          {/* Gotta make these routes private once the front end is finalized */}
-          <Route exact path="/home" component={Home} />
-          <Route exact path="/profile" component={Profile} />
-          <Route
-            exact
-            path="/unheathly-thinking"
-            component={UnhealthyThinking}
-          />
-          <Route exact path="/mental-hygiene" component={MentalHygiene} />
-          <Route exact path="/journal-page" component={JournalPage} />
-          <Route
-            exact
-            path="/therapist-search"
-            component={TherapistSearch}
-          />
-          <Route exact path="/my-therapist" component={MyTherapist} />
-          <Route exact path="/therapist:id" component={TherapistProfile} />
-        </Switch>
-      </BrowserRouter>
-    </div>
+            <Route exact path="/password-reset" component={PasswordReset} />
+            <Route exact path="/signup" component={SignUpPage} />
+            <Route exact path="/password-forgot" component={PasswordForgot} />
+            <Route exact path="/login" component={Login} />
+            {/* Gotta make these routes private once the front end is finalized */}
+            <Route exact path="/home" component={Home} />
+            <Route exact path="/profile" component={Profile} />
+            <Route
+              exact
+              path="/unhealthy-thinking"
+              component={UnhealthyThinking}
+            />
+            <Route exact path="/mental-hygiene" component={MentalHygiene} />
+            <Route exact path="/journal-page" component={JournalPage} />
+            <Route
+              exact
+              path="/therapist-search"
+              component={TherapistSearch}
+            />
+            <Route exact path="/my-therapist" component={MyTherapist} />
+            <Route exact path="/therapist:id" component={TherapistProfile} />
+          </Switch>
+        </BrowserRouter>
+      </div>
     </AppContextProvider>
   );
 }
