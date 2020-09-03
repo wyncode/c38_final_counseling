@@ -20,6 +20,7 @@ import TherapistProfile from './pages/TherapistProfile/TherapistProfile';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import { AppContextProvider } from './context/AppContext';
 import ReactCalendar from './components/Calendar';
+import Backdrop from './components/Backdrop/Backdrop';
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -31,7 +32,8 @@ function App() {
           <Toolbar setOpen={setOpen} open={open} />
           {open ? (
             <>
-              <SideDrawer />
+              <SideDrawer setOpen={setOpen} open={open} />
+              <Backdrop setOpen={setOpen} open={open} />
             </>
           ) : null}
 

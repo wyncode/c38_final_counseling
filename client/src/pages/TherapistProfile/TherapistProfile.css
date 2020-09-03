@@ -1,8 +1,49 @@
+.therapist-profile {
+    margin: 5rem auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .therapist-info {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     align-content: center;
-    border: 2px solid red;
 }
+
+.therapist-copy {
+    width: 70%;
+    margin-top: 2rem;
+}
+
+.therapist-info img {
+    margin-bottom: 2rem;
+}
+
+.therapist-secondary-info {
+    display: flex;
+    justify-content: center;
+}
+
+.skills-expertise, .finances {
+    margin: 2rem 3rem;
+}
+
+/* Uncomment if the button gets used, delete if the button is not used
+.save-therapist-button {
+    height: 3rem;
+    padding: 0 30px;
+    background-color: #EDCAA7;
+    border: none;
+    color: white;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    outline: none;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+} */
