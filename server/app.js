@@ -26,7 +26,7 @@ app.use(
 );
 // Secure User routes
 app.use(secureUserRoutes);
-
+app.use(secureJournalRoutes);
 // Serve any static files
 // Any authentication middleware and related routing would be here.
 // Handle React routing, return all requests to React app
