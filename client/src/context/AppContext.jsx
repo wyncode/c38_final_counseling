@@ -4,7 +4,9 @@ import axios from 'axios';
 const AppContext = createContext();
 
 const AppContextProvider = ({ children }) => {
-  const [currentUser, setCurrentUser] = useState(null);
+  const [currentUser, setCurrentUser] = useState(
+    sessionStorage.getItem('user') || null // TODO fix this if there's time.
+  );
   const [loading, setLoading] = useState(false);
   const [journalList, setJournalList] = useState(null);
   const user = sessionStorage.getItem('user');
@@ -12,14 +14,23 @@ const AppContextProvider = ({ children }) => {
   useEffect(() => {
     // incase user refreshes and context is cleared.
     if (user && !currentUser) {
-      axios
-        .get(`/api/users/me`, {
-          withCredentials: true
+      // TODO current user is null
+      fetch('/api/users/current', {
+        method: 'get',
+        credentials: 'same-origin',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+          Authorization: `jwt ${currentUser?.tokens[0]?.token}` // TODO this is a hack, shouldn't be necessary
+        }
+      })
+        .then((res) => res.json())
+        .then((res) => {
+          setCurrentUser(res.data);
         })
-        .then(({ data }) => {
-          setCurrentUser(data);
-        })
-        .catch((error) => console.error(error));
+        .catch((error) => {
+          console.log(error);
+        });
     }
   }, [currentUser, user]);
 

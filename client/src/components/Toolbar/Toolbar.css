@@ -8,10 +8,9 @@ body{
     font-family: sans-serif;
 }
 
-.nav-logo-icon img {
-    width: 10rem;
+div.nav-logo-icon {
+    width: 12rem;
     height: auto;
-    margin-left: 0.5rem;
 }
 
 .nav-logo-icon:hover {
@@ -19,7 +18,6 @@ body{
 }
 
 .header {
-    align-content: flex-start;
     width: 100%;
 }
 
@@ -31,4 +29,8 @@ body{
   justify-content: space-between;
   padding: 1.5rem 2rem;
   text-transform: uppercase;
+}
+
+.back-button {
+    width: 1rem;
 }
