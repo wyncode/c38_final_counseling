@@ -19,7 +19,7 @@ const Login = ({ history }) => {
       setCurrentUser(response.data);
       // persists user if browser is refreshes.
       sessionStorage.setItem('user', response.data);
-      history.push('/');
+      history.push('/home');
     } catch (error) {
       console.log('Login Error: ', error);
     }
