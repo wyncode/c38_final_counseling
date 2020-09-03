@@ -1,108 +1,120 @@
-
-  .main {
-    margin: 0 auto;
-    width: 100vw;
-    max-width: 1920px;
-    min-height: 100vh;
-    background-color: white;
-  }
-  
-  .logo {
-    display: flex;
-    justify-content: flex-start;  
-    background-repeat: no-repeat;
-    margin-top: 90pt;
-    margin-left: 75pt;
-  }
-  
-  .loginWelcomeButton {
-    background-repeat: no-repeat;
-    background-position: left;
-    margin-top: 10pt;
-    margin-left: 75pt;
-  }
-
-  .loginWelcomeButton:hover {
-      opacity: 0.8;
-  }
-
-  .newUserButton {
-    background-repeat: no-repeat;
-    background-position: left;
-    margin-top: 50pt;
-    margin-left: 75pt;
-  }
-
-  .newUserButton:hover {
-opacity: 0.8;
-  }
-
-  .signUpButton {
-    background-repeat: no-repeat;
-    background-position: left;
-    margin-top: 50pt;
-  }
-
-  .signUpButton:hover {
-      opacity: 0.8;
-  }
-
-  .findyourtherapist {
-      font-family: avenir next;
-      color: #EDCAA7;
-      font-weight: bold;
-      align-items: flex-start;
-      justify-content: flex-start;
-      margin-left: 75pt;
-      margin-top: 50pt;
-}  
-
+.backgroundimage {
+  margin: 0px;
+  height: 100%;
+  background-image: url('./Doorman_with_blob.svg');
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: right bottom;
+}
+.section1 {
+  margin-bottom: 0px;
+}
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  background-repeat: no-repeat;
+  margin-top: 150pt;
+  margin-left: 75pt;
+}
+.loginWelcomeButton {
+  background-repeat: no-repeat;
+  background-position: left;
+  margin-top: 5pt;
+  margin-left: 75pt;
+}
+.loginWelcomeButton:hover {
+  opacity: 0.8;
+}
+.newUserButton {
+  background-repeat: no-repeat;
+  background-position: left;
+  margin-top: 20pt;
+  margin-left: 75pt;
+}
+.newUserButton:hover {
+  opacity: 0.8;
+}
+.signUpButton {
+  background-repeat: no-repeat;
+  background-position: left;
+  margin-top: 50pt;
+}
+.signUpButton:hover {
+  opacity: 0.8;
+}
+.findyourtherapist {
+  font-family: avenir next;
+  font-size: 30pt;
+  color: #edcaa7;
+  font-weight: bold;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: 75pt;
+  margin-top: 50pt;
+}
 .headerdescription {
-    font-family: avenir next;
-      color: #EDCAA7;
-      align-items: flex-start;
-      justify-content: flex-start;
-      margin-left: 75pt;
-      margin-top: 10pt;
+  font-family: ITC Avant Garde Gothic Std;
+  font-weight: bold;
+  color: #edcaa7;
+  width: 400px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: 75pt;
+  margin-top: 10pt;
 }
-
 .how {
-    font-family: avenir next;
-      color: #EDCAA7;
-      font-weight: bold;
-      align-items: flex-start;
-      justify-content: flex-start;
-      margin-left: 75pt;
-      margin-top: 40pt;
+  font-family: avenir next;
+  color: #edcaa7;
+  font-weight: bold;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: 75pt;
+  margin-top: 40pt;
 }
-
 .how:hover {
-    opacity: 0.8;
+  opacity: 0.8;
+}
+.welcome {
+  font-family: ITC Avant Garde Gothic Std;
+  font-size: 25pt;
+  font-weight: bold;
+  color: #edcaa7;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 75pt;
+  margin-top: 130pt;
+}
+.description {
+  /* display: flex; */
+  min-height: 100vh;
+  font-family: avenir next;
+  color: #edcaa7;
+  justify-content: flex-start;
+  align-items: initial;
+  width: 400px;
+  margin-left: 75pt;
+  margin-top: 10pt;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 
-.description {
-    display: flex;
-    min-height: 100vh;
-    background-color: white;
-    font-family: avenir next;
-    color: #EDCAA7;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 400px;
-    margin-left: 75pt;
-    margin-top: 600pt;
-  }
+.section2 {
+  /* display: flex; */
+  justify-content: space-between;
+}
 
-  .welcomFooterImage {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    background-position: right;
-    flex-direction: column;
-    flex-shrink: 3;
-    }
+.welcomFooterImage {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background-position: right;
+  flex-direction: column;
+  flex-shrink: 3;
+  margin-top: 0%;
+  margin-bottom: 1000px;
+}
 
-  .section2 {
-      display: flex;
-      justify-content: space-between;
-  }
+.section3 {
+  display: flex;
+  height: fit-content;
+}

@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Form, Button } from 'react-bootstrap';
-import { AppContext } from '../context/AppContext';
+import { AppContext } from '../../context/AppContext';
 import axios from 'axios';
 import swal from 'sweetalert';
 
@@ -20,7 +20,7 @@ const SignUpPage = ({ history }) => {
       .then((response) => {
         sessionStorage.setItem('user', response.data);
         setCurrentUser(response.data);
-        history.push('/');
+        history.push('/home');
       })
       .catch((error) => swal('Error', 'Please check the inputs', 'warning'));
   };

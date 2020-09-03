@@ -1,0 +1,7 @@
+<svg id="My_Profile_Button" xmlns="http://www.w3.org/2000/svg" width="248" height="249" viewBox="0 0 248 249">
+  <g id="Group_104" data-name="Group 104">
+    <rect id="Rectangle_31" data-name="Rectangle 31" width="248" height="249" rx="27" fill="#edcaa7"/>
+    <text id="My_Profile" data-name="My Profile" transform="translate(124.45 215.231)" fill="#fff" font-size="29" font-family="ArialMT, Arial"><tspan x="-64.457" y="0">My Profile</tspan></text>
+  </g>
+  <path id="Icon_awesome-user" data-name="Icon awesome-user" d="M53.1,60.682A30.341,30.341,0,1,0,22.756,30.341,30.338,30.338,0,0,0,53.1,60.682Zm21.239,7.585H70.376a41.262,41.262,0,0,1-34.56,0H31.858A31.866,31.866,0,0,0,0,100.124v9.861a11.381,11.381,0,0,0,11.378,11.378H94.815a11.381,11.381,0,0,0,11.378-11.378v-9.861A31.866,31.866,0,0,0,74.335,68.267Z" transform="translate(74.756 47.617)" fill="#fff"/>
+</svg>

@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Home from './pages/Home';
+import Home from './pages/Home/Home';
 import './App.css';
 //uncomment this once the private routes are back in use after the front end is finalized
 // import PrivateRoute from './components/PrivateRoute';
 import WelcomePage from './pages/WelcomePage/WelcomePage';
 import PasswordReset from './pages/PasswordReset';
-import SignUpPage from './pages/SignUpPage';
+import SignUpPage from './pages/SignUpPage/SignUpPage';
 import PasswordForgot from './pages/PasswordForgot';
-import Login from './pages/Login';
+import Login from './pages/Login/Login';
 import Profile from './pages/Profile';
 import UnhealthyThinking from './pages/UnhealthyThinking/UnhealthyThinking';
 import MentalHygiene from './pages/MentalHygiene';
@@ -21,26 +21,21 @@ import SideDrawer from './components/SideDrawer/SideDrawer';
 import { AppContextProvider } from './context/AppContext';
 import ReactCalendar from './components/Calendar';
 
-
 function App() {
-  const [open, setOpen] = useState(false)
-
+  const [open, setOpen] = useState(false);
 
   return (
     <AppContextProvider>
       <div style={{ height: '100%' }}>
         <BrowserRouter>
           <Toolbar setOpen={setOpen} open={open} />
-          {
-            open ? (
-              <>
-                <SideDrawer />
-              </>
-            ) : null
-          }
+          {open ? (
+            <>
+              <SideDrawer />
+            </>
+          ) : null}
 
           <Switch>
-
             <Route exact path="/" component={WelcomePage} />
             <Route exact path="/calendar" component={ReactCalendar} />
 
@@ -58,11 +53,7 @@ function App() {
             />
             <Route exact path="/mental-hygiene" component={MentalHygiene} />
             <Route exact path="/journal-page" component={JournalPage} />
-            <Route
-              exact
-              path="/therapist-search"
-              component={TherapistSearch}
-            />
+            <Route exact path="/therapist-search" component={TherapistSearch} />
             <Route exact path="/my-therapist" component={MyTherapist} />
             <Route exact path="/therapist:id" component={TherapistProfile} />
           </Switch>

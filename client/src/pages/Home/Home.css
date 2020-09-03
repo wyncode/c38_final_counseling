@@ -1,0 +1,66 @@
+main {
+  justify-content: center;
+}
+
+.quote {
+  background-position: center;
+  margin-left: 420pt;
+  margin-left: 420pt;
+  margin-top: 100px;
+}
+.grid {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 200pt;
+}
+
+.container {
+  margin-left: 215pt;
+  margin-top: 50pt;
+}
+
+.container2 {
+  margin-right: 215pt;
+  margin-top: 50pt;
+}
+
+.find {
+  margin-bottom: 15pt;
+}
+
+.find:hover {
+  opacity: 0.8;
+}
+
+.track {
+  margin-bottom: 15pt;
+}
+
+.track:hover {
+  opacity: 0.8;
+}
+
+.mental:hover {
+  opacity: 0.8;
+}
+
+.profile {
+  margin-bottom: 10pt;
+}
+
+.profile:hover {
+  opacity: 0.8;
+}
+
+.journalButton:hover {
+  opacity: 0.8;
+}
+
+/* need help with this tomorrow */
+.cory {
+  max-width: 1000px;
+  background-image: url('/Cory_Footer.svg');
+  background-attachment: fixed;
+  background-size: contain;
+  background-position: bottom;
+}
