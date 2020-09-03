@@ -6,48 +6,34 @@ import { AppContext } from '../context/AppContext';
 import './SideDrawer/SideDrawer.css';
 
 const Logout = ({ setOpen }) => {
-    const history = useHistory();
-    const { setCurrentUser } = useContext(AppContext);
+  const history = useHistory();
+  const { setCurrentUser, currentUser } = useContext(AppContext);
 
-    const handleSignOut = async () => {
+  const handleSignOut = async () => {
+    fetch('/api/users/logout', {
+      method: 'post',
+      credentials: 'same-origin',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+        Authorization: `jwt ${currentUser.tokens[0].token}` // TODO this is a hack, shouldn't be necessary
+      }
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        setCurrentUser(null);
+        history.push('/login');
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
-        try {
-            const response = await fetch('/api/users/logout', {
-                method: 'POST',
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json',
-                }
-            })
-            if (response) {
-                console.log(response);
-                setCurrentUser(null)
-                sessionStorage.removeItem('user')
-                setOpen(false)
-                history.push('/login')
-            }
-        } catch (error) {
-            console.log(error)
-        }
-
-        // axios
-        //     .post('/api/users/logout', { withCredentials: true })
-        //     .then((res) => {
-        //         console.log(res)
-        //         setCurrentUser(null);
-        //         sessionStorage.removeItem('user');
-        //         setOpen(false)
-        //         history.push('/login');
-        //     })
-        //     .catch((error) => console.log(error));
-    };
-
-    return (
-        <Nav.Item as="li" onClick={handleSignOut}>
-            <p className="logout">Logout</p>
-        </Nav.Item>
-
-    );
+  return (
+    <Nav.Item as="li" onClick={handleSignOut}>
+      <p className="logout">Logout</p>
+    </Nav.Item>
+  );
 };
 
 export default Logout;
