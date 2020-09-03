@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Form } from 'react-bootstrap';
+import { AppContext } from '../context/AppContext';
 
 const SearchbyMood = () => {
-  return <Form.Control type="text" placeholder="Search by Mood" />;
-};
+  const { setSearch } = useContext(AppContext);
 
+  const handleSearch = (e) => {
+    setSearch(e.target.value);
+  };
+
+  return (
+    <Form.Control
+      type="text"
+      placeholder="Search by Mood"
+      onChange={handleSearch}
+    />
+  );
+};
 export default SearchbyMood;

@@ -17,7 +17,7 @@ const Login = ({ history }) => {
     try {
       const response = await axios.post('/api/users/login', formData);
       setCurrentUser(response.data);
-      sessionStorage.setItem('user', response.data);
+      sessionStorage.setItem('user', JSON.stringify(response.data));
       history.push('/home');
     } catch (error) {
       console.log('Login Error: ', error);

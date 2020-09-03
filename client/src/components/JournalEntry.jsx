@@ -15,7 +15,7 @@ function JournalEntry() {
     setLoading(true);
     const form = e.target;
     const formData = new FormData(form);
-    fetch('/api/journal', {
+    fetch('api/journal/:id', {
       method: 'post',
       headers: {
         Accept: 'application/json',

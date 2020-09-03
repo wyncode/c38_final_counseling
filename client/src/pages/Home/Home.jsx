@@ -25,7 +25,7 @@ function Home() {
             </Link>
           </div>
           <div className="journalButton">
-            <Link to="/journal-page">
+            <Link to="/calendar">
               <img src={journalButton} alt="My Journal" />
             </Link>
           </div>
