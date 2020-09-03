@@ -21,6 +21,7 @@ const Logout = ({ setOpen }) => {
     })
       .then((res) => res.json())
       .then((res) => {
+        setOpen(false);
         setCurrentUser(null);
         history.push('/login');
       })
