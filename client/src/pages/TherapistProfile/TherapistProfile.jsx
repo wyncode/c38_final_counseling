@@ -1,8 +1,5 @@
 import React from 'react';
-import TherapistAvatar from './tharapist-avatar.png'
-import WebsiteButton from './tharapist-profile-website.png'
-import PhoneButton from './tharapist-profile-phone-number.png'
-import AddressButton from './tharapist-profile-address.png'
+import TherapistAvatar from './tharapist-avatar.png';
 import './TherapistProfile.css'
 
 const TherapistProfile = () => {
@@ -12,26 +9,44 @@ const TherapistProfile = () => {
                 <img src={TherapistAvatar} alt="Therapist Avatar" className="therapist-avatar" />
                 <h1>[Therapist Name]</h1>
                 <h2>Therapist Title</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in
-                voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui
+                <div className="therapist-copy">
+                    <p>Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna
+                    aliqua. </p>
+
+                    <p>Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt in culpa qui
  officia deserunt mollit anim id est laborum.</p>
+                </div>
             </div>
 
-            <button className="search-therapist">Search Therapist</button>
+            <div className="therapist-secondary-info">
+                <div className="skills-expertise">
+                    <h2>Skills & Expertise</h2>
+                    <ul>
+                        <li>Skill item</li>
+                        <li>Expertise item</li>
+                    </ul>
+                </div>
 
-            <div className="therapists-links">
-                <button><img src={WebsiteButton} alt="Visit Therapist's Website" />Visit Website</button>
-                <button><img src={PhoneButton} alt="Call Therapist's Office" />Call Office</button>
-                <button><img src={AddressButton} alt="Visit the Therapist" />Visit Location</button>
+                <div className="finances">
+                    <h2>Finances</h2>
+                    <p className="finances-item">Individual Counseling $30-60</p>
+                    <p className="finances-item">Couple & Family Counseling $30-80</p>
+                </div>
             </div>
+
+            {/* This button might get deleted, don't forget to delete if it does!!  */}
+            {/* <div className="button">
+                <button className="save-therapist-button">Save Therapist</button>
+            </div> */}
+
 
 
         </main>
