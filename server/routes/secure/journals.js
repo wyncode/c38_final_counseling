@@ -13,7 +13,7 @@ router.post('/api/journal', async (req, res) => {
       mood,
       body,
       // TODO once authentication is set up, swap this out for req.user._id
-      owner: '5f4ebadbed4e0c3c99c35a0c'
+      owner: req.user._id
     });
     await journal.save();
     res.status(201).json(journal);

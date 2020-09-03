@@ -7,43 +7,39 @@ const TherapistSchema = new mongoose.Schema({
     trim: true
   },
   jobTitle: {
-    type: String,
-    required: true
-  },
-  gender: {
-    type: String,
-    required: true
-  },
-  phoneNumber: {
-    type: String,
-    required: true
-  },
-  prefix: {
     type: String
   },
-  companyName: {
-    type: String,
-    required: true
-  },
-  streetAddress: {
-    type: String,
-    required: true
-  },
-  zipCode: {
-    type: String,
-    required: true
-  },
-  city: {
-    type: String,
-    required: true
-  },
-  race: {
+  gender: {
     type: String
   },
   specialty: {
     type: String
   },
-  treatmentOrientation: {
+  modality: {
+    type: String
+  },
+  ageSpecialty: {
+    type: String
+  },
+  phoneNumber: {
+    type: String
+  },
+  companyName: {
+    type: String
+  },
+  streetAddress: {
+    type: String
+  },
+  zipCode: {
+    type: String
+  },
+  city: {
+    type: String
+  },
+  race: {
+    type: String
+  },
+  specialty: {
     type: String
   },
   language: {
