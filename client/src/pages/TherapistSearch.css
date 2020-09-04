@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.therapist-search-main {
+    margin: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Form Content */
+.form-contents {
+    width: 80%;
+}
+
+/* Search Filters */
+.search-filter-fields {
+    margin: 0.2rem 1rem;
+    width: 18rem;
+}
+
+.search-filter-fields label {
+    margin-right: 0.5rem;
+}
+
+.search-filter-fields select {
+    width: 8rem;
+}
+
+.search-filters-all {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/* Submit Button */
+.search-submit-button {
+    display: flex;
+    justify-content: center;
+}
+
+/* Button Style */
+.search-submit-button input{
+    color: white;
+    background-color: #EDCAA7;
+    padding: 0.5rem 2rem;
+    border-radius: 2.5rem;
+    margin: 0.5rem 0;
+    border: none;
+}
+
+.search-submit-button input:hover{
+    opacity: 0.7;
+}
+
+/* Therapist Cards */
+.therapist-search-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.therapist-card {
+    width: 20rem;
+    margin: 1rem;
+}
+
+.card-title.h5 {
+    color: #EDCAA7;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0.7rem 0;
+}
+
+.card-text {
+    margin-bottom: 0.3rem;
+}
+
+/* Media Queries */
+/* iPhone X */
+@media only screen and (max-device-width: 375px) {
+
+/* Form Content */
+.form-contents {
+    width: 100%;
+}
+
+.therapist-search-main {
+    margin: 2rem 1rem;
+}
+
+.therapist-card {
+    width: 16rem;
+    padding: 0;
+}
+
+.form-contents {
+    margin-top: 1rem;
+}
+
+}
+
+/* iPhone Plus */
+@media only screen and (max-device-width: 414px) {
+
+    .form-contents {
+        width: 100%;
+    }
+
+    .form-contents {
+        margin-top: 1rem;
+    }
+
+    .search-filter-fields {
+        margin: 0.2rem 2rem;
+    }
+
+    .therapist-card {
+        width: 100%;
+    }
+
+    }
+

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import Logo from './mind_passage_logo-white.png';
+import Logo from './mind_passage_logo.svg';
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
-import BackButton from './back-button.png';
+import BackButton from './back-button.svg';
 import { useLocation } from 'react-router-dom';
 
 import './Toolbar.css';

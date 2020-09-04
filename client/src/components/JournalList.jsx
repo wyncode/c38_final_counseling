@@ -7,6 +7,9 @@ import Card from 'react-bootstrap/Card';
 import DeleteButton from './DeleteButton';
 import EditButton from './EditButton';
 import SearchbyMood from './SearchbyMood';
+import './JournalStylesheets/index.css'
+import './JournalStylesheets/index.css'
+
 const JournalList = () => {
   const { setJournalList } = useContext(AppContext);
   const { setLoading } = useContext(AppContext);
@@ -25,11 +28,11 @@ const JournalList = () => {
   }, []);
 
   return (
-    <Container>
+    <Container id="container">
       <Accordion>
         <Card>
           <Accordion.Toggle as={Button} variant="link" eventKey="0">
-            View Journal Entrys!
+            View Journal Entries
             <SearchbyMood />
           </Accordion.Toggle>
 
@@ -44,8 +47,10 @@ const JournalList = () => {
                   <Card.Text>
                     I had an amazing interview with a great company today.
                   </Card.Text>
-                  <DeleteButton />
-                  <EditButton />
+                  <div className="delete-edit-buttons">
+                    <DeleteButton />
+                    <EditButton />
+                  </div>
                 </Card.Body>
               </Card>
             </Card.Body>

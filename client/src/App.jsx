@@ -7,7 +7,7 @@ import './App.css';
 import WelcomePage from './pages/WelcomePage/WelcomePage';
 import PasswordReset from './pages/PasswordReset';
 import SignUpPage from './pages/SignUpPage/SignUpPage';
-import PasswordForgot from './pages/PasswordForgot';
+import PasswordUpdate from './pages/PasswordUpdate';
 import Login from './pages/Login/Login';
 import Profile from './pages/Profile';
 import UnhealthyThinking from './pages/UnhealthyThinking/UnhealthyThinking';
@@ -43,7 +43,7 @@ function App() {
 
             <Route exact path="/password-reset" component={PasswordReset} />
             <Route exact path="/signup" component={SignUpPage} />
-            <Route exact path="/password-forgot" component={PasswordForgot} />
+            <Route exact path="/password-update" component={PasswordUpdate} />
             <Route exact path="/login" component={Login} />
             {/* Gotta make these routes private once the front end is finalized */}
             <Route exact path="/home" component={Home} />

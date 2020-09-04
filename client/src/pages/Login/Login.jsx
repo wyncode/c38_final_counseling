@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Container, Form, Button } from 'react-bootstrap';
 import { AppContext } from '../../context/AppContext';
 import axios from 'axios';
+import './Login.css';
 
 const Login = ({ history }) => {
   const { setCurrentUser } = useContext(AppContext);
@@ -18,6 +19,7 @@ const Login = ({ history }) => {
       const response = await axios.post('/api/users/login', formData);
       setCurrentUser(response.data);
       sessionStorage.setItem('user', JSON.stringify(response.data));
+
       history.push('/home');
     } catch (error) {
       console.log('Login Error: ', error);
@@ -25,7 +27,7 @@ const Login = ({ history }) => {
   };
 
   return (
-    <Container className="container d-flex flex-column align-items-center justify-content-center fullscreen">
+    <Container className="loginMain">
       <h1 className="mb-4">Welcome Back</h1>
       <Form style={{ width: 300 }} onSubmit={handleLogin}>
         <Form.Group>
@@ -55,6 +57,11 @@ const Login = ({ history }) => {
       <Link className="mt-4" to="/signup">
         Need an Account? Sign up.
       </Link>
+      <p>
+        <Link className="mt-4" to="/password-reset">
+          Forgot Password?
+        </Link>
+      </p>
     </Container>
   );
 };
