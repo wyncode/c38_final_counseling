@@ -95,5 +95,52 @@ h4 {
     width: fit-content;
 }
 
+@media only screen and (max-device-width : 375px) {
+    .article {
+        margin: 0.5rem auto;
+        width: 90%;
+    }
+/* Parent Container of article-title-author and article-image */
+.article-header {
+    display: flex;
+    flex-direction: column;
+    margin: 1.8rem 0;
+}
 
+.article-title-author {
+    width: 100%;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem;
+}
+
+.article-image {
+    margin: 1rem auto;
+    width: 18rem;
+    height: 12rem;
+}
+
+.scroll-down {
+    display: none;
+}
+
+.article-copy {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.article-source {
+    margin: 2rem auto;
+    width: fit-content;
+    padding-bottom: 1rem;
+}
+}
 
