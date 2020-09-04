@@ -9,7 +9,7 @@ body{
 }
 
 div.nav-logo-icon {
-    width: 12rem;
+    width: 10rem;
     height: auto;
 }
 
@@ -27,7 +27,7 @@ div.nav-logo-icon {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 2rem;
+  padding: 0.8rem 2rem;
   text-transform: uppercase;
 }
 
@@ -35,7 +35,7 @@ div.nav-logo-icon {
     width: 2rem;
 }
 
-@media only screen and (min-device-width : 375px) {
+@media only screen and (max-device-width : 375px) {
     .navigation {
         padding: 1rem 1.5rem;
         text-transform: uppercase;
