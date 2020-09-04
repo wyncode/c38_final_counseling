@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import swal from 'sweetalert';
 import JournalList from './JournalList';
+import './JournalStylesheets/index.css'
 
 // unable to get calendar to rinder pushing to get some help while i debug.
 
@@ -31,7 +32,9 @@ const ReactCalendar = ({ history }) => {
   };
 
   return (
-    <div>
+    <div className="calendar-main">
+      <h2>Journal</h2>
+      <p>Select a past day to display previous entries. To make a journal entry, select the current day. </p>
       <Calendar onChange={setValue} value={value} onClickDay={handleDayClick} />
       <JournalList />
     </div>
