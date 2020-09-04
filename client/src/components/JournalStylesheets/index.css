@@ -22,11 +22,14 @@ h2 {
     border: 2px solid #EDCAA7;
 }
 
+.react-calendar__navigation {
+    border-bottom: 2px solid #EDCAA7;
+}
+
 .react-calendar__month-view__weekdays__weekday {
     text-align: center;
     color: #EDCAA7;
     padding: 0.5rem 0;
-    border-top: 1px solid #EDCAA7;
     border-bottom: 1px solid #EDCAA7;
 }
 
