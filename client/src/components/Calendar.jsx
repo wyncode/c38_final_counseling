@@ -2,15 +2,14 @@ import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import swal from 'sweetalert';
 import JournalList from './JournalList';
-import './JournalStylesheets/index.css'
+import moment from 'moment';
 
-// unable to get calendar to rinder pushing to get some help while i debug.
 
 const ReactCalendar = ({ history }) => {
   const [value, setValue] = useState(new Date());
 
   const handleDayClick = (day) => {
-    swal(`${day}`, {
+    swal(`${moment(day).format('MMM Do, YYYY')}`, {
       buttons: {
         new: ' Make a journal entry',
         view: {
@@ -18,17 +17,19 @@ const ReactCalendar = ({ history }) => {
           value: 'Journal Entry'
         }
       }
-    }).then((value) => {
-      switch (value) {
-        case 'new':
-          history.push('/journal-page');
-          break;
-        case 'delete':
-          // handleDelete(entryId);
-          console.log('delete journal entry');
-          break;
-      }
-    });
+    })
+      .then((value) => {
+        switch (value) {
+          case 'new':
+            history.push('/journal-page');
+            break; // needs to be worked on to render a large pop up of the journal entry
+          case 'delete':
+            // handleDelete(entryId);
+            console.log('delete journal entry');
+            break;
+        }
+      })
+      .then(() => {});
   };
 
   return (

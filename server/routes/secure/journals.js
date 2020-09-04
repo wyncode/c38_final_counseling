@@ -5,7 +5,7 @@ const router = require('express').Router(),
 // ***********************************************//
 // Create a journal
 // ***********************************************//
-router.post('/api/journal', async (req, res) => {
+router.post('/api/journal/:id', async (req, res) => {
   const { title, mood, body } = req.body;
   try {
     const journal = new Journal({
