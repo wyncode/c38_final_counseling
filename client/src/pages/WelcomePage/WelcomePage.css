@@ -5,18 +5,21 @@
   background-repeat: no-repeat;
   background-size: 60%;
   background-position: right bottom;
+  font-family: 'Helvetica', 'Arial', sans-serif;
 }
 .section1 {
   margin-bottom: 0px;
 }
 .logo {
+  height: 80px;
   display: flex;
   justify-content: flex-start;
   background-repeat: no-repeat;
-  margin-top: 150pt;
-  margin-left: 75pt;
+  margin-top: 130pt;
+  /* margin-left: 75pt; */
 }
 .loginWelcomeButton {
+  width: 5px;
   background-repeat: no-repeat;
   background-position: left;
   margin-top: 5pt;
@@ -68,6 +71,7 @@
   font-weight: bold;
   align-items: flex-start;
   justify-content: flex-start;
+  width: 100%;
   margin-left: 75pt;
   margin-top: 40pt;
 }

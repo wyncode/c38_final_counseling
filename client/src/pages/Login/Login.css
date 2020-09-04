@@ -1,0 +1,13 @@
+/* finishing tomorrow */
+
+.loginMain {
+  background-color: #edcaa7;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 100%;
+  line-height: 1.5;
+  /* padding: 4em 1em; */
+  font-family: 'ITC Avant Garde Gothic Std', 'Helvetica', 'Arial', sans-serif;
+}
