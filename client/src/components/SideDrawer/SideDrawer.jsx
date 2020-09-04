@@ -17,9 +17,12 @@ const SideDrawer = ({ setOpen, open }) => {
         <div className="side-drawer">
 
             <Nav className="top-nav-items" defaultActiveKey="/" as="ul">
-                <Nav.Item as="li">
-                    <Link to="/home" onClick={() => setOpen(!open)}>Home</Link>
-                </Nav.Item>
+                {currentUser ? <>
+                    <Nav.Item as="li">
+                        <Link to="/home" onClick={() => setOpen(!open)}>Home</Link></Nav.Item></> : <><Nav.Item as="li">
+                            <Link to="/" onClick={() => setOpen(!open)}>Welcome</Link>
+                        </Nav.Item></>}
+
 
                 <Nav.Item as="li">
                     <Link to="/therapist-search" onClick={() => setOpen(!open)}>Find a Therapist</Link>
