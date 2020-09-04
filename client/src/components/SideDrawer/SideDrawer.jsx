@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
-import LogoIcon from './mind-passage-icon.png';
+import LogoIcon from '/Users/gpexlaptop/Desktop/wyncode/c38_final_counseling/client/src/components/SideDrawer/mind_passage_icon.svg';
 import './SideDrawer.css';
 import Logout from '../Logout';
+import { AppContext } from '../../context/AppContext'
 
 
 
 const SideDrawer = ({ setOpen, open }) => {
-
+    const { handleSignOut } = useContext(AppContext);
 
     return (
 
@@ -34,7 +35,7 @@ const SideDrawer = ({ setOpen, open }) => {
 
             <Nav className="bottom-nav-items" defaultActiveKey="/" as="ul">
                 <Nav.Item as="li">
-                    <img className="nav-logo-icon" src={LogoIcon} alt="Mind Passage About Us" />
+                    <img className="nav-logo-icon" src={LogoIcon} alt="Mind Passage About Us" onClick={() => handleSignOut} />
                 </Nav.Item>
 
 

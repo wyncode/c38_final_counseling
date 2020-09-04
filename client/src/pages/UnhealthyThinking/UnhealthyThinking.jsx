@@ -1,5 +1,5 @@
 import React from 'react';
-import ScrollDown from './down-06.png';
+import ScrollDown from './down-06.svg';
 import './UnhealthyThinking.css'
 
 const UnhealthyThinking = () => {

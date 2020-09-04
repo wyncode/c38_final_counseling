@@ -32,5 +32,22 @@ div.nav-logo-icon {
 }
 
 .back-button {
-    width: 1rem;
+    width: 2rem;
 }
+
+@media only screen and (min-device-width : 375px) {
+    .navigation {
+        padding: 1rem 1.5rem;
+        text-transform: uppercase;
+      }
+
+      div.nav-logo-icon {
+        width: 10rem;
+        height: auto;
+    }
+
+    .back-button {
+        width: 1.4rem;
+    }
+}
+
