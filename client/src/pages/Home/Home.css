@@ -1,11 +1,13 @@
-main {
-  justify-content: center;
+.mainHome {
+  margin: 0 auto;
+  max-width: 50em;
+  line-height: 1.5;
+  padding: 4em 1em;
 }
 
 .quote {
   background-position: center;
-  margin-left: 420pt;
-  margin-left: 420pt;
+
   margin-top: 100px;
 }
 .grid {
@@ -58,9 +60,12 @@ main {
 
 /* need help with this tomorrow */
 .cory {
-  max-width: 1000px;
-  background-image: url('/Cory_Footer.svg');
-  background-attachment: fixed;
-  background-size: contain;
+  background-color: #edcaa7;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1.5rem 2rem;
+  background-image: url('/NEW_Cory_footer.svg');
   background-position: bottom;
+  margin-bottom: 0px;
 }

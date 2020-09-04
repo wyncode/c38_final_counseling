@@ -4,6 +4,7 @@ import { Container, Form, Button } from 'react-bootstrap';
 import { AppContext } from '../../context/AppContext';
 import axios from 'axios';
 import swal from 'sweetalert';
+import './SignUpPage.css';
 
 const SignUpPage = ({ history }) => {
   const [formData, setFormData] = useState(null);
@@ -26,7 +27,7 @@ const SignUpPage = ({ history }) => {
   };
 
   return (
-    <Container className="container d-flex flex-column align-items-center justify-content-center fullscreen">
+    <Container className="signupMain">
       <h1 className="mb-4">Sign Up</h1>
       <Form style={{ width: 300 }} onSubmit={handleSubmit}>
         <Form.Group>
