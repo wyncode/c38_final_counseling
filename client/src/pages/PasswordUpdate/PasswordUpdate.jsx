@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 import axios from 'axios';
+import './PasswordUpdate.css';
 
 const PasswordUpdate = ({ history }) => {
   const [password, setPassword] = useState(null);
@@ -28,7 +29,7 @@ const PasswordUpdate = ({ history }) => {
       .catch((error) => console.log(error));
   };
   return (
-    <Container className="d-flex flex-column align-items-center justify-content-center fullscreen">
+    <Container className="mainPU">
       <h1>Update Password</h1>
       <Form onSubmit={handleSubmit}>
         <Form.Group>

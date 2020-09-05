@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Button, Form } from 'react-bootstrap';
 import axios from 'axios';
+import './PasswordReset.css';
 
 const PasswordReset = () => {
   const [email, setEmail] = useState(null);
@@ -18,7 +19,7 @@ const PasswordReset = () => {
   };
 
   return (
-    <Container className="d-flex flex-column align-items-center justify-content-center fullscreen">
+    <Container className="mainPR">
       <h1>Reset Password</h1>
       <Form onSubmit={handleSubmit}>
         <Form.Group>
