@@ -1,92 +1,119 @@
 h2 {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .calendar-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 3rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem 5rem;
 }
 
 #container {
-    margin: 2rem auto;
-    display: flex;
-    flex-direction: column;
-
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
 }
 
 /* React Calendar */
 .react-calendar {
-    margin: 1rem 0;
-    border: 2px solid #EDCAA7;
+  margin: 1rem 0;
+  border: 2px solid #edcaa7;
+  box-shadow: 2px 2px #767676;
+  border-radius: 25px;
 }
-
+div.react-calendar {
+  margin: 1rem 0;
+  border: 2px solid #767676;
+  box-shadow: 2px 4px #767676;
+  border-radius: 30px;
+}
 .react-calendar__navigation {
-    border-bottom: 2px solid #EDCAA7;
+  border-bottom: 2px solid #edcaa7;
 }
 
 .react-calendar__month-view__weekdays__weekday {
-    text-align: center;
-    color: #EDCAA7;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #EDCAA7;
+  text-align: center;
+  background-color: #edcaa7;
+  color: #767676;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #edcaa7;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
 }
-
+/* calender week days css */
+abbr[data-original-title],
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+  text-decoration: none;
+  cursor: pointer;
+  border-bottom: 0;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+}
 .react-calendar button {
-    background-color: white;
-    border: none;
-    color: #EDCAA7;
+  background-color: #767676;
+  border: none;
+  color: #edcaa7;
 }
 
 .react-calendar button:hover {
-    color: black;
+  background-color: #edcaa7;
 }
 
 .react-calendar__navigation__label__labelText.react-calendar__navigation__label__labelText--from {
-    color: #EDCAA7;
+  color: #edcaa7;
 }
 
-.react-calendar__navigation__arrow.react-calendar__navigation__prev-button, .react-calendar__navigation__arrow.react-calendar__navigation__prev2-button, .react-calendar__navigation__arrow.react-calendar__navigation__next-button, .react-calendar__navigation__arrow.react-calendar__navigation__next2-button  {
-    padding: 0.5rem;
-    color: #EDCAA7;
+.react-calendar__navigation__arrow.react-calendar__navigation__prev-button,
+.react-calendar__navigation__arrow.react-calendar__navigation__prev2-button,
+.react-calendar__navigation__arrow.react-calendar__navigation__next-button,
+.react-calendar__navigation__arrow.react-calendar__navigation__next2-button {
+  padding: 0.5rem;
+  color: #edcaa7;
+  border-radius: 25px;
 }
-
+.react-calendar__navigation__arrow.react-calendar__navigation__next2-button,
+.react-calendar__navigation__arrow.react-calendar__navigation__prev2-button {
+  display: none;
+  border-radius: 25px;
+}
 button {
-    padding: 1rem 0;
-    border: none;
-} 
+  padding: 1rem 0;
+  border: none;
+}
+/*  react calebdar bottom css tiles*/
+react-calendar button {
+  background-color: white;
+  border: none;
+  color: #edcaa7;
+  border-radius: 25px;
+}
 
 /* Accordion */
 .card {
-    border: 1px solid #EDCAA7;
+  border: 1px solid #edcaa7;
 }
 
 .btn.btn-link {
-    color: #EDCAA7;
-    padding-top: 1rem;
+  color: #edcaa7;
+  padding-top: 1rem;
 }
 
 .btn.btn-link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 input.form-control {
-    margin: 1rem 0;
-    border: 1px solid #EDCAA7;
+  margin: 1rem 0;
+  border: 1px solid #edcaa7;
 }
 
 /* Buttons inside the entries */
-.delete-edit-buttons{
-    display: flex;
-    justify-content: space-around;
-    padding-top: 0.5rem;
+.delete-edit-buttons {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 0.5rem;
 }
-
-
-
-
-
-
-
-
