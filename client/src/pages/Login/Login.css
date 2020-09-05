@@ -19,6 +19,10 @@ h1.mb-4 {
   color: white;
 }
 
+.loginMain.container input {
+  margin-top: 0;
+}
+
 #login.btn.btn-primary {
     color: #EDCAA7;
     background-color: white;
