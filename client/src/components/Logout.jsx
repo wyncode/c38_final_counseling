@@ -11,18 +11,19 @@ const Logout = ({ setOpen }) => {
 
   const handleSignOut = async () => {
     fetch('/api/users/logout', {
-      method: 'post',
+      method: 'POST',
       credentials: 'same-origin',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
-        Authorization: `jwt ${currentUser.tokens[0].token}` // TODO this is a hack, shouldn't be necessary
+        Authorization: `jwt ${JSON.parse(currentUser).tokens[0].token}` // TODO this is a hack, shouldn't be necessary
       }
     })
       .then((res) => res.json())
       .then((res) => {
         setOpen(false);
         setCurrentUser(null);
+        sessionStorage.removeItem('user')
         history.push('/login');
       })
       .catch((error) => {
