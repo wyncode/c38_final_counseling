@@ -1,92 +1,102 @@
 h2 {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .calendar-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 3rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem 3rem;
 }
 
 #container {
-    margin: 2rem auto;
-    display: flex;
-    flex-direction: column;
-
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
 }
 
 /* React Calendar */
 .react-calendar {
-    margin: 1rem 0;
-    border: 2px solid #EDCAA7;
+  margin: 1rem 0;
+  border: 2px solid #edcaa7;
 }
 
 .react-calendar__navigation {
-    border-bottom: 2px solid #EDCAA7;
+  border-bottom: 2px solid #edcaa7;
 }
 
 .react-calendar__month-view__weekdays__weekday {
-    text-align: center;
-    color: #EDCAA7;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #EDCAA7;
+  text-align: center;
+  color: #edcaa7;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #edcaa7;
 }
 
 .react-calendar button {
-    background-color: white;
-    border: none;
-    color: #EDCAA7;
+  background-color: white;
+  border: none;
+  color: #edcaa7;
 }
 
 .react-calendar button:hover {
-    color: black;
+  color: black;
 }
 
 .react-calendar__navigation__label__labelText.react-calendar__navigation__label__labelText--from {
-    color: #EDCAA7;
+  color: #edcaa7;
 }
 
-.react-calendar__navigation__arrow.react-calendar__navigation__prev-button, .react-calendar__navigation__arrow.react-calendar__navigation__prev2-button, .react-calendar__navigation__arrow.react-calendar__navigation__next-button, .react-calendar__navigation__arrow.react-calendar__navigation__next2-button  {
-    padding: 0.5rem;
-    color: #EDCAA7;
+.react-calendar__navigation__arrow.react-calendar__navigation__prev-button,
+.react-calendar__navigation__arrow.react-calendar__navigation__prev2-button,
+.react-calendar__navigation__arrow.react-calendar__navigation__next-button,
+.react-calendar__navigation__arrow.react-calendar__navigation__next2-button {
+  padding: 0.5rem;
+  color: #edcaa7;
 }
 
 button {
-    padding: 1rem 0;
-    border: none;
-} 
+  padding: 1rem 0;
+  border: none;
+}
 
 /* Accordion */
 .card {
-    border: 1px solid #EDCAA7;
+  border: 1px solid #edcaa7;
+}
+.card-body {
+  outline-color: #72706d;
+  background: #edcaa7;
+}
+
+.card-body #card-item {
+  border-radius: 25px;
+  background: white;
+  margin-bottom: 1rem;
+  box-shadow: 5px 10px #72706d;
 }
 
 .btn.btn-link {
-    color: #EDCAA7;
-    padding-top: 1rem;
+  color: #edcaa7;
+  padding-top: 1rem;
+  box-shadow: 5px 10px;
 }
 
 .btn.btn-link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 input.form-control {
-    margin: 1rem 0;
-    border: 1px solid #EDCAA7;
+  margin: 1rem 0;
+  border: 1px solid #edcaa7;
 }
 
 /* Buttons inside the entries */
-.delete-edit-buttons{
-    display: flex;
-    justify-content: space-around;
-    padding-top: 0.5rem;
+.delete-edit-buttons {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 0.5rem;
 }
-
-
-
-
-
-
-
-
+//journal
+div #journal1 {
+  width: fit-content;
+}
