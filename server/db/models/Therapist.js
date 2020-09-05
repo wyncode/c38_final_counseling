@@ -24,9 +24,6 @@ const TherapistSchema = new mongoose.Schema({
   phoneNumber: {
     type: String
   },
-  companyName: {
-    type: String
-  },
   streetAddress: {
     type: String
   },
@@ -40,13 +37,10 @@ const TherapistSchema = new mongoose.Schema({
     type: String
   },
   specialty: {
-    type: String
-  },
-  language: {
     type: Array
   },
-  cost: {
-    type: Number
+  avatar: {
+    type: String
   }
 });
 

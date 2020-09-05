@@ -4,9 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import LogoIcon from '../SideDrawer/mind_passage_icon.svg';
 import './SideDrawer.css';
 import Logout from '../Logout';
-import { AppContext } from '../../context/AppContext'
-
-
+import { AppContext } from '../../context/AppContext';
 
 const SideDrawer = ({ setOpen, open }) => {
     const { handleSignOut } = useContext(AppContext);
