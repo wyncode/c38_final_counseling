@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Card from 'react-bootstrap/Card';
-import './TherapistSearch.css'
+import './TherapistSearch.css';
+import { Link } from 'react-router-dom';
 
 const TherapistSearch = () => {
   const [therapists, setTherapists] = useState([]);
@@ -56,10 +57,14 @@ const TherapistSearch = () => {
   return (
     <main className="therapist-search-main">
       <h2>Find a Therapist</h2>
+      <h3>
+        Search for counselors near your area. For a more detailed search, click
+        the arrow to display all filters.
+      </h3>
       <form className="form-contents" onSubmit={handleSearch}>
         <div className="search-filters-all">
           <div className="search-filter-fields">
-            <label>Search by Location</label>
+            <label>Location</label>
             <select
               name="city"
               id="city"
@@ -104,7 +109,7 @@ const TherapistSearch = () => {
             </select>
           </div>
           <div className="search-filter-fields">
-            <label>Search by Race</label>
+            <label>Race</label>
             <select
               name="race"
               id="race"
@@ -118,17 +123,17 @@ const TherapistSearch = () => {
               <option value="multi-racial">Multi-Racial</option>
               <option value="native-american">
                 Native American or Alaskan Native
-            </option>
+              </option>
               <option value="native-hawaiian">
                 Native Hawaiian or Pacific Islander
-            </option>
+              </option>
               <option value="white">White</option>
               <option value="other">Other</option>
             </select>
           </div>
 
           <div className="search-filter-fields">
-            <label>Search by Gender</label>
+            <label>Gender</label>
             <select
               name="gender"
               id="gender"
@@ -139,11 +144,10 @@ const TherapistSearch = () => {
               <option value="female">Female</option>
               <option value="nonbinary">NonBinary</option>
             </select>
-
           </div>
 
           <div className="search-filter-fields">
-            <label>Search by Specialty</label>
+            <label>Specialty</label>
             <select
               name="specialty"
               id="specialty"
@@ -152,33 +156,37 @@ const TherapistSearch = () => {
               <option disabled selected value />
               <option value="Aggression and Violence">
                 Aggression and Violence
-            </option>
+              </option>
               <option value="Anger Management">Anger Management</option>
               <option value="Agoraphobia">Agoraphobia</option>
               <option value="Antisocial Personality">
                 Antisocial Personality
-            </option>
+              </option>
               <option value="Behavioral Issues">Behavioral Issues</option>
               <option value="Bipolar Disorder">Bipolar Disorder</option>
               <option value="Border Personality Disorder">
                 Border Personality Disorder
-            </option>
+              </option>
               <option value="Coping Mechanisms">Coping Mechanisms</option>
               <option value="Depression">Depression</option>
               <option value="Dissociative Disorders">
                 Dissociative Disorders
-            </option>
+              </option>
               <option value="Domestic Abuse">Domestic Abuse</option>
               <option value="Eating Disorders">Eating Disorders</option>
-              <option value="Emotional Disturbance">Emotional Disturbance</option>
+              <option value="Emotional Disturbance">
+                Emotional Disturbance
+              </option>
               <option value="Loss or Grief">Loss or Grief</option>
               <option value="Marriage Counseling">Marriage Counseling</option>
               <option value="Mood Disorders">Mood Disorders</option>
               <option value="Narcissistic Personality">
                 Narcissistic Personality
-            </option>
+              </option>
               <option value="Parenting">Parenting</option>
-              <option value="Personality Disorders">Personality Disorders</option>
+              <option value="Personality Disorders">
+                Personality Disorders
+              </option>
               <option value="Psychosis">Psychosis</option>
               <option value="Relationship Issues">Relationship Issues</option>
               <option value="Self Esteem">Self Esteem</option>
@@ -193,7 +201,7 @@ const TherapistSearch = () => {
           </div>
 
           <div className="search-filter-fields">
-            <label>Search by Modality</label>
+            <label>Modality</label>
             <select
               name="modality"
               id="modality"
@@ -210,34 +218,32 @@ const TherapistSearch = () => {
         </div>
 
         <div className="search-submit-button">
-          <input className="search-submit-button" type="submit" value="Submit" />
+          <input
+            className="search-submit-button"
+            type="submit"
+            value="Submit"
+          />
         </div>
-
       </form>
 
       <div className="therapist-search-cards">
-        {
-          therapists.map((therapist) => {
-            return (
-              <div className="therapist-card" key={therapist._id}>
-
-                <Card>
-                  <Card.Body>
-                    <Card.Title>{therapist.name}</Card.Title>
-                    <Card.Text>{therapist.jobTitle}</Card.Text>
-                    <Card.Text>{therapist.specialty}</Card.Text>
-                    <Card.Text>{`${therapist.streetAddress} ${therapist.city} ${therapist.zipCode}`}</Card.Text>
-                    <Card.Text>{`Call: ${therapist.phoneNumber}`}</Card.Text>
-                  </Card.Body>
-                </Card>
-              </div>
-
-            );
-          })
-        }
-
+        {therapists.map((therapist) => {
+          return (
+            <div className="therapist-card" key={therapist._id}>
+              <Card>
+                <Card.Body>
+                  <Card.Title>{therapist.name}</Card.Title>
+                  <Card.Text>{therapist.jobTitle}</Card.Text>
+                  <Card.Text>{`${therapist.streetAddress} ${therapist.city} ${therapist.zipCode}`}</Card.Text>
+                  <Card.Text>{`Call: ${therapist.phoneNumber}`}</Card.Text>
+                  <Link to={`/therapist/${therapist._id}`}>View Profile</Link>
+                </Card.Body>
+              </Card>
+            </div>
+          );
+        })}
       </div>
-    </main >
+    </main>
   );
 };
 export default TherapistSearch;

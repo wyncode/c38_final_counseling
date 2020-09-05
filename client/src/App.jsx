@@ -9,7 +9,7 @@ import PasswordReset from './pages/PasswordReset/PasswordReset';
 import SignUpPage from './pages/SignUpPage/SignUpPage';
 import PasswordUpdate from './pages/PasswordUpdate/PasswordUpdate';
 import Login from './pages/Login/Login';
-import Profile from './pages/Profile';
+import UpdateAccount from './pages/UpdateAccount/UpdateAccount';
 import UnhealthyThinking from './pages/UnhealthyThinking/UnhealthyThinking';
 import MentalHygiene from './pages/MentalHygiene';
 import JournalPage from './pages/JournalPage';
@@ -47,7 +47,7 @@ function App() {
             <Route exact path="/login" component={Login} />
             {/* Gotta make these routes private once the front end is finalized */}
             <Route exact path="/home" component={Home} />
-            <Route exact path="/profile" component={Profile} />
+            <Route exact path="/account" component={UpdateAccount} />
             <Route
               exact
               path="/unhealthy-thinking"
@@ -57,7 +57,7 @@ function App() {
             <Route exact path="/journal-page" component={JournalPage} />
             <Route exact path="/therapist-search" component={TherapistSearch} />
             <Route exact path="/my-therapist" component={MyTherapist} />
-            <Route exact path="/therapist:id" component={TherapistProfile} />
+            <Route exact path="/therapist/:id" component={TherapistProfile} />
           </Switch>
         </BrowserRouter>
       </div>

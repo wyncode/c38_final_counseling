@@ -3,7 +3,7 @@ const router = require('express').Router(),
 //cloudinary = require('cloudinary').v2;
 
 //Get Current User
-router.get('/api/users/current', async (req, res) => {
+router.get('/api/users/:id', async (req, res) => {
   try {
     const user = req.user;
     res.json(user);
@@ -36,7 +36,7 @@ router.patch('/api/users/me', async (req, res) => {
 // Logout a user
 // ***********************************************//
 router.post('/api/users/logout', async (req, res) => {
-  console.log(req.user)
+  console.log(req.user);
   try {
     req.user.tokens = req.user.tokens.filter((token) => {
       return token.token !== req.token;
@@ -74,7 +74,7 @@ router.delete('/api/users/me', async (req, res) => {
     res.status(500).json({ error: e.toString() });
   }
 });
-//Upload Avatar to User 
+//Upload Avatar to User
 // TODO this is a placeholder route, it does not work yet
 router.post('/api/users/avatar', async (req, res) => {
   const { image } = req.body;

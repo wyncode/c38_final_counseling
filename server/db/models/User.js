@@ -5,34 +5,6 @@ const mongoose = require('mongoose'),
   jwt = require('jsonwebtoken');
 const Journal = require('./Journal');
 
-//Creating Enum Options for User Selections
-const Race = {
-  Asian: 'Asian',
-  AfricanAmerican: 'Black or African American',
-  Hispanic: 'Latin/Latinx/Latina/Latino/Hispanic',
-  MiddleEastern: 'Middle Eastern',
-  MultiRacial: 'Multi-Racial',
-  NativeAmerican: 'Native American or Alaskan Native',
-  NativeHawaiian: 'Native Hawaiian or Pacific Islander',
-  White: 'White or European American',
-  Other: 'Other',
-  NA: 'Rather not say'
-};
-const Genders = {
-  Male: 'male',
-  Female: 'female',
-  NonBinary: 'Non Binary/Trans',
-  NA: 'Rather not say'
-};
-const SexualOrientation = {
-  Heterosexual: 'Heterosexual',
-  Gay: 'Gay',
-  Lesbian: 'Lesbian',
-  Bisexual: 'Bisexual',
-  Pansexual: 'Pansexual',
-  Asexual: 'Asexual',
-  Queer: 'Queer'
-};
 // Creating User Schema
 const userSchema = new mongoose.Schema(
   {
@@ -41,34 +13,10 @@ const userSchema = new mongoose.Schema(
       required: true,
       trim: true
     },
-    race: {
-      type: String,
-      enum: Object.values(Race)
-    },
-    age: {
-      type: String
-    },
-    gender: {
-      type: String,
-      enum: Object.values(Genders)
-    },
-    sexualOrientation: {
-      type: String,
-      enum: Object.values(SexualOrientation)
-    },
-    children: {
-      type: String
-    },
+
     avatar: {
       type: String
     },
-    therapists: [
-      {
-        therapist: {
-          type: mongoose.Schema.Types.ObjectId
-        }
-      }
-    ],
     tokens: [
       {
         token: {
