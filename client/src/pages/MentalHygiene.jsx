@@ -21,7 +21,7 @@ const MentalHygiene = () => {
         health are:
       </p>
 
-      <Accordion className="accordion-mental-hygiene" defaultActiveKey="0">
+      <Accordion defaultActiveKey="0">
         <Card>
           <Accordion.Toggle as={Card.Header} eventKey="0">
             Take care of your physical health
