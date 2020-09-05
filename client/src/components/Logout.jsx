@@ -16,7 +16,7 @@ const Logout = ({ setOpen }) => {
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
-        Authorization: `jwt ${currentUser.tokens[0].token}` // TODO this is a hack, shouldn't be necessary
+        Authorization: `jwt ${JSON.parse(currentUser).tokens[0].token}` // TODO this is a hack, shouldn't be necessary
       }
     })
       .then((res) => res.json())

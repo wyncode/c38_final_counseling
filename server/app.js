@@ -12,13 +12,12 @@ app.use(express.json());
 // Unauthenticated routes
 app.use(openRoutes);
 app.use(therapistRoutes);
-//
+
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
 
-app.use(secureJournalRoutes);
 app.use(
   passport.authenticate('jwt', {
     session: false

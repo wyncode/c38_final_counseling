@@ -5,14 +5,14 @@ const router = require('express').Router(),
 // ***********************************************//
 // Create a journal
 // ***********************************************//
-router.post('/api/journal/:id', async (req, res) => {
+router.post('/api/journal', async (req, res) => {
+  console.log(req.user);
   const { title, mood, body } = req.body;
   try {
     const journal = new Journal({
       title,
       mood,
       body,
-      // TODO once authentication is set up, swap this out for req.user._id
       owner: req.user._id
     });
     await journal.save();
@@ -85,11 +85,11 @@ router.patch('/api/journal/:id', async (req, res) => {
 // // /journal?sortBy=createdAt:asc
 // // /journal?sortBy=dueDate:desc
 // // ***********************************************//
-// router.get('/api/journal', async (req, res) => {
+// rmpouter.get('/api/journal', async (req, res) => {
 //     try {
 //       const match = {},
 //         sort = {};
-//       if (req.query.completed) {
+//       if (req.query.coleted) {
 //         match.completed = req.query.completed === 'true';
 //       }
 //       if (req.query.sortBy) {
