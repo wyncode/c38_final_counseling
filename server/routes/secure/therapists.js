@@ -67,4 +67,13 @@ router.get('/api/therapists', async (req, res) => {
   }
 });
 
+router.get('/api/therapist/:id', async (req, res) => {
+  try {
+    const therapist = await Therapist.findById(req.params.id);
+    res.json(therapist);
+  } catch (error) {
+    res.status(400).json({ error: error.toString() });
+  }
+});
+
 module.exports = router;

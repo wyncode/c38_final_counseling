@@ -11,7 +11,7 @@ const Logout = ({ setOpen }) => {
 
   const handleSignOut = async () => {
     fetch('/api/users/logout', {
-      method: 'post',
+      method: 'POST',
       credentials: 'same-origin',
       headers: {
         Accept: 'application/json',
@@ -23,6 +23,7 @@ const Logout = ({ setOpen }) => {
       .then((res) => {
         setOpen(false);
         setCurrentUser(null);
+        sessionStorage.removeItem('user')
         history.push('/login');
       })
       .catch((error) => {
