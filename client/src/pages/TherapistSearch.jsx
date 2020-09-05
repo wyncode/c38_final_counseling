@@ -57,10 +57,10 @@ const TherapistSearch = () => {
   return (
     <main className="therapist-search-main">
       <h2>Find a Therapist</h2>
-      <h3>
+      <p>
         Search for counselors near your area. For a more detailed search, click
         the arrow to display all filters.
-      </h3>
+      </p>
       <form className="form-contents" onSubmit={handleSearch}>
         <div className="search-filters-all">
           <div className="search-filter-fields">

@@ -1,6 +1,7 @@
 import React from 'react';
 import ScrollDown from './down-06.svg';
 import './UnhealthyThinking.css'
+import { Link as ScrollLink } from 'react-scroll';
 
 const UnhealthyThinking = () => {
         return (
@@ -11,14 +12,16 @@ const UnhealthyThinking = () => {
                                         <h1>10 Common Unhealthy Thinking Patterns (and How to Change Them)</h1>
                                         <h3>By Caitlin Taylor</h3>
                                         <h4>March 16, 2017 at 11:24pm</h4>
-                                        <img className="scroll-down" src={ScrollDown} alt="scroll down" />
+                                        <ScrollLink to="copy" smooth={true}>
+                                                <img className="scroll-down" src={ScrollDown} alt="scroll down" />
+                                        </ScrollLink>
                                 </div>
 
                                 <div className="article-image" />
                         </div>
 
 
-                        <div className="article-copy">
+                        <div className="article-copy" id="copy">
                                 <p>Do the voices in your head ever make you feel like you’ve completely and irrevocably lost your mind? Are you thinking yourself in circles? Is it sometimes difficult to concentrate? You’re not alone. In fact, experts have pegged common patterns to some of our most unhealthy thoughts. Even better news? If you learn how to recognize these negative thinking patterns, it becomes easier to change them. Here’s 10 of the most common unhealthy thinking patterns and some suggestions on how to curb the negative spirals.</p>
                                 <p>Note: Anxiety, depression and other mental health disorders may heighten unhealthy thought patterns and may not be able to be maintained without the help of a mental health professional. If you, or someone you know, may be facing a mental health concern, Her Campus at MSU encourages you to seek out resources or call the national mental health hotline at <span>1-800-950-6264</span>.</p>
                                 <h2>1. All-or-Nothing Thinking</h2>

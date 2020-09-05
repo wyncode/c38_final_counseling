@@ -1,10 +1,12 @@
 import React from 'react';
 import { Container, Accordion, Card } from 'react-bootstrap';
+import './MentalHygiene.css'
 
 const MentalHygiene = () => {
   return (
     <Container>
-      <h2>10 Tips for Mental &#38; Emotional Health</h2>
+      <h2>Mental Hygiene</h2>
+      <h1>10 Tips for Mental &#38; Emotional Health</h1>
       <p>
         Mental and emotional health is an essential part of your overall health
         and wellbeing. Managing emotions and maintaining emotional balance is an
@@ -19,7 +21,7 @@ const MentalHygiene = () => {
         health are:
       </p>
 
-      <Accordion defaultActiveKey="0">
+      <Accordion className="accordion-mental-hygiene" defaultActiveKey="0">
         <Card>
           <Accordion.Toggle as={Card.Header} eventKey="0">
             Take care of your physical health

@@ -3,28 +3,31 @@ import { Link, useHistory } from 'react-router-dom';
 import Logo from './mind_passage_logo.svg';
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
 import BackButton from './back-button.svg';
-import { useLocation } from 'react-router-dom';
-
+// import { useLocation } from 'react-router-dom'; TODO
 import './Toolbar.css';
 
 const Toolbar = ({ setOpen, open }) => {
-  const history = useHistory(),
-    location = useLocation();
-
-  console.log(location);
+  const history = useHistory();
+  // location = useLocation(); TODO
 
   return (
     <header className="header">
       <nav className="navigation">
         <div className="">
-          {!location.pathname === '/' && (
+          <img
+            className="back-button"
+            src={BackButton}
+            alt="Go Back"
+            onClick={() => history.goBack()}
+          />
+          {/* TODO {!location.pathname === '/' && (
             <img
               className="back-button"
               src={BackButton}
               alt="Go Back"
               onClick={() => history.goBack()}
             />
-          )}
+          )} */}
         </div>
 
         <div className="nav-logo-icon">
