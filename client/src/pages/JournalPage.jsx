@@ -3,7 +3,7 @@ import JournalEntry from './../components/JournalEntry';
 
 function JournalPage() {
   return (
-    <div>
+    <div id="journalpage">
       <JournalEntry />
     </div>
   );

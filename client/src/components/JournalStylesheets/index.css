@@ -96,7 +96,24 @@ input.form-control {
   justify-content: space-around;
   padding-top: 0.5rem;
 }
-//journal
+/* //journal */
 div #journal1 {
   width: fit-content;
+}
+#journalpage {
+  background-image: url(/static/media/Journal_Bkg.b4022148.svg);
+  background-size: cover;
+  height: 80vh;
+}
+#exampleForm.ControlMood1 {
+  opacity: 0.6;
+}
+
+.form-control #journalimage {
+  opacity: O.6;
+}
+input.form-control {
+  margin: 1rem 0;
+  border: 1px solid #edcaa7;
+  opacity: 0.6;
 }
