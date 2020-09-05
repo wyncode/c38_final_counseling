@@ -57,10 +57,10 @@ const TherapistSearch = () => {
   return (
     <main className="therapist-search-main">
       <h2>Find a Therapist</h2>
-      <h3>
+      <p id="therapist-search">
         Search for counselors near your area. For a more detailed search, click
         the arrow to display all filters.
-      </h3>
+      </p>
       <form className="form-contents" onSubmit={handleSearch}>
         <div className="search-filters-all">
           <div className="search-filter-fields">
@@ -236,7 +236,7 @@ const TherapistSearch = () => {
                   <Card.Text>{therapist.jobTitle}</Card.Text>
                   <Card.Text>{`${therapist.streetAddress} ${therapist.city} ${therapist.zipCode}`}</Card.Text>
                   <Card.Text>{`Call: ${therapist.phoneNumber}`}</Card.Text>
-                  <Link to={`/therapist/${therapist._id}`}>View Profile</Link>
+                  <Link id="view-profile" to={`/therapist/${therapist._id}`}>View Profile</Link>
                 </Card.Body>
               </Card>
             </div>

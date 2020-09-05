@@ -4,10 +4,24 @@
 }
 
 .therapist-search-main {
-    margin: 2rem 2rem;
+    margin: 2rem auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+p#therapist-search {
+    width: 80%;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+a#view-profile:hover {
+    color: #988282;
+}
+
+a#view-profile {
+    color: white;
 }
 
 /* Form Content */
@@ -51,7 +65,7 @@
 }
 
 .search-submit-button input:hover{
-    opacity: 0.7;
+    background-color: #988282;
 }
 
 /* Therapist Cards */
@@ -67,7 +81,7 @@
 }
 
 .card-title.h5 {
-    color: #EDCAA7;
+    color: white;
     text-transform: uppercase;
     font-weight: bold;
     margin: 0.7rem 0;
