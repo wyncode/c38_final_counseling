@@ -1,33 +1,51 @@
-.mainHome {
-  margin: 0 auto;
-  max-width: 50em;
-  line-height: 1.5;
-  padding: 4em 1em;
+.lacasita {
+  display: flex;
+  background-image: url('./HomePage.svg');
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: right bottom;
+}
+.contain {
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  background-position: left;
+  max-width: 600px;
+  /* max-width: 55em;
+  line-height: 1.5; */
+  padding: 4em 2em;
 }
 
 .quote {
-  background-position: center;
-
-  margin-top: 100px;
+  background-position: left;
+  justify-content: flex-start;
+  align-items: left;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #edcaa7;
+  margin-left: 145px;
+  margin-top: 80px;
+  max-width: 600px;
+  margin-bottom: 0px;
 }
-.grid {
+/* .grid {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 200pt;
-}
+} */
 
 .container {
-  margin-left: 215pt;
-  margin-top: 50pt;
+  margin-left: 75pt;
+  margin-top: 10pt;
 }
 
 .container2 {
   margin-right: 215pt;
-  margin-top: 50pt;
+  margin-top: 10pt;
 }
 
 .find {
-  margin-bottom: 15pt;
+  margin-bottom: 13pt;
+  width: 70%;
 }
 
 .find:hover {
@@ -35,7 +53,7 @@
 }
 
 .track {
-  margin-bottom: 15pt;
+  margin-bottom: 13pt;
 }
 
 .track:hover {

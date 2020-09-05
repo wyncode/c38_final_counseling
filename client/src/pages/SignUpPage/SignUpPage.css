@@ -1,16 +1,15 @@
 /* finishing tomorrow */
 
 .signupMain {
-  /* background-color: #edcaa7; */
-  background-image: url('./signup_bkg.svg');
+  background-color: #edcaa7;
   color: white;
-  background-repeat: no-repeat;
-  /* max-width: 50em; */
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  margin: 0;
-  /* max-width: 100%;
-  line-height: 1.5; */
-  /* padding: 4em 1em; */
+  border-radius: 25px;
+  max-width: 55em;
+  line-height: 1.5;
+  padding: 4em 2em;
   font-family: 'ITC Avant Garde Gothic Std', 'Helvetica', 'Arial', sans-serif;
 }

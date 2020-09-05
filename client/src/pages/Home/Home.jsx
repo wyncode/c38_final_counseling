@@ -88,34 +88,36 @@ function Home() {
         </p>
         <em>{quote}</em>
       </div>
-      <div className="grid">
-        <div className="container">
-          <div className="profile">
-            <Link to="/profile">
-              <img src={profile} alt="My Profile" />
-            </Link>
+      <div className="lacasita">
+        <div className="contain">
+          <div className="container">
+            <div className="profile">
+              <Link to="/profile">
+                <img src={profile} alt="My Profile" />
+              </Link>
+            </div>
+            <div className="journalButton">
+              <Link to="/calendar">
+                <img src={journalButton} alt="My Journal" />
+              </Link>
+            </div>
           </div>
-          <div className="journalButton">
-            <Link to="/calendar">
-              <img src={journalButton} alt="My Journal" />
-            </Link>
-          </div>
-        </div>
-        <div className="container2">
-          <div className="find">
-            <Link to="/therapist-search">
-              <img src={find} alt="Find My Therapist" />
-            </Link>
-          </div>
-          <div className="track">
-            <Link to="/unhealthy-thinking">
-              <img src={track} alt="Unhealthy Thinking" />
-            </Link>
-          </div>
-          <div className="mental">
-            <Link to="/mental-hygiene">
-              <img src={mental} alt="Mental Hygiene" />
-            </Link>
+          <div className="container2">
+            <div className="find">
+              <Link to="/therapist-search">
+                <img src={find} alt="Find My Therapist" />
+              </Link>
+            </div>
+            <div className="track">
+              <Link to="/unhealthy-thinking">
+                <img src={track} alt="Unhealthy Thinking" />
+              </Link>
+            </div>
+            <div className="mental">
+              <Link to="/mental-hygiene">
+                <img src={mental} alt="Mental Hygiene" />
+              </Link>
+            </div>
           </div>
         </div>
       </div>

@@ -5,9 +5,9 @@ import './App.css';
 //uncomment this once the private routes are back in use after the front end is finalized
 // import PrivateRoute from './components/PrivateRoute';
 import WelcomePage from './pages/WelcomePage/WelcomePage';
-import PasswordReset from './pages/PasswordReset';
+import PasswordReset from './pages/PasswordReset/PasswordReset';
 import SignUpPage from './pages/SignUpPage/SignUpPage';
-import PasswordUpdate from './pages/PasswordUpdate';
+import PasswordUpdate from './pages/PasswordUpdate/PasswordUpdate';
 import Login from './pages/Login/Login';
 import Profile from './pages/Profile';
 import UnhealthyThinking from './pages/UnhealthyThinking/UnhealthyThinking';
