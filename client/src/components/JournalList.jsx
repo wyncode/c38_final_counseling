@@ -1,23 +1,26 @@
 import React, { useEffect, useContext } from 'react';
-import { Container, Button, Form } from 'react-bootstrap';
+import { Container, Button } from 'react-bootstrap';
 import axios from 'axios';
 import { AppContext } from '../context/AppContext';
+import { useParams } from 'react-router-dom';
 import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
-import DeleteButton from './DeleteButton';
-import EditButton from './EditButton';
 import SearchbyMood from './SearchbyMood';
-import './JournalStylesheets/index.css'
-import './JournalStylesheets/index.css'
+import JournalCard from './JournalCards';
+import './JournalStylesheets/index.css';
+import './JournalStylesheets/index.css';
 
 const JournalList = () => {
   const { setJournalList } = useContext(AppContext);
-  const { setLoading } = useContext(AppContext);
+  const { setLoading, currentUser } = useContext(AppContext);
 
+  const { id } = useParams();
   useEffect(() => {
     axios
-      .get('/api/journal/:id', {
-        withCredentials: true
+      .get(`/api/journal/${id}`, {
+        headers: {
+          Authorization: `jwt ${JSON.parse(currentUser).tokens}`
+        }
       })
       .then((response) => {
         setJournalList(response.data);
@@ -38,21 +41,10 @@ const JournalList = () => {
 
           <Accordion.Collapse eventKey="0">
             <Card.Body>
-              <Card style={{ width: '18rem' }}>
-                <Card.Body>
-                  <Card.Title>Today was a good day</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">
-                    Happy
-                  </Card.Subtitle>
-                  <Card.Text>
-                    I had an amazing interview with a great company today.
-                  </Card.Text>
-                  <div className="delete-edit-buttons">
-                    <DeleteButton />
-                    <EditButton />
-                  </div>
-                </Card.Body>
-              </Card>
+              <JournalCard />
+              <JournalCard />
+              <JournalCard />
+              <Card style={{ width: '18rem' }}></Card>
             </Card.Body>
           </Accordion.Collapse>
         </Card>
