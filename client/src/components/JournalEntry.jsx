@@ -40,15 +40,15 @@ function JournalEntry() {
       });
   };
   return (
-    <Container>
+    <Container id="journalimage">
       <div id="journal1">
         <div>
           <h1>Journal</h1>
           <p>Make an entry to remember what lead you to feel this way today.</p>
         </div>
         <Form onSubmit={handleJournalSubmission}>
-          <Form.Group controlId="exampleForm.ControlInput1">
-            <Form.Label>Journal Title</Form.Label>
+          <Form.Group controlId="JournalSubmitionForm.ControlInput1">
+            <Form.Label></Form.Label>
             <Form.Control
               type="text"
               placeholder="Journal Title"
@@ -56,7 +56,7 @@ function JournalEntry() {
               onChange={handleChange}
             />
           </Form.Group>
-          <Form.Group controlId="exampleForm.ControlSelect1">
+          <Form.Group controlId="exampleForm.ControlMood1">
             <Form.Label>Mood</Form.Label>
             <Form.Control as="select" name="mood" onChange={handleChange}>
               <option value="happy">Happy</option>
@@ -67,7 +67,9 @@ function JournalEntry() {
               <option value="bored">Bored</option>
               <option value="indifferent">Indifferent</option>
             </Form.Control>
+
             <Form.Control
+              placeholder="Journal Body:"
               as="textarea"
               rows="3"
               name="body"
