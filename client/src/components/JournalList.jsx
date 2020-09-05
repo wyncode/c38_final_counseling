@@ -5,7 +5,6 @@ import { AppContext } from '../context/AppContext';
 import { useParams } from 'react-router-dom';
 import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
-import SearchbyMood from './SearchbyMood';
 import JournalCard from './JournalCards';
 import './JournalStylesheets/index.css';
 import './JournalStylesheets/index.css';
@@ -33,16 +32,13 @@ const JournalList = () => {
   return (
     <Container id="container">
       <Accordion>
-        <Card>
+        <Card style={{ 'background-color': '#988282' }}>
           <Accordion.Toggle as={Button} variant="link" eventKey="0">
             View Journal Entries
-            <SearchbyMood />
           </Accordion.Toggle>
 
           <Accordion.Collapse eventKey="0">
             <Card.Body>
-              <JournalCard />
-              <JournalCard />
               <JournalCard />
               <Card style={{ width: '18rem' }}></Card>
             </Card.Body>
