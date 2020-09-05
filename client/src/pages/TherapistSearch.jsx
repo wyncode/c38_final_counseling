@@ -229,7 +229,7 @@ const TherapistSearch = () => {
       <div className="therapist-search-cards">
         {therapists.map((therapist) => {
           return (
-            <div className="therapist-card" key={therapist._id}>
+            <div className="therapist-card" id="thereapist-card" key={therapist._id}>
               <Card>
                 <Card.Body>
                   <Card.Title>{therapist.name}</Card.Title>

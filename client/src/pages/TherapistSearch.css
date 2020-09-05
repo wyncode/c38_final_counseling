@@ -21,7 +21,7 @@ a#view-profile:hover {
 }
 
 a#view-profile {
-    color: white;
+    color: #EDCAA7;
 }
 
 /* Form Content */
@@ -32,7 +32,6 @@ a#view-profile {
 /* Search Filters */
 .search-filter-fields {
     margin: 0.2rem 1rem;
-    width: 18rem;
 }
 
 .search-filter-fields label {
@@ -40,7 +39,7 @@ a#view-profile {
 }
 
 .search-filter-fields select {
-    width: 8rem;
+    width: 5rem;
 }
 
 .search-filters-all {
@@ -75,13 +74,17 @@ a#view-profile {
     justify-content: center;
 }
 
+#thereapist-card .card-body{
+    background: white;
+}
+
 .therapist-card {
     width: 20rem;
     margin: 1rem;
 }
 
 .card-title.h5 {
-    color: white;
+    color: #EDCAA7;
     text-transform: uppercase;
     font-weight: bold;
     margin: 0.7rem 0;
