@@ -6,7 +6,8 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 3rem 3rem;
+
+  margin: 5rem 5rem;
 }
 
 #container {
@@ -19,27 +20,51 @@ h2 {
 .react-calendar {
   margin: 1rem 0;
   border: 2px solid #edcaa7;
-}
 
+  box-shadow: 2px 2px #767676;
+  border-radius: 25px;
+}
+div.react-calendar {
+  margin: 1rem 0;
+  border: 2px solid #767676;
+  box-shadow: 2px 4px #767676;
+  border-radius: 30px;
+
+}
 .react-calendar__navigation {
   border-bottom: 2px solid #edcaa7;
 }
 
 .react-calendar__month-view__weekdays__weekday {
   text-align: center;
+  background-color: #edcaa7;
+  color: #767676;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #edcaa7;
+ }
+/* calender week days css */
+abbr[data-original-title],
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+  text-decoration: none;
+  cursor: pointer;
   color: #edcaa7;
   padding: 0.5rem 0;
   border-bottom: 1px solid #edcaa7;
-}
 
+}
 .react-calendar button {
-  background-color: white;
+
+  background-color: #767676;
+
   border: none;
   color: #edcaa7;
 }
 
 .react-calendar button:hover {
-  color: black;
+
+  background-color: #edcaa7;
+
 }
 
 .react-calendar__navigation__label__labelText.react-calendar__navigation__label__labelText--from {
@@ -52,16 +77,33 @@ h2 {
 .react-calendar__navigation__arrow.react-calendar__navigation__next2-button {
   padding: 0.5rem;
   color: #edcaa7;
-}
 
+  border-radius: 25px;
+}
+.react-calendar__navigation__arrow.react-calendar__navigation__next2-button,
+.react-calendar__navigation__arrow.react-calendar__navigation__prev2-button {
+  display: none;
+  border-radius: 25px;
+
+}
 button {
   padding: 1rem 0;
   border: none;
 }
 
+/*  react calebdar bottom css tiles*/
+react-calendar button {
+  background-color: white;
+  border: none;
+  color: #edcaa7;
+  border-radius: 25px;
+}
+
+
 /* Accordion */
 .card {
   border: 1px solid #edcaa7;
+
 }
 .card-body {
   outline-color: #72706d;
@@ -73,12 +115,15 @@ button {
   background: white;
   margin-bottom: 1rem;
   box-shadow: 5px 10px #72706d;
+
 }
 
 .btn.btn-link {
   color: #edcaa7;
   padding-top: 1rem;
+
   box-shadow: 5px 10px;
+
 }
 
 .btn.btn-link:hover {
@@ -95,8 +140,10 @@ input.form-control {
   display: flex;
   justify-content: space-around;
   padding-top: 0.5rem;
+
 }
 //journal
 div #journal1 {
   width: fit-content;
+
 }
