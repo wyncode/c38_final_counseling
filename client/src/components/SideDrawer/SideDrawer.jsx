@@ -32,7 +32,7 @@ const SideDrawer = ({ setOpen, open }) => {
                     </Nav.Item>
 
                     <Nav.Item as="li">
-                        <Link to="/profile" onClick={() => setOpen(!open)}>Your Profile</Link>
+                        <Link to="/account" onClick={() => setOpen(!open)}>Your Account</Link>
                     </Nav.Item></> : null}
 
             </Nav>

@@ -2,7 +2,7 @@
 
 Welcome to Mind Passage. Our goal is to provide users with a place to find theraphists, and mental health tips. 
 
---
+---
 
 ## Dependencies
 
@@ -14,6 +14,7 @@ Welcome to Mind Passage. Our goal is to provide users with a place to find thera
 | SweetAlert | `yarn add sweetalert` |
 | React Scroll | `yarn add react-scroll` |
 | Moment | `yarn add moment` |
+| Cookie-parser | `yarn add cookie-parser` |
 
 
 ## Setup
@@ -41,14 +42,14 @@ NOTE: Heroku specifically runs `npm start`, so don't remove that from your packa
 - `heroku config:set MONGODB_URL=<insertYourAtlasDbUri>`
 - `git push heroku master`
 
---
+---
 
 #### Authors
-Diana Canelon
-Jorge Silva
-Natalia Molina
-Angelica Garzon
+- Diana Canelon
+- Jorge Silva
+- Natalia Molina
+- Angelica Garzon
 
---
+---
 
 
