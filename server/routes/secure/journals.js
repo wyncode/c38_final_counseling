@@ -1,8 +1,7 @@
 const router = require('express').Router(),
   jwt = require('jsonwebtoken'),
   mongoose = require('mongoose'),
-  Journal = require('../../db/models/Journal'),
-  jwt = require('jsonwebtoken');
+  Journal = require('../../db/models/Journal');
 
 // ***********************************************//
 // Create a journal
