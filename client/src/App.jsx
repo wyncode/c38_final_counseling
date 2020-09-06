@@ -43,7 +43,7 @@ function App() {
 
             <Route exact path="/password-reset" component={PasswordReset} />
             <Route exact path="/signup" component={SignUpPage} />
-            <Route exact path="/password-update" component={PasswordUpdate} />
+            <Route exact path="/update-password" component={PasswordUpdate} />
             <Route exact path="/login" component={Login} />
             {/* Gotta make these routes private once the front end is finalized */}
             <Route exact path="/home" component={Home} />

@@ -1,5 +1,4 @@
 const mongoose = require('mongoose'),
-  moment = require('moment'),
   validator = require('validator'),
   bcrypt = require('bcryptjs'),
   jwt = require('jsonwebtoken');

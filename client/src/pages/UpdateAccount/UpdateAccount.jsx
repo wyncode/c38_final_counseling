@@ -11,8 +11,6 @@ import './UpdateAccount.css';
 const UpdateAccount = ({ history }) => {
   const [formData, setFormData] = useState(null);
   const { currentUser, setCurrentUser } = useContext(AppContext);
-  //console.log('user', currentUser.id);
-  //const { id } = currentUser;
 
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
@@ -23,27 +21,13 @@ const UpdateAccount = ({ history }) => {
     fetch('/api/users/me', {
       method: 'PATCH',
       headers: {
-        Accept: 'application/json'
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
       },
-      data: formData
+      body: JSON.stringify(formData)
     })
       .then((data) => console.log('Updated!!!', data))
       .catch((e) => console.log(e));
-    // axios
-    //   .patch('/api/users/me', {
-    //     headers: {
-    //       Authorization: `jwt ${
-    //         JSON.parse(sessionStorage.getItem('user')).tokens[0].token
-    //       }`
-    //     }
-    //   })
-    //   .then((response) => {
-    //     console.log(response);
-    //     sessionStorage.setItem('user', response.data);
-    //     setCurrentUser(response.data);
-    //     history.push('/home');
-    //   })
-    //   .catch((error) => swal('Error', 'Please check the inputs', 'warning'));
   };
 
   return (

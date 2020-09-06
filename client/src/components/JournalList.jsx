@@ -1,33 +1,20 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Button } from 'react-bootstrap';
 import axios from 'axios';
-import { AppContext } from '../context/AppContext';
-import { useParams } from 'react-router-dom';
 import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import JournalCard from './JournalCards';
 import './JournalStylesheets/index.css';
-import './JournalStylesheets/index.css';
 
 const JournalList = () => {
-  // const { setJournalList } = useContext(AppContext);
-  // const { setLoading, currentUser } = useContext(AppContext);
+  const [journalEntries, setJournalEntries] = useState([]);
 
-  // const { id } = useParams();
-  // useEffect(() => {
-  //   axios
-  //     .get(`/api/journal/${id}`, {
-  //       headers: {
-  //         Authorization: `jwt ${JSON.parse(currentUser).tokens}`
-  //       }
-  //     })
-  //     .then((response) => {
-  //       setJournalList(response.data);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // }, []);
+  useEffect(() => {
+    axios.get('/api/journals', { withCredentials: true }).then((res) => {
+      const { journals } = res.data;
+      setJournalEntries(journals);
+    });
+  }, []);
 
   return (
     <Container id="container">
@@ -39,6 +26,9 @@ const JournalList = () => {
 
           <Accordion.Collapse eventKey="0">
             <Card.Body>
+              {journalEntries.map((entry) => (
+                <JournalCard key={entry._id} {...entry} />
+              ))}
               <JournalCard />
               <Card style={{ width: '18rem' }}></Card>
             </Card.Body>

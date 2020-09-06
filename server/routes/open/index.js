@@ -1,5 +1,5 @@
 const router = require('express').Router(),
-  { sendWelcomeEmail } = require('../../emails/index'),
+  { sendWelcomeEmail, forgotPasswordEmail } = require('../../emails/index'),
   jwt = require('jsonwebtoken'),
   User = require('../../db/models/User');
 
@@ -42,9 +42,9 @@ router.post('/api/users/login', async (req, res) => {
     res.status(400).json({ error: e.toString() });
   }
 });
+
 // password reset request
 router.get('/api/password', async (req, res) => {
-  console.log(req.query);
   try {
     const { email } = req.query,
       user = await User.findOne({ email });
@@ -57,9 +57,11 @@ router.get('/api/password', async (req, res) => {
         expiresIn: '10m'
       }
     );
+
     forgotPasswordEmail(email, token);
     res.json({ message: 'reset password email sent' });
   } catch (error) {
+    console.log('hey', error.message);
     res.status(500).json({ error: error.toString() });
   }
 });
@@ -77,7 +79,7 @@ router.get('/api/password/:token', (req, res) => {
       maxAge: 600000,
       sameSite: 'Strict'
     });
-    res.redirect(process.env.URL + '/update-password');
+    res.redirect(process.env.APP_URL + '/update-password');
   } catch (error) {
     res.status(401).json({ error: error.toString() });
   }

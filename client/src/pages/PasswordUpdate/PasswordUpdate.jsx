@@ -22,7 +22,7 @@ const PasswordUpdate = ({ history }) => {
         { password: password.password },
         { withCredentials: true }
       )
-      .then((res) => {
+      .then(() => {
         //add alert
         history.push('/login');
       })
