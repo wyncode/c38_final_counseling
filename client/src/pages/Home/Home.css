@@ -14,6 +14,15 @@
   padding: 4em 2em;
 }
 
+.stayinspired {
+  color: white;
+  background-color: #bea2a2;
+  padding: 0.5rem 2rem;
+  border-radius: 2.5rem;
+  margin: 0.5rem 0;
+  width: 12rem;
+  border: 1px solid white;
+}
 .quote {
   background-position: left;
   justify-content: flex-start;

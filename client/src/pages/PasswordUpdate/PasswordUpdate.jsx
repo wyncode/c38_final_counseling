@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 import './PasswordUpdate.css';
+import swal from 'sweetalert';
 
 const PasswordUpdate = ({ history }) => {
   const [password, setPassword] = useState(null);
@@ -23,10 +24,10 @@ const PasswordUpdate = ({ history }) => {
         { withCredentials: true }
       )
       .then(() => {
-        //add alert
+        swal('Password Updated');
         history.push('/login');
       })
-      .catch((error) => console.log(error));
+      .catch((error) => swal('Passwords do not match'));
   };
   return (
     <Container className="mainPU">
