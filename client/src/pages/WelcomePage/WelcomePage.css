@@ -56,8 +56,7 @@
   margin-top: 50pt;
 }
 .headerdescription {
-  font-family: ITC Avant Garde Gothic Std;
-  font-weight: bold;
+  font-family: 'ITC Avant Garde Gothic Std Bold', sans-serif;
   color: #edcaa7;
   width: 400px;
   align-items: flex-start;
