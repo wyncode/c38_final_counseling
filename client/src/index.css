@@ -3,12 +3,18 @@
   padding: 0;
 }
 
-
 html {
   height: 100%;
 }
 
 body {
   height: 100%;
+}
 
+* {
+  font-family: 'Avenir-Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Avenir-Medium'),
+    url('../../fonts/Avenir-Medium.woff') format('woff');
 }
