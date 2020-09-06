@@ -27,7 +27,11 @@ function DeleteButton() {
       });
   };
   return (
-    <Button onClick={handleJournalDelete} variant="outline-danger">
+    <Button
+      style={{ 'border-color': '#988282;', color: '#988282', hover: '#988282' }}
+      onClick={handleJournalDelete}
+      variant="outline-danger"
+    >
       Delete Entry
     </Button>
   );

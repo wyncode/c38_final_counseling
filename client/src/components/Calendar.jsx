@@ -4,18 +4,13 @@ import swal from 'sweetalert';
 import JournalList from './JournalList';
 import moment from 'moment';
 
-
 const ReactCalendar = ({ history }) => {
   const [value, setValue] = useState(new Date());
 
   const handleDayClick = (day) => {
     swal(`${moment(day).format('MMM Do, YYYY')}`, {
       buttons: {
-        new: ' Make a journal entry',
-        view: {
-          text: 'View Journal Entry',
-          value: 'Journal Entry'
-        }
+        new: ' Make a journal entry'
       }
     })
       .then((value) => {
@@ -35,7 +30,10 @@ const ReactCalendar = ({ history }) => {
   return (
     <div className="calendar-main">
       <h2>Journal</h2>
-      <p>Select a past day to display previous entries. To make a journal entry, select the current day. </p>
+      <p>
+        Select a past day to display previous entries. To make a journal entry,
+        select the current day.{' '}
+      </p>
       <Calendar onChange={setValue} value={value} onClickDay={handleDayClick} />
       <JournalList />
     </div>
