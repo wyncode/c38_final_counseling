@@ -1,5 +1,6 @@
 const router = require('express').Router(),
   { sendWelcomeEmail } = require('../../emails/index'),
+  jwt = require('jsonwebtoken'),
   User = require('../../db/models/User');
 
 // Create User
@@ -43,6 +44,7 @@ router.post('/api/users/login', async (req, res) => {
 });
 // password reset request
 router.get('/api/password', async (req, res) => {
+  console.log(req.query);
   try {
     const { email } = req.query,
       user = await User.findOne({ email });

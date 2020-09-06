@@ -92,7 +92,7 @@ function Home() {
         <div className="contain">
           <div className="container">
             <div className="profile">
-              <Link to="/profile">
+              <Link to="/account">
                 <img src={profile} alt="My Profile" />
               </Link>
             </div>

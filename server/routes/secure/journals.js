@@ -1,12 +1,13 @@
 const router = require('express').Router(),
   mongoose = require('mongoose'),
-  Journal = require('../../db/models/Journal');
+  Journal = require('../../db/models/Journal'),
+  jwt = require('jsonwebtoken');
 
 // ***********************************************//
 // Create a journal
 // ***********************************************//
 router.post('/api/journal', async (req, res) => {
-  console.log(req.user);
+  console.log(req.body);
   const { title, mood, body } = req.body;
   try {
     const journal = new Journal({

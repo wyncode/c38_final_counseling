@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Button, Form } from 'react-bootstrap';
 import axios from 'axios';
+import swal from 'sweetalert';
 import './PasswordReset.css';
 
 const PasswordReset = () => {
@@ -15,7 +16,7 @@ const PasswordReset = () => {
         console.log(res);
         form.reset();
       })
-      .catch((error) => console.log(error));
+      .catch((error) => swal('Check your email to reset your password!'));
   };
 
   return (

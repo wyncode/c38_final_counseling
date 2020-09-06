@@ -21,6 +21,7 @@ const SignUpPage = ({ history }) => {
       .then((response) => {
         sessionStorage.setItem('user', response.data);
         setCurrentUser(response.data);
+        swal('Welcome to Mind Passage');
         history.push('/home');
       })
       .catch((error) => swal('Error', 'Please check the inputs', 'warning'));
