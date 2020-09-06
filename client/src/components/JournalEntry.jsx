@@ -24,9 +24,7 @@ function JournalEntry() {
 
     axios
       .post('/api/journal', journalData, {
-        headers: {
-          Authorization: `jwt ${JSON.parse(currentUser).tokens[0].token}`
-        }
+        withCredentials: true
       })
       .then((res) => {
         console.log(res);

@@ -18,28 +18,27 @@ router.get('/api/users/:id', async (req, res) => {
 // ***********************************************//
 
 router.patch('/api/users/me', async (req, res) => {
-  const { name, email, password } = req.body;
+  //const { name, email, password } = req.body;
   console.log('ReqUser: ', req.user);
-  let user;
+
   try {
-    user = await User.findByIdAndUpdate(req.user._id, req.body, {
+    const user = await User.findByIdAndUpdate(req.user._id, req.body, {
       new: true,
       runValidators: true
     });
+    res.status(200).json({ user });
   } catch (err) {
-    console.log('Something went wrong. Could not update user', 500);
-    return next(err);
+    console.log('Something went wrong. Could not update user', err);
   }
-  user.name = name;
-  user.email = email;
-  uesr.password = password;
-  try {
-    await user.save();
-  } catch (err) {
-    console.log('Something went wrong. Could not update user', 500);
-    return next(err);
-  }
-  res.status(200).json({ user: user.toObject({ getters: true }) });
+  // user.name = name;
+  // user.email = email;
+  // uesr.password = password;
+  // try {
+  //   await user.save();
+  // } catch (err) {
+  //   console.log('Something went wrong. Could not update user', 500);
+  //   return next(err);
+  // }
 });
 
 //   const updates = Object.keys(req.body);

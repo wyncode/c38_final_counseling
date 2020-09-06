@@ -70,7 +70,7 @@ const TherapistSearch = () => {
               id="city"
               onChange={(e) => setCity(e.target.value)}
             >
-              <option disabled selected value />
+              <option value="" />
               <option value="Alexandria, VA">Alexandria, VA</option>
               <option value="Arlington, VA">Arlington, VA</option>
               <option value="Atlanta, GA">Atlanta, GA</option>
@@ -115,7 +115,7 @@ const TherapistSearch = () => {
               id="race"
               onChange={(e) => setRace(e.target.value)}
             >
-              <option disabled selected value />
+              <option value="" />
               <option value="asian">Asian</option>
               <option value="african-american">African-American</option>
               <option value="hispanic">Hispanic</option>
@@ -139,7 +139,7 @@ const TherapistSearch = () => {
               id="gender"
               onChange={(e) => setGender(e.target.value)}
             >
-              <option disabled selected value />
+              <option value="" />
               <option value="male">Male</option>
               <option value="female">Female</option>
               <option value="nonbinary">NonBinary</option>
@@ -153,7 +153,7 @@ const TherapistSearch = () => {
               id="specialty"
               onChange={(e) => setSpecialty(e.target.value)}
             >
-              <option disabled selected value />
+              <option value="" />
               <option value="Aggression and Violence">
                 Aggression and Violence
               </option>
@@ -207,7 +207,7 @@ const TherapistSearch = () => {
               id="modality"
               onChange={(e) => setModality(e.target.value)}
             >
-              <option disabled selected value />
+              <option value="" />
               <option value="individual">Individual</option>
               <option value="children">Children</option>
               <option value="couple">Couple</option>

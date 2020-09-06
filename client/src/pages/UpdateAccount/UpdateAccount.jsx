@@ -21,11 +21,11 @@ const UpdateAccount = ({ history }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     fetch('/api/users/me', {
-      method: 'patch',
-      data: formData,
+      method: 'PATCH',
       headers: {
         Accept: 'application/json'
-      }
+      },
+      data: formData
     })
       .then((data) => console.log('Updated!!!', data))
       .catch((e) => console.log(e));
@@ -86,7 +86,11 @@ const UpdateAccount = ({ history }) => {
           </Button>
         </Form.Group>
         <Form.Group className="d-flex justify-content-center">
-          <Button type="cancel" id="cancel" Link to="/home">
+          <Button
+            type="cancel"
+            id="cancel"
+            onClick={() => history.push('/home')}
+          >
             Cancel
           </Button>
         </Form.Group>

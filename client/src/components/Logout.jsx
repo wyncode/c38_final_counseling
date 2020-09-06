@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 import { Nav } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import { AppContext } from '../context/AppContext';
@@ -10,20 +10,13 @@ const Logout = ({ setOpen }) => {
   const { setCurrentUser, currentUser } = useContext(AppContext);
 
   const handleSignOut = async () => {
-    fetch('/api/users/logout', {
-      method: 'POST',
-      credentials: 'same-origin',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-        Authorization: `jwt ${JSON.parse(currentUser).tokens[0].token}` // TODO this is a hack, shouldn't be necessary
-      }
-    })
-      .then((res) => res.json())
+    axios
+      .post('/api/users/logout', { withCredentials: true })
       .then((res) => {
+        console.log(res.data);
         setOpen(false);
         setCurrentUser(null);
-        sessionStorage.removeItem('user')
+        sessionStorage.removeItem('user');
         history.push('/login');
       })
       .catch((error) => {
