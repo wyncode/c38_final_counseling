@@ -12,4 +12,37 @@
   line-height: 1.5;
   padding: 4em 2em;
   font-family: 'ITC Avant Garde Gothic Std', 'Helvetica', 'Arial', sans-serif;
+  margin: 3rem auto;
+}
+
+.signupMain.container input {
+  margin-top: 0;
+}
+
+#create-account.btn.btn-primary {
+  color: #EDCAA7;
+  background-color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 2.5rem;
+  margin: 0.5rem 0;
+  border: none;
+}
+
+#create-account.btn.btn-primary:hover {
+color: white;
+background-color: #988282;
+}
+
+@media only screen and (max-device-width: 375px) {
+  .signupMain {
+    margin: 3rem auto;
+    width: 90%;
+  }
+}
+
+@media only screen and (max-device-width: 414px) {
+  .signupMain {
+    margin: 3rem auto;
+    width: 90%;
+  }
 }

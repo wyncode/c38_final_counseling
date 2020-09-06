@@ -57,10 +57,10 @@ const TherapistSearch = () => {
   return (
     <main className="therapist-search-main">
       <h2>Find a Therapist</h2>
-      <h3>
+      <p id="therapist-search">
         Search for counselors near your area. For a more detailed search, click
         the arrow to display all filters.
-      </h3>
+      </p>
       <form className="form-contents" onSubmit={handleSearch}>
         <div className="search-filters-all">
           <div className="search-filter-fields">
@@ -229,14 +229,14 @@ const TherapistSearch = () => {
       <div className="therapist-search-cards">
         {therapists.map((therapist) => {
           return (
-            <div className="therapist-card" key={therapist._id}>
+            <div className="therapist-card" id="thereapist-card" key={therapist._id}>
               <Card>
                 <Card.Body>
                   <Card.Title>{therapist.name}</Card.Title>
                   <Card.Text>{therapist.jobTitle}</Card.Text>
                   <Card.Text>{`${therapist.streetAddress} ${therapist.city} ${therapist.zipCode}`}</Card.Text>
                   <Card.Text>{`Call: ${therapist.phoneNumber}`}</Card.Text>
-                  <Link to={`/therapist/${therapist._id}`}>View Profile</Link>
+                  <Link id="view-profile" to={`/therapist/${therapist._id}`}>View Profile</Link>
                 </Card.Body>
               </Card>
             </div>

@@ -71,7 +71,7 @@ const SignUpPage = ({ history }) => {
           />
         </Form.Group>
         <Form.Group className="d-flex justify-content-center">
-          <Button type="submit">Create Account</Button>
+          <Button id="create-account" type="submit">Create Account</Button>
         </Form.Group>
       </Form>
       <Link className="mt-4" to="/login">
