@@ -1,9 +1,10 @@
 import React from 'react';
 import { Container, Accordion, Card } from 'react-bootstrap';
+import './MentalHygiene.css';
 
 const MentalHygiene = () => {
   return (
-    <Container>
+    <Container id="mental-hygiene-main">
       <h2>10 Tips for Mental &#38; Emotional Health</h2>
       <p>
         Mental and emotional health is an essential part of your overall health

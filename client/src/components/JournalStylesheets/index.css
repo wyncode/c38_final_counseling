@@ -29,7 +29,6 @@ div.react-calendar {
   border: 2px solid #767676;
   box-shadow: 2px 4px #767676;
   border-radius: 30px;
-
 }
 .react-calendar__navigation {
   border-bottom: 2px solid #edcaa7;
@@ -41,30 +40,26 @@ div.react-calendar {
   color: #767676;
   padding: 0.5rem 0;
   border-bottom: 1px solid #edcaa7;
- }
+}
 /* calender week days css */
 abbr[data-original-title],
 abbr[title] {
   -webkit-text-decoration: underline dotted;
   text-decoration: none;
   cursor: pointer;
-  color: #edcaa7;
+  color: #988282;
   padding: 0.5rem 0;
-  border-bottom: 1px solid #edcaa7;
-
+  border-bottom: 1px solid #988282;
 }
 .react-calendar button {
-
-  background-color: #767676;
+  background-color: #988282;
 
   border: none;
   color: #edcaa7;
 }
 
 .react-calendar button:hover {
-
-  background-color: #edcaa7;
-
+  background-color: #988282;
 }
 
 .react-calendar__navigation__label__labelText.react-calendar__navigation__label__labelText--from {
@@ -77,14 +72,11 @@ abbr[title] {
 .react-calendar__navigation__arrow.react-calendar__navigation__next2-button {
   padding: 0.5rem;
   color: #edcaa7;
-
-  border-radius: 25px;
 }
 .react-calendar__navigation__arrow.react-calendar__navigation__next2-button,
 .react-calendar__navigation__arrow.react-calendar__navigation__prev2-button {
   display: none;
   border-radius: 25px;
-
 }
 button {
   padding: 1rem 0;
@@ -99,11 +91,9 @@ react-calendar button {
   border-radius: 25px;
 }
 
-
 /* Accordion */
 .card {
   border: 1px solid #edcaa7;
-
 }
 .card-body {
   outline-color: #72706d;
@@ -114,8 +104,7 @@ react-calendar button {
   border-radius: 25px;
   background: white;
   margin-bottom: 1rem;
-  box-shadow: 5px 10px #72706d;
-
+  box-shadow: 2px 4px #72706d;
 }
 
 .btn.btn-link {
@@ -123,7 +112,6 @@ react-calendar button {
   padding-top: 1rem;
 
   box-shadow: 5px 10px;
-
 }
 
 .btn.btn-link:hover {
@@ -140,17 +128,26 @@ input.form-control {
   display: flex;
   justify-content: space-around;
   padding-top: 0.5rem;
-
 }
 /* //journal */
 div #journal1 {
   width: fit-content;
-
+  opacity: 0.6;
+  border: 1px solid lightslategray;
+  border-radius: 25px;
+  box-shadow: 2px 4px #72706d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 #journalpage {
-  background-image: url(/static/media/Journal_Bkg.b4022148.svg);
-  background-size: cover;
+  background-image: url('./Journal_Bkg.svg');
+  background-size: 40%;
   height: 80vh;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  outline-color: lightslategray;
 }
 #exampleForm.ControlMood1 {
   opacity: 0.6;
@@ -163,4 +160,26 @@ input.form-control {
   margin: 1rem 0;
   border: 1px solid #edcaa7;
   opacity: 0.6;
+}
+
+div #journaltitle {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  margin-left: 140px;
+}
+
+div #journal1 {
+  width: -moz-fit-content;
+  width: fit-content;
+  opacity: 0.6;
+  border: 1px solid lightslategray;
+  border-radius: 25px;
+  box-shadow: 2px 4px #72706d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #edcaa7;
+  margin-top: 72px;
 }

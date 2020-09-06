@@ -24,9 +24,7 @@ function JournalEntry() {
 
     axios
       .post('/api/journal', journalData, {
-        headers: {
-          Authorization: `jwt ${JSON.parse(currentUser).tokens[0].token}`
-        }
+        withCredentials: true
       })
       .then((res) => {
         console.log(res);
@@ -43,8 +41,12 @@ function JournalEntry() {
     <Container id="journalimage">
       <div id="journal1">
         <div>
-          <h1>Journal</h1>
-          <p>Make an entry to remember what lead you to feel this way today.</p>
+          <h1 id="journaltitle" style={{ color: '#988282' }}>
+            Journal
+          </h1>
+          <blockquote>
+            Make an entry to remember what lead you to feel this way today.
+          </blockquote>
         </div>
         <Form onSubmit={handleJournalSubmission}>
           <Form.Group controlId="JournalSubmitionForm.ControlInput1">
@@ -56,10 +58,13 @@ function JournalEntry() {
               onChange={handleChange}
             />
           </Form.Group>
-          <Form.Group controlId="exampleForm.ControlMood1">
-            <Form.Label>Mood</Form.Label>
+          <Form.Group
+            style={{ opacity: '.6' }}
+            controlId="exampleForm.ControlMood1"
+          >
+            <Form.Label></Form.Label>
             <Form.Control as="select" name="mood" onChange={handleChange}>
-              <option value="happy">Happy</option>
+              <option value="happy">Mood:</option>
               <option value="sad">Sad</option>
               <option value="grumpy">Grumpy</option>
               <option value="motivated">Motivated</option>
@@ -76,7 +81,15 @@ function JournalEntry() {
               onChange={handleChange}
             />
           </Form.Group>
-          <Button variant="primary" type="submit">
+          <Button
+            style={{
+              'margin-left': '200px',
+              background: '#988282',
+              border: 'none'
+            }}
+            variant="primary"
+            type="submit"
+          >
             Save your Entry!
           </Button>
         </Form>

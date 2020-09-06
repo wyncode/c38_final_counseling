@@ -1,0 +1,23 @@
+#mental-hygiene-main {
+    margin: 3rem auto;
+}
+
+#mental-hygiene-main h2{
+    text-align: center;
+}
+
+#mental-hygiene-main .card-header{
+    background: #EDCAA7;
+    color: white;
+    outline-color: #988282;
+}
+
+#mental-hygiene-main .card-header:hover{
+    background: #988282;
+    color: white;
+}
+
+#mental-hygiene-main .card-body{
+    background: white;
+}
+

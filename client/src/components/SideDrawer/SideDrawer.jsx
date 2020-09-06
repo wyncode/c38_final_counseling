@@ -22,13 +22,14 @@ const SideDrawer = ({ setOpen, open }) => {
                         </Nav.Item></>}
 
 
-                <Nav.Item as="li">
-                    <Link to="/therapist-search" onClick={() => setOpen(!open)}>Find a Therapist</Link>
-                </Nav.Item>
+                {currentUser ? <>
+                    <Nav.Item as="li">
+                        <Link to="/therapist-search" onClick={() => setOpen(!open)}>Find a Therapist</Link>
+                    </Nav.Item>
 
-                {currentUser ? <><Nav.Item as="li">
-                    <Link to="/mental-hygiene" onClick={() => setOpen(!open)}>Mental Hygiene</Link>
-                </Nav.Item>
+                    <Nav.Item as="li">
+                        <Link to="/mental-hygiene" onClick={() => setOpen(!open)}>Mental Hygiene</Link>
+                    </Nav.Item>
 
                     <Nav.Item as="li">
                         <Link to="/profile" onClick={() => setOpen(!open)}>Your Profile</Link>

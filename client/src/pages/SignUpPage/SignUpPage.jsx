@@ -19,7 +19,7 @@ const SignUpPage = ({ history }) => {
     axios
       .post('/api/users/', formData)
       .then((response) => {
-        sessionStorage.setItem('user', response.data);
+        sessionStorage.setItem('user', JSON.stringify(response.data));
         setCurrentUser(response.data);
         swal('Welcome to Mind Passage');
         history.push('/home');
@@ -72,7 +72,7 @@ const SignUpPage = ({ history }) => {
           />
         </Form.Group>
         <Form.Group className="d-flex justify-content-center">
-          <Button type="submit">Create Account</Button>
+          <Button id="create-account" type="submit">Create Account</Button>
         </Form.Group>
       </Form>
       <Link className="mt-4" to="/login">

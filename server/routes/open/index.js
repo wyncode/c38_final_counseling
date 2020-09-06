@@ -49,6 +49,7 @@ router.get('/api/password', async (req, res) => {
     const { email } = req.query,
       user = await User.findOne({ email });
     if (!user) throw new Error("account doesn't exist");
+
     const token = jwt.sign(
       { _id: user._id.toString(), name: user.name },
       process.env.JWT_SECRET,
@@ -56,7 +57,7 @@ router.get('/api/password', async (req, res) => {
         expiresIn: '10m'
       }
     );
-    //  forgotPasswordEmail(email, token);
+    forgotPasswordEmail(email, token);
     res.json({ message: 'reset password email sent' });
   } catch (error) {
     res.status(500).json({ error: error.toString() });
