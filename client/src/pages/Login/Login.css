@@ -1,7 +1,8 @@
-/* finishing tomorrow */
-
-.loginMain {
+.loginMain.container {
+  width: 90%;
   background-color: #edcaa7;
+  background-position: cover;
+  border: 0px;
   color: white;
   display: flex;
   flex-direction: column;
@@ -15,28 +16,6 @@
   margin: 2rem auto;
 }
 
-h1.mb-4 {
-  color: white;
-}
-
-.loginMain.container input {
-  margin-top: 0;
-}
-
-#login.btn.btn-primary {
-    color: #EDCAA7;
-    background-color: white;
-    padding: 0.5rem 2rem;
-    border-radius: 2.5rem;
-    margin: 0.5rem 0;
-    border: none;
-}
-
-#login.btn.btn-primary:hover {
-  color: white;
-  background-color: #988282;
-}
-
 a {
   color: #988282;
 }
@@ -44,6 +23,62 @@ a {
 a:hover {
   color: #988282;
   text-decoration: underline;
+}
+
+.loginMain.container input {
+  margin-top: 0;
+}
+
+h1.mb-4 {
+  color: white;
+}
+
+#login.btn.btn-primary {
+  color: #EDCAA7;
+  background-color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 2.5rem;
+  margin: 0.5rem 0;
+  border: none;
+}
+
+
+#login.btn.btn-primary:hover {
+color: white;
+background-color: #988282;
+}
+
+.swal-button {
+  background-color: #edcaa7;
+  color: white;
+}
+
+.swal-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15pt;
+  font-weight: bold;
+  color: #edcaa7;
+}
+
+.swal-modal {
+  border-radius: 25px;
+}
+
+.swal-button--confirm {
+  background-color: #edcaa7;
+}
+
+.swal-button--confirm:hover {
+  color: white;
+  background-color: #988282;
+  border-color: white;
+}
+
+@media only screen and (max-device-width: 375px) {
+  .loginMain {
+    margin: 3rem auto;
+    width: 90%;
+  }
 }
 
 

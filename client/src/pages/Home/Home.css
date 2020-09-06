@@ -11,8 +11,6 @@
   margin: 0px;
   background-position: left;
   max-width: 600px;
-  /* max-width: 55em;
-  line-height: 1.5; */
   padding: 4em 2em;
 }
 
@@ -27,11 +25,6 @@
   max-width: 600px;
   margin-bottom: 0px;
 }
-/* .grid {
-  display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 200pt;
-} */
 
 .container {
   margin-left: 75pt;
@@ -76,7 +69,6 @@
   opacity: 0.8;
 }
 
-/* need help with this tomorrow */
 .cory {
   background-color: #edcaa7;
   display: flex;

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Container, Form, Button } from 'react-bootstrap';
 import { AppContext } from '../../context/AppContext';
 import axios from 'axios';
+import swal from 'sweetalert';
 import './Login.css';
 
 const Login = ({ history }) => {
@@ -19,10 +20,10 @@ const Login = ({ history }) => {
       const response = await axios.post('/api/users/login', formData);
       setCurrentUser(response.data);
       sessionStorage.setItem('user', JSON.stringify(response.data));
-
+      swal('Welcome Back!');
       history.push('/home');
     } catch (error) {
-      console.log('Login Error: ', error);
+      swal('Oops!', 'Something went wrong');
     }
   };
 
