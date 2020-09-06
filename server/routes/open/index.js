@@ -61,7 +61,6 @@ router.get('/api/password', async (req, res) => {
     forgotPasswordEmail(email, token);
     res.json({ message: 'reset password email sent' });
   } catch (error) {
-    console.log('hey', error.message);
     res.status(500).json({ error: error.toString() });
   }
 });

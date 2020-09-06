@@ -3,7 +3,6 @@ const router = require('express').Router(),
   Journal = require('../../db/models/Journal');
 
 router.get('/api/journals', async (req, res) => {
-  console.log('hitting this route!!!');
   try {
     const { user } = req;
 
@@ -11,7 +10,6 @@ router.get('/api/journals', async (req, res) => {
 
     res.send({ journals });
   } catch (err) {
-    console.log('in my catch', err.message);
     res.status(500).send({ error: err.toString() });
   }
 });
@@ -20,7 +18,6 @@ router.get('/api/journals', async (req, res) => {
 // Create a journal
 // ***********************************************//
 router.post('/api/journal', async (req, res) => {
-  console.log(req.body);
   const { title, mood, body } = req.body;
   try {
     const journal = new Journal({

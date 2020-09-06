@@ -105,8 +105,6 @@ router.put('/api/password', async (req, res) => {
     req.user.password = req.body.password;
     await req.user.save();
 
-    console.log('what is happening', req.user);
-
     res.clearCookie('jwt');
     res.json({ message: 'password updated successfully' });
   } catch (e) {
