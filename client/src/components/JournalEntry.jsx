@@ -3,8 +3,6 @@ import { Container, Form, Button } from 'react-bootstrap';
 import { AppContext } from '../context/AppContext';
 import swal from 'sweetalert';
 import { useHistory } from 'react-router-dom';
-import DeleteButton from './DeleteButton';
-import EditButton from './EditButton';
 import axios from 'axios';
 
 function JournalEntry() {
@@ -59,7 +57,7 @@ function JournalEntry() {
             />
           </Form.Group>
           <Form.Group
-            style={{ opacity: '.6' }}
+            style={{ opacity: '0.6' }}
             controlId="exampleForm.ControlMood1"
           >
             <Form.Label></Form.Label>
@@ -83,7 +81,7 @@ function JournalEntry() {
           </Form.Group>
           <Button
             style={{
-              'margin-left': '200px',
+              marginLeft: '200px',
               background: '#988282',
               border: 'none'
             }}
