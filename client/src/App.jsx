@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import './App.css';
 //uncomment this once the private routes are back in use after the front end is finalized
-// import PrivateRoute from './components/PrivateRoute';
+import PrivateRoute from './components/PrivateRoute';
 import WelcomePage from './pages/WelcomePage/WelcomePage';
 import PasswordReset from './pages/PasswordReset/PasswordReset';
 import SignUpPage from './pages/SignUpPage/SignUpPage';
@@ -46,18 +46,30 @@ function App() {
             <Route exact path="/update-password" component={PasswordUpdate} />
             <Route exact path="/login" component={Login} />
             {/* Gotta make these routes private once the front end is finalized */}
-            <Route exact path="/home" component={Home} />
-            <Route exact path="/account" component={UpdateAccount} />
-            <Route
+            <PrivateRoute exact path="/home" component={Home} />
+            <PrivateRoute exact path="/account" component={UpdateAccount} />
+            <PrivateRoute
               exact
               path="/unhealthy-thinking"
               component={UnhealthyThinking}
             />
-            <Route exact path="/mental-hygiene" component={MentalHygiene} />
-            <Route exact path="/journal-page" component={JournalPage} />
-            <Route exact path="/therapist-search" component={TherapistSearch} />
-            <Route exact path="/my-therapist" component={MyTherapist} />
-            <Route exact path="/therapist/:id" component={TherapistProfile} />
+            <PrivateRoute
+              exact
+              path="/mental-hygiene"
+              component={MentalHygiene}
+            />
+            <PrivateRoute exact path="/journal-page" component={JournalPage} />
+            <PrivateRoute
+              exact
+              path="/therapist-search"
+              component={TherapistSearch}
+            />
+            <PrivateRoute exact path="/my-therapist" component={MyTherapist} />
+            <PrivateRoute
+              exact
+              path="/therapist/:id"
+              component={TherapistProfile}
+            />
           </Switch>
         </BrowserRouter>
       </div>
