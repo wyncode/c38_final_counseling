@@ -62,7 +62,8 @@ function JournalEntry() {
           >
             <Form.Label></Form.Label>
             <Form.Control as="select" name="mood" onChange={handleChange}>
-              <option value="happy">Mood:</option>
+              <option value=" ">Mood:</option>
+              <option value="happy">Happy</option>
               <option value="sad">Sad</option>
               <option value="grumpy">Grumpy</option>
               <option value="motivated">Motivated</option>

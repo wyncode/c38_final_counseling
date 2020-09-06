@@ -45,7 +45,11 @@ const TherapistProfile = () => {
       <div className="therapist-secondary-info">
         <div className="skills-expertise">
           <h2>Skills & Expertise</h2>
-          <div>{therapist.specialty}</div>
+          <div>
+            {therapist.specialty?.map((specialty) => (
+              <p key={specialty}>{specialty}</p>
+            ))}
+          </div>
         </div>
 
         <div className="finances">

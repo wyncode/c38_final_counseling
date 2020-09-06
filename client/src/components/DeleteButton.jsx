@@ -9,7 +9,7 @@ function DeleteButton() {
     e.preventDefault();
     setLoading(true);
     fetch('/api/journal/:id', {
-      method: 'delete',
+      method: 'DELETE',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json'
@@ -28,9 +28,13 @@ function DeleteButton() {
   };
   return (
     <Button
-      style={{ 'border-color': '#988282;', color: '#988282', hover: '#988282' }}
+      style={{
+        borderCcolor: '#988282;',
+        color: '#988282',
+        hover: '#988282',
+        color: '988282'
+      }}
       onClick={handleJournalDelete}
-      variant="outline-danger"
     >
       Delete Entry
     </Button>
