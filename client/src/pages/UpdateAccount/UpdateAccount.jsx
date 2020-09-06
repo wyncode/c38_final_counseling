@@ -4,15 +4,11 @@ import { Container, Form, Button } from 'react-bootstrap';
 import { AppContext } from '../../context/AppContext';
 import axios from 'axios';
 import swal from 'sweetalert';
-import SaveChanges from './SaveChanges.svg';
-import Cancel from './Cancel.svg';
 import './UpdateAccount.css';
 
 const UpdateAccount = ({ history }) => {
   const [formData, setFormData] = useState(null);
   const { currentUser, setCurrentUser } = useContext(AppContext);
-  //console.log('user', currentUser.id);
-  //const { id } = currentUser;
 
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
@@ -27,8 +23,8 @@ const UpdateAccount = ({ history }) => {
       },
       data: formData
     })
-      .then((data) => console.log('Updated!!!', data))
-      .catch((e) => console.log(e));
+      .then((data) => swal('Updated!!!', data))
+      .catch((e) => swal(e));
     // axios
     //   .patch('/api/users/me', {
     //     headers: {

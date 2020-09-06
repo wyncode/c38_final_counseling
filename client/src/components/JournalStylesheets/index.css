@@ -1,3 +1,11 @@
+* {
+  font-family: 'Avenir-Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Avenir-Medium'),
+    url('../../fonts/Avenir-Medium.woff') format('woff');
+}
+
 h2 {
   margin-bottom: 2rem;
 }
