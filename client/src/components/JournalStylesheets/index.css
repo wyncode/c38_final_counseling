@@ -19,16 +19,9 @@ h2 {
 /* React Calendar */
 .react-calendar {
   margin: 1rem 0;
-  border: 2px solid #edcaa7;
-
-  box-shadow: 2px 2px #767676;
-  border-radius: 25px;
 }
 div.react-calendar {
   margin: 1rem 0;
-  border: 2px solid #767676;
-  box-shadow: 2px 4px #767676;
-  border-radius: 30px;
 }
 .react-calendar__navigation {
   border-bottom: 2px solid #edcaa7;
@@ -129,6 +122,21 @@ input.form-control {
   justify-content: space-around;
   padding-top: 0.5rem;
 }
+
+/* .delete-edit-buttons.btn.btn-outline-danger {
+  color: #edcaa7;
+  background-color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 2.5rem;
+  margin: 0.5rem 0;
+  border: none;
+}
+
+.delete-edit-buttons.btn.btn-outline-danger:hover {
+  color: white;
+  background-color: #988282;
+} */
+
 /* //journal */
 div #journal1 {
   width: fit-content;
