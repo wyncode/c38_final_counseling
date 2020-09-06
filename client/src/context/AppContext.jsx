@@ -27,6 +27,7 @@ const AppContextProvider = ({ children }) => {
         .then((res) => res.json())
         .then((res) => {
           setCurrentUser(res.data);
+          console.log('auth', currentUser);
         })
         .catch((error) => {
           console.log(error);

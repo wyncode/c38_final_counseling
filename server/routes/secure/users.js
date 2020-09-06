@@ -1,4 +1,5 @@
 const router = require('express').Router(),
+  jwt = require('jsonwebtoken'),
   { sendCancellationEmail } = require('../../emails/index');
 //cloudinary = require('cloudinary').v2;
 
@@ -15,22 +16,64 @@ router.get('/api/users/:id', async (req, res) => {
 // ***********************************************//
 // Update a user
 // ***********************************************//
+
 router.patch('/api/users/me', async (req, res) => {
-  const updates = Object.keys(req.body);
-  const allowedUpdates = ['name', 'email', 'password'];
-  const isValidOperation = updates.every((update) =>
-    allowedUpdates.includes(update)
-  );
-  if (!isValidOperation)
-    return res.status(400).send({ error: 'invalid updates!' });
+  const { name, email, password } = req.body;
+  console.log('ReqUser: ', req.user);
+  let user;
   try {
-    updates.forEach((update) => (req.user[update] = req.body[update]));
-    await req.user.save();
-    res.json(req.user);
-  } catch (e) {
-    res.status(400).json({ error: e.toString() });
+    user = await User.findByIdAndUpdate(req.user._id, req.body, {
+      new: true,
+      runValidators: true
+    });
+  } catch (err) {
+    console.log('Something went wrong. Could not update user', 500);
+    return next(err);
   }
+  user.name = name;
+  user.email = email;
+  uesr.password = password;
+  try {
+    await user.save();
+  } catch (err) {
+    console.log('Something went wrong. Could not update user', 500);
+    return next(err);
+  }
+  res.status(200).json({ user: user.toObject({ getters: true }) });
 });
+
+//   const updates = Object.keys(req.body);
+//   const allowedUpdates = ['name', 'email', 'password'];
+//   const isValidOperation = updates.every((update) =>
+//     allowedUpdates.includes(update)
+//   );
+//   if (!isValidOperation)
+//     return res.status(400).send({ error: 'invalid updates!' });
+//   try {
+//     updates.forEach((update) => (req.user[update] = req.body[update]));
+//     await req.user.save();
+//     res.json(req.user);
+//   } catch (e) {
+//     res.status(400).json({ error: e.toString() });
+//   }
+// });
+
+// router.patch('/api/users/:id', async (req, res => {
+//   const updates = Object.keys(req.body);
+//   const allowedUpdates = ['name', 'email', 'password'];
+//   const isValidOperation = updates.every((update) =>
+//     allowedUpdates.includes(update)
+//   );
+//   if (!isValidOperation)
+//     return res.status(400).send({ error: 'invalid updates!' });
+//   try {
+//     updates.forEach((update) => (req.user[update] = req.body[update]));
+//     await req.user.save();
+//     res.json(req.user);
+//   } catch (e) {
+//     res.status(400).json({ error: e.toString() });
+//   }
+// });
 
 // ***********************************************//
 // Logout a user
@@ -100,4 +143,5 @@ router.put('/api/password', async (req, res) => {
     res.json({ error: e.toString() });
   }
 });
+
 module.exports = router;

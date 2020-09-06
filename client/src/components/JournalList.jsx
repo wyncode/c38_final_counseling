@@ -11,24 +11,24 @@ import './JournalStylesheets/index.css';
 import './JournalStylesheets/index.css';
 
 const JournalList = () => {
-  const { setJournalList } = useContext(AppContext);
-  const { setLoading, currentUser } = useContext(AppContext);
+  // const { setJournalList } = useContext(AppContext);
+  // const { setLoading, currentUser } = useContext(AppContext);
 
-  const { id } = useParams();
-  useEffect(() => {
-    axios
-      .get(`/api/journal/${id}`, {
-        headers: {
-          Authorization: `jwt ${JSON.parse(currentUser).tokens}`
-        }
-      })
-      .then((response) => {
-        setJournalList(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
+  // const { id } = useParams();
+  // useEffect(() => {
+  //   axios
+  //     .get(`/api/journal/${id}`, {
+  //       headers: {
+  //         Authorization: `jwt ${JSON.parse(currentUser).tokens}`
+  //       }
+  //     })
+  //     .then((response) => {
+  //       setJournalList(response.data);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // }, []);
 
   return (
     <Container id="container">

@@ -19,7 +19,7 @@ const SignUpPage = ({ history }) => {
     axios
       .post('/api/users/', formData)
       .then((response) => {
-        sessionStorage.setItem('user', response.data);
+        sessionStorage.setItem('user', JSON.stringify(response.data));
         setCurrentUser(response.data);
         history.push('/home');
       })
