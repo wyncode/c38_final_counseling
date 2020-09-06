@@ -32,6 +32,7 @@
     margin: 5px 0;
     display: flex;
     align-items: center;
+    font-family: 'ITC Avant Garde Gothic Std Medium', sans-serif;
 }
 
 .bottom-nav-items {
@@ -47,6 +48,7 @@
     font-size: 1.2rem;
     text-transform: uppercase;
     cursor: pointer;
+    font-family: 'ITC Avant Garde Gothic Std Medium', sans-serif;
 }
 
 .nav-logo-icon {
