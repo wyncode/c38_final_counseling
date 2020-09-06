@@ -19,7 +19,7 @@ const EditButton = () => {
     })
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
+
         // form.reset();
         swal('');
       })

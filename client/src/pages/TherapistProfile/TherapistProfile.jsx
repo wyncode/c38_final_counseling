@@ -15,7 +15,7 @@ const TherapistProfile = () => {
       .then((data) => setTherapist(data))
       .catch((error) => console.log('Error???: ', error));
   }, []);
-  console.log(therapist);
+
   return (
     <main className="therapist-profile">
       <div className="therapist-info">

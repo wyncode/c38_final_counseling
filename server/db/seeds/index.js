@@ -16,16 +16,16 @@ const dbReset = async () => {
   }
 
   await User.countDocuments({}, function (err, count) {
-    console.log('Number of users:', count);
+
     console.log(err);
   });
   await Journal.countDocuments({}, function (err, count) {
-    console.log('Number of journals:', count);
+
     console.log(err);
   });
   const userIdArray = [];
   await Therapist.countDocuments({}, function (err, count) {
-    console.log('Number of therapists:', count);
+
     console.log(err);
   });
 
@@ -185,13 +185,13 @@ const dbReset = async () => {
     await therapist.save();
   }
   await User.countDocuments({}, function (err, count) {
-    console.log('Number of users:', count);
+    // console.log('Number of users:', count);
   });
   await Journal.countDocuments({}, function (err, count) {
-    console.log('Number of journals:', count);
+    // console.log('Number of journals:', count);
   });
   await Therapist.countDocuments({}, function (err, count) {
-    console.log('Number of therapists:', count);
+    // console.log('Number of therapists:', count);
   });
 };
 

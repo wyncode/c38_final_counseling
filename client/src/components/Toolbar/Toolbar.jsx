@@ -11,7 +11,7 @@ const Toolbar = ({ setOpen, open }) => {
   const history = useHistory(),
     location = useLocation();
 
-  console.log(location);
+
 
   return (
     <header className="header">

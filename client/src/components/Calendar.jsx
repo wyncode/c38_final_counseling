@@ -25,11 +25,10 @@ const ReactCalendar = ({ history }) => {
             break; // needs to be worked on to render a large pop up of the journal entry
           case 'delete':
             // handleDelete(entryId);
-            console.log('delete journal entry');
             break;
         }
       })
-      .then(() => {});
+      .then(() => { });
   };
 
   return (

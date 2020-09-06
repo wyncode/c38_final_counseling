@@ -17,7 +17,7 @@ function DeleteButton() {
     })
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
+
         // form.reset();
         swal(' Your Journal has been Deleted!');
       })

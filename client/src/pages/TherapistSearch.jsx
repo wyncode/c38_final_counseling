@@ -47,7 +47,6 @@ const TherapistSearch = () => {
         return data.json();
       })
       .then((res) => {
-        console.log(res);
         setTherapists(res);
       })
       .catch((err) => {

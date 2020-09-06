@@ -1,6 +1,7 @@
 const router = require('express').Router(),
   { sendWelcomeEmail } = require('../../emails/index'),
-  User = require('../../db/models/User');
+  jwt = require('jsonwebtoken'),
+  User = require('../../db/models/User')
 
 // Create User
 router.post('/api/users/', async (req, res) => {

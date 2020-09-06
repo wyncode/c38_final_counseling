@@ -8,7 +8,7 @@ router.get('/api/users/:id', async (req, res) => {
     const user = req.user;
     res.json(user);
   } catch (error) {
-    console.log('No user, please login');
+    // console.log('No user, please login');
   }
 });
 
@@ -36,7 +36,7 @@ router.patch('/api/users/me', async (req, res) => {
 // Logout a user
 // ***********************************************//
 router.post('/api/users/logout', async (req, res) => {
-  console.log(req.user);
+
   try {
     req.user.tokens = req.user.tokens.filter((token) => {
       return token.token !== req.token;

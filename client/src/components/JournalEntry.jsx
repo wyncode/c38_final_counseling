@@ -8,13 +8,15 @@ import EditButton from './EditButton';
 import axios from 'axios';
 
 function JournalEntry() {
-  const [journalData, setJournalData] = useState(null);
+  const [journalData, setJournalData] = useState({ mood: "happy" });
   const history = useHistory();
   const { setLoading, currentUser } = useContext(AppContext);
-  console.log(journalData);
+
 
   const handleChange = (e) => {
+    console.log("Target Value: ", e.target.value)
     setJournalData({ ...journalData, [e.target.name]: e.target.value });
+    console.log('jd: ', journalData)
   };
 
   const handleJournalSubmission = async (e) => {
@@ -58,7 +60,11 @@ function JournalEntry() {
           </Form.Group>
           <Form.Group controlId="exampleForm.ControlMood1">
             <Form.Label>Mood</Form.Label>
-            <Form.Control as="select" name="mood" onChange={handleChange}>
+            <Form.Control
+              as="select"
+              name="mood"
+              onChange={e => setJournalData({ ...journalData, mood: e.target.value })}
+            >
               <option value="happy">Happy</option>
               <option value="sad">Sad</option>
               <option value="grumpy">Grumpy</option>

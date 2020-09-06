@@ -51,13 +51,12 @@ router.get('/api/therapists', async (req, res) => {
   const updates = Object.keys(req.query);
   const searchObject = {};
 
-  console.log(1, searchObject);
 
   updates.forEach((update) => {
     if (!req.query[update]) return null;
     searchObject[update] = req.query[update];
   });
-  console.log(2, searchObject);
+
   try {
     //const therapist = req.therapist;
     const therapists = await Therapist.find(searchObject);
