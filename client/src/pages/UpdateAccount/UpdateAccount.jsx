@@ -4,8 +4,6 @@ import { Container, Form, Button } from 'react-bootstrap';
 import { AppContext } from '../../context/AppContext';
 import axios from 'axios';
 import swal from 'sweetalert';
-import SaveChanges from './SaveChanges.svg';
-import Cancel from './Cancel.svg';
 import './UpdateAccount.css';
 
 const UpdateAccount = ({ history }) => {
@@ -26,8 +24,6 @@ const UpdateAccount = ({ history }) => {
       },
       body: JSON.stringify(formData)
     })
-      .then((data) => console.log('Updated!!!', data))
-      .catch((e) => console.log(e));
   };
 
   return (

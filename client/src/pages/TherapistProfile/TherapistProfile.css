@@ -1,34 +1,43 @@
+* {
+  font-family: 'Avenir-Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Avenir-Medium'),
+    url('../../fonts/Avenir-Medium.woff') format('woff');
+}
+
 .therapist-profile {
-    margin: 5rem auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  margin: 5rem auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .therapist-info {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
 }
 
 .therapist-copy {
-    width: 70%;
-    margin-top: 2rem;
+  width: 70%;
+  margin-top: 2rem;
 }
 
 .therapist-info img {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .therapist-secondary-info {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-.skills-expertise, .finances {
-    margin: 2rem 3rem;
+.skills-expertise,
+.finances {
+  margin: 2rem 3rem;
 }
 
 /* Uncomment if the button gets used, delete if the button is not used

@@ -1,145 +1,145 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .therapist-search-main {
-    margin: 2rem auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 p#therapist-search {
-    width: 80%;
-    margin: 1rem auto;
-    text-align: center;
+  width: 80%;
+  margin: 1rem auto;
+  text-align: center;
 }
 
 a#view-profile:hover {
-    color: #988282;
+  color: #988282;
 }
 
 a#view-profile {
-    color: #EDCAA7;
+  color: #edcaa7;
 }
 
 /* Form Content */
 .form-contents {
-    width: 80%;
+  width: 80%;
 }
 
 /* Search Filters */
 .search-filter-fields {
-    margin: 0.2rem 1rem;
+  margin: 0.2rem 1rem;
 }
 
 .search-filter-fields label {
-    margin-right: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .search-filter-fields select {
-    width: 5rem;
+  width: 5rem;
 }
 
 .search-filters-all {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 /* Submit Button */
 .search-submit-button {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 /* Button Style */
-.search-submit-button input{
-    color: white;
-    background-color: #EDCAA7;
-    padding: 0.5rem 2rem;
-    border-radius: 2.5rem;
-    margin: 0.5rem 0;
-    border: none;
+.search-submit-button input {
+  color: white;
+  background-color: #edcaa7;
+  padding: 0.5rem 2rem;
+  border-radius: 2.5rem;
+  margin: 0.5rem 0;
+  border: none;
 }
 
-.search-submit-button input:hover{
-    background-color: #988282;
+.search-submit-button input:hover {
+  background-color: #988282;
 }
 
 /* Therapist Cards */
 .therapist-search-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-#thereapist-card .card-body{
-    background: white;
+#thereapist-card .card-body {
+  background: white;
 }
 
 .therapist-card {
-    width: 20rem;
-    margin: 1rem;
+  width: 20rem;
+  margin: 1rem;
 }
 
 .card-title.h5 {
-    color: #EDCAA7;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin: 0.7rem 0;
+  color: #edcaa7;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0.7rem 0;
 }
 
 .card-text {
-    margin-bottom: 0.3rem;
+  margin-bottom: 0.3rem;
 }
 
 /* Media Queries */
 /* iPhone X */
 @media only screen and (max-device-width: 375px) {
-
-/* Form Content */
-.form-contents {
+  /* Form Content */
+  .form-contents {
     width: 100%;
-}
+  }
 
-.search-filters-all {
+  .search-filters-all {
     width: 100%;
-}
+  }
 
-.therapist-search-main {
+  .therapist-search-main {
     margin: 2rem 1rem;
-}
+  }
 
-.therapist-card {
+  .therapist-card {
     width: 16rem;
     padding: 0;
-}
+  }
 
-.form-contents {
+  .form-contents {
     margin-top: 1rem;
-}
-
+  }
 }
 
 /* iPhone Plus */
 @media only screen and (max-device-width: 414px) {
+  .form-contents {
+    width: 100%;
+  }
 
-    .form-contents {
-        width: 100%;
-    }
+  .form-contents {
+    margin-top: 1rem;
+  }
 
-    .form-contents {
-        margin-top: 1rem;
-    }
+  .search-filter-fields {
+    margin: 0.2rem 2rem;
+  }
 
-    .search-filter-fields {
-        margin: 0.2rem 2rem;
-    }
+  .therapist-card {
+    width: 100%;
+  }
+}
 
-    .therapist-card {
-        width: 100%;
-    }
-
-    }
-
+label {
+  font-size: 18px;
+  color: #726363;
+}
