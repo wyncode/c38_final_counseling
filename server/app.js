@@ -13,7 +13,7 @@ app.use(express.json());
 // Unauthenticated routes
 app.use(openRoutes);
 app.use(therapistRoutes);
-app.use(cookieParser);
+app.use(cookieParser());
 
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files

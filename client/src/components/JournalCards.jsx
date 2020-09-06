@@ -3,14 +3,12 @@ import DeleteButton from './DeleteButton';
 import EditButton from './EditButton';
 import Card from 'react-bootstrap/Card';
 
-const JournalCards = () => {
+const JournalCards = ({ mood, title, body }) => {
   return (
     <Card.Body id="card-item">
-      <Card.Title>Today was a good day</Card.Title>
-      <Card.Subtitle className="mb-2 text-muted">Happy</Card.Subtitle>
-      <Card.Text>
-        I had an amazing interview with a great company today.
-      </Card.Text>
+      <Card.Title>{title}</Card.Title>
+      <Card.Subtitle className="mb-2 text-muted">{mood}</Card.Subtitle>
+      <Card.Text>{body}</Card.Text>
       <div className="delete-edit-buttons">
         <DeleteButton />
         <EditButton />

@@ -1,13 +1,23 @@
 const router = require('express').Router(),
-  jwt = require('jsonwebtoken'),
   mongoose = require('mongoose'),
   Journal = require('../../db/models/Journal');
+
+router.get('/api/journals', async (req, res) => {
+  try {
+    const { user } = req;
+
+    const journals = await Journal.find({ owner: user._id }).populate('owner');
+
+    res.send({ journals });
+  } catch (err) {
+    res.status(500).send({ error: err.toString() });
+  }
+});
 
 // ***********************************************//
 // Create a journal
 // ***********************************************//
 router.post('/api/journal', async (req, res) => {
-  console.log(req.body);
   const { title, mood, body } = req.body;
   try {
     const journal = new Journal({
@@ -17,6 +27,7 @@ router.post('/api/journal', async (req, res) => {
       owner: req.user._id
     });
     await journal.save();
+
     res.status(201).json(journal);
   } catch (error) {
     res.status(400).json({ error: error.toString() });
@@ -79,39 +90,5 @@ router.patch('/api/journal/:id', async (req, res) => {
     res.status(400).json({ error: e.toString() });
   }
 });
-
-// // ***********************************************//
-// // Get all mood and date
-// // /journal?limit=10&skip=10
-// // /journal?sortBy=createdAt:asc
-// // /journal?sortBy=dueDate:desc
-// // ***********************************************//
-// rmpouter.get('/api/journal', async (req, res) => {
-//     try {
-//       const match = {},
-//         sort = {};
-//       if (req.query.coleted) {
-//         match.completed = req.query.completed === 'true';
-//       }
-//       if (req.query.sortBy) {
-//         const parts = req.query.sortBy.split(':');
-//         sort[parts[0]] = parts[1] === 'desc' ? -1 : 1;
-//       }
-//       await req.user
-//         .populate({
-//           path: 'journal',
-//           match,
-//           options: {
-//             limit: parseInt(req.query.limit),
-//             skip: parseInt(req.query.skip),
-//             sort,
-//           },
-//         })
-//         .execPopulate();
-//       res.json(req.user.journal);
-//     } catch (error) {
-//       res.status(400).json({ error: error.toString() });
-//     }
-//   });
 
 module.exports = router;
