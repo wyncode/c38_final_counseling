@@ -1,4 +1,5 @@
 const router = require('express').Router(),
+  jwt = require('jsonwebtoken'),
   mongoose = require('mongoose'),
   Therapist = require('../../db/models/Therapist');
 // gets the therapist from our search bar needs to be tested after we populate our data base with faker

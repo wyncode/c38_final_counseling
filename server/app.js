@@ -1,17 +1,19 @@
 require('./db/config');
 const express = require('express'),
   path = require('path'),
-  openRoutes = require('./routes/open'),
+  openRoutes = require('./routes/open/index'),
   secureUserRoutes = require('./routes/secure/users'),
   secureJournalRoutes = require('./routes/secure/journals'),
   therapistRoutes = require('./routes/secure/therapists'),
-  passport = require('./middleware/authentication'),
+  passport = require('./middleware/authentication/index'),
+  cookieParser = require('cookie-parser'),
   app = express();
 //Middleware
 app.use(express.json());
 // Unauthenticated routes
 app.use(openRoutes);
 app.use(therapistRoutes);
+app.use(cookieParser);
 
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files

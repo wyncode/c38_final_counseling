@@ -8,7 +8,6 @@ const passport = require('passport'),
 // ******************************
 let jwtOptions = {
   jwtFromRequest: (req) => {
-    console.log(req);
     return req?.cookies?.jwt || ExtractJwt.fromAuthHeaderWithScheme('jwt')(req);
   },
   secretOrKey: process.env.JWT_SECRET
@@ -17,6 +16,7 @@ let jwtOptions = {
 passport.use(
   'jwt',
   new JwtStrategy(jwtOptions, async (jwtPayload, done) => {
+    console.log('In JWT Strategy: ', jwtPayload);
     if (Date.now() > jwtPayload.expires) {
       return done(null, false, { message: 'jwt expired' });
     }
