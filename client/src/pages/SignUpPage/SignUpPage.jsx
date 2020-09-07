@@ -51,16 +51,7 @@ const SignUpPage = ({ history }) => {
             onChange={handleChange}
           />
         </Form.Group>
-        <Form.Group>
-          <Form.Label htmlFor="username">Username</Form.Label>
-          <Form.Control
-            id="username"
-            type="username"
-            placeholder="Username"
-            name="username"
-            onChange={handleChange}
-          />
-        </Form.Group>
+
         <Form.Group>
           <Form.Label htmlFor="password">Password</Form.Label>
           <Form.Control
@@ -72,7 +63,9 @@ const SignUpPage = ({ history }) => {
           />
         </Form.Group>
         <Form.Group className="d-flex justify-content-center">
-          <Button id="create-account" type="submit">Create Account</Button>
+          <Button id="create-account" type="submit">
+            Create Account
+          </Button>
         </Form.Group>
       </Form>
       <Link className="mt-4" to="/login">

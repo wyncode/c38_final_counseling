@@ -12,7 +12,6 @@
   margin: 3rem auto;
 }
 
-
 .loginMain.container input {
   margin-top: 0;
 }
@@ -29,7 +28,6 @@ h1.mb-4 {
   margin: 0.5rem 0;
   background: 1px solid #988282;
 }
-
 
 #login.btn.btn-primary:hover {
 background-color: #988282;

@@ -28,11 +28,7 @@ const EditButton = () => {
         console.log(error);
       });
   };
-  return (
-    <Button onClick={handleJournalEdit} variant="outline-info">
-      Edit Post
-    </Button>
-  );
+  return <Button onClick={handleJournalEdit}>Edit Post</Button>;
 };
 
 export default EditButton;

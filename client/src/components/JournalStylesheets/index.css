@@ -1,9 +1,8 @@
-* {
+@font-face {
   font-family: 'Avenir-Medium';
   font-style: normal;
   font-weight: normal;
-  src: local('Avenir-Medium'),
-    url('../../fonts/Avenir-Medium.woff') format('woff');
+  src: local('Avenir-Medium'), url('../../fonts/Avenir-Medium.woff') format('woff');
 }
 
 h2 {
@@ -14,7 +13,6 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   margin: 5rem 5rem;
 }
 
@@ -32,15 +30,15 @@ div.react-calendar {
   margin: 1rem 0;
 }
 .react-calendar__navigation {
-  border-bottom: 2px solid #edcaa7;
+  border-bottom: 2px solid #f4eae1;
 }
 
 .react-calendar__month-view__weekdays__weekday {
   text-align: center;
-  background-color: #edcaa7;
-  color: #767676;
+  background-color: #f4eae1;
+  color: #988282;
   padding: 0.5rem 0;
-  border-bottom: 1px solid #edcaa7;
+  border-bottom: 1px solid #f4eae1;
 }
 /* calender week days css */
 abbr[data-original-title],
@@ -54,13 +52,14 @@ abbr[title] {
 }
 .react-calendar button {
   background-color: #988282;
-
+  border-color: #f4eae1;
   border: none;
   color: #edcaa7;
 }
 
 .react-calendar button:hover {
   background-color: #988282;
+  border-color: #f4eae1;
 }
 
 .react-calendar__navigation__label__labelText.react-calendar__navigation__label__labelText--from {
@@ -82,30 +81,32 @@ abbr[title] {
 button {
   padding: 1rem 0;
   border: none;
+  border-color: #f4eae1;
 }
 
 /*  react calebdar bottom css tiles*/
 react-calendar button {
   background-color: white;
   border: none;
+  border-color: #f4eae1;
   color: #edcaa7;
   border-radius: 25px;
 }
 
 /* Accordion */
 .card {
-  border: 1px solid #edcaa7;
+  border: 1px solid #f4eae1;
 }
 .card-body {
-  outline-color: #72706d;
-  background: #edcaa7;
+  outline-color: #bea2a2;
+  background: #f4eae1;
 }
 
 .card-body #card-item {
   border-radius: 25px;
   background: white;
   margin-bottom: 1rem;
-  box-shadow: 2px 4px #72706d;
+  box-shadow: 2px 4px #bea2a2;
 }
 
 .btn.btn-link {
@@ -131,23 +132,37 @@ input.form-control {
   padding-top: 0.5rem;
 }
 
-/* .delete-edit-buttons.btn.btn-outline-danger {
+.quotecontainer {
+  background-position: left;
+  justify-content: flex-start;
+  align-items: left;
+  font-family: Arial, Helvetica, sans-serif;
   color: #edcaa7;
-  background-color: white;
+  margin-left: 145px;
+  margin-top: 80px;
+  max-width: 600px;
+  margin-bottom: 0px;
+  font-style: italic;
+}
+
+.inspiredbutton {
+  color: white;
+  background-color: #bea2a2;
   padding: 0.5rem 2rem;
   border-radius: 2.5rem;
   margin: 0.5rem 0;
-  border: none;
+  width: 12rem;
+  border: 1px solid white;
+  margin-bottom: 10px;
 }
 
-.delete-edit-buttons.btn.btn-outline-danger:hover {
-  color: white;
+.inspiredbutton:hover {
   background-color: #988282;
-} */
+}
 
-/* //journal */
 div #journal1 {
   width: fit-content;
+  padding: 0.5rem 2rem;
   opacity: 0.6;
   border: 1px solid lightslategray;
   border-radius: 25px;
@@ -156,6 +171,7 @@ div #journal1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 40px;
 }
 #journalpage {
   background-image: url('./Journal_Bkg.svg');
@@ -198,4 +214,8 @@ div #journal1 {
   justify-content: center;
   background-color: #edcaa7;
   margin-top: 72px;
+}
+
+.btn.btn-primary:hover {
+  background-color: #988282;
 }

@@ -23,7 +23,8 @@ const UpdateAccount = ({ history }) => {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(formData)
-    })
+    });
+    swal('User Updated!');
   };
 
   return (
