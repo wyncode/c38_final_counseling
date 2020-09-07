@@ -13,10 +13,10 @@ const PasswordReset = () => {
     axios
       .get(`/api/password?email=${email}`)
       .then((res) => {
-        console.log(res);
-        form.reset();
+        swal('Check your email to reset your password!');
+        form.reset('/login');
       })
-      .catch((error) => swal('Check your email to reset your password!'));
+      .catch((error) => swal('Error! try again'));
   };
 
   return (

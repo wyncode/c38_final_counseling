@@ -38,6 +38,7 @@ const WelcomePage = () => {
         </div>
         <div>
           <h2 className="how">
+            {/* added scroll link so user is more likely to view bottom portion of page */}
             <ScrollLink to="anchor" smooth={true}>
               <img src={how} alt="HOW IT WORKS" />
             </ScrollLink>
@@ -54,15 +55,12 @@ const WelcomePage = () => {
             a collective uprising demanding justice for marginalized
             communities, we are in urgent need of attending to our mental
             hygiene. We've created this app to create accessibility to those
-            struggling to find affordable support.
-            <p>
-              In our directory you'll find professionals in your area offering
-              sliding-scale treatment based on your specific needs while
-              offering additional free resources for those who are not quite
-              ready to meet their therapist. We strive to keep you engaged in
-              your healing process with daily reminders and a profile page that
-              will keep track of your moods and journal entries.
-            </p>
+            struggling to find affordable support. In our directory you'll find
+            professionals in your area offering sliding-scale treatment based on
+            your specific needs while offering additional free resources for
+            those who are not quite ready to meet their therapist. We strive to
+            keep you engaged in your healing process with daily reminders and a
+            profile page that will keep track of your moods and journal entries.
             <div className="signUpButton">
               <Link to="/signup">
                 <img src={signUpButton} alt="Sign Up Button" />
