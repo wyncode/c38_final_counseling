@@ -38,6 +38,7 @@ const WelcomePage = () => {
         </div>
         <div>
           <h2 className="how">
+            {/* added scroll link so user is more likely to view bottom portion of page */}
             <ScrollLink to="anchor" smooth={true}>
               <img id="how-img" src={how} alt="HOW IT WORKS" />
             </ScrollLink>

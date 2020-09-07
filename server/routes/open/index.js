@@ -78,7 +78,7 @@ router.get('/api/password/:token', (req, res) => {
       maxAge: 600000,
       sameSite: 'Strict'
     });
-    res.redirect(process.env.APP_URL + '/update-password');
+    res.redirect(process.env.URL + '/update-password');
   } catch (error) {
     res.status(401).json({ error: error.toString() });
   }

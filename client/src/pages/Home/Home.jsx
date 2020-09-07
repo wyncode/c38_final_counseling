@@ -8,6 +8,7 @@ import journalButton from './Journal_Button.svg';
 import cory from './NEW_Cory_footer.svg';
 import './Home.css';
 
+// could not find working api so created an array of quotes and added Math.floor(math.random()) function
 const quotes = [
   '"Life shrinks or expands in proportion to one`s courage."  -Anais Nin',
   '"We don`t see things as they are, we see them as we are." -Anais Nin',
@@ -79,12 +80,21 @@ const quotes = [
 
 const quote = quotes[Math.floor(Math.random() * quotes.length)];
 
+// also added a refreshpage onclick button to get a new quote
+
 function Home() {
+  function refreshPage() {
+    window.location.reload(false);
+  }
   return (
     <main className="mainHome">
       <div className="quote">
         <p>
-          <Link to="/home">Stay Inspired</Link>
+          <div>
+            <button className="stayinspired" onClick={refreshPage}>
+              Stay Inspired
+            </button>
+          </div>
         </p>
         <em>{quote}</em>
       </div>
