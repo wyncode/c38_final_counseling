@@ -1,0 +1,11 @@
+.cory {
+    background-color: #edcaa7;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1.5rem 2rem;
+    background-image: url('/NEW_Cory_footer.svg');
+    background-position: bottom;
+    margin-bottom: 0px;
+    bottom: 0;
+  }
