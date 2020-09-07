@@ -2,7 +2,8 @@
   font-family: 'Avenir-Medium';
   font-style: normal;
   font-weight: normal;
-  src: local('Avenir-Medium'), url('../../fonts/Avenir-Medium.woff') format('woff');
+  src: local('Avenir-Medium'),
+    url('../../fonts/Avenir-Medium.woff') format('woff');
 }
 
 h2 {
@@ -172,7 +173,9 @@ div #journal1 {
   align-items: center;
   justify-content: center;
   margin-bottom: 40px;
+  margin-left: 100px;
 }
+
 #journalpage {
   background-image: url('./Journal_Bkg.svg');
   background-size: 40%;
