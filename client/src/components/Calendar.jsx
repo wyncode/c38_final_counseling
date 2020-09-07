@@ -22,6 +22,8 @@ const ReactCalendar = ({ history }) => {
             // handleDelete(entryId);
             console.log('delete journal entry');
             break;
+          default:
+            console.log('Journal');
         }
       })
       .then(() => {});

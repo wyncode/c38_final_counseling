@@ -1,39 +1,46 @@
 # Mind Passage
 
-Welcome to Mind Passage. Our goal is to provide users with a place to find theraphists, and mental health tips. While allowing our user's to release how they feel  with our Journal.
+Welcome to Mind Passage. Our goal is to provide users with a place to find theraphists, and mental health tips. While allowing our user's to release how they feel with our Journal.
 
 #Specific features include:
 -User's can keep track of their emotional state by acessing the calendar page which allows the users to submit journal entrys.
 -The user can use our Seach feature to find a cheap and local Therapsit by a number of different factors such as Speciality, Treament type and more.
--health tips 
-
+-health tips
 
 #Further Goals:
 -A more fleshed out user profile
 -Allowing the user to keep track of their favortie Therapist
 -Creating a dissucsion board to allow our users to chat with one another and help each other.
--adding more health tips and reminders 
+-adding more health tips and reminders
 
 #MERN Stack
 -MongoDB to store data  
 -Express for our server
--React for our front end 
+-React for our front end
 -Node.js as our runtime.
 
 ---
 
 ## Dependencies
 
-| Dependency | Command |
-| ----------- | ----------- |
-| Axios | `yarn add axios` |
-| Bootstrap | `yarn add react-bootstrap` |
-| Send Grid | `yarn add @sendgrid/mail` |
-| SweetAlert | `yarn add sweetalert` |
-| React Scroll | `yarn add react-scroll` |
-| Moment | `yarn add moment` |
-| Cookie-parser | `yarn add cookie-parser` |
-
+| Dependency      | Command                    |
+| --------------- | -------------------------- |
+| Axios           | `yarn add axios`           |
+| React-Bootstrap | `yarn add react-bootstrap` |
+| Bcrypt          | `yarn add bcrypt`          |
+| Send Grid       | `yarn add @sendgrid/mail`  |
+| SweetAlert      | `yarn add sweetalert`      |
+| React Scroll    | `yarn add react-scroll`    |
+| Moment          | `yarn add moment`          |
+| Cookie-parser   | `yarn add cookie-parser`   |
+| Express         | `yarn add express`         |
+| Faker           | `yarn add faker`           |
+| Passport        | `yarn add passport`        |
+| JSON Web Token  | `yarn add passport-jwt`    |
+| Mongoose        | `yarn add mongoose`        |
+| MongoDB         | `yarn add mongodb`         |
+| React Calender  | `yarn add react-calendar`  |
+| Validator       | `yarn add validator`       |
 
 ## Setup
 
@@ -42,7 +49,6 @@ Welcome to Mind Passage. Our goal is to provide users with a place to find thera
 - `yarn install`
 - `cd client && yarn install`
 - `cp .env.sample .env`
-
 
 ## Available build commands
 
@@ -63,11 +69,10 @@ NOTE: Heroku specifically runs `npm start`, so don't remove that from your packa
 ---
 
 #### #Meet The Team:
+
 - Diana Canelon
 - Jorge Silva
 - Natalia Molina
 - Angelica Garzon
 
 ---
-
-

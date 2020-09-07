@@ -27,12 +27,10 @@ const TherapistSearch = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [city, gender, modality, race, specialty]);
 
   const handleSearch = (e) => {
     e.preventDefault();
-    const form = e.target;
-    const formData = new FormData(form);
 
     fetch(
       `/api/therapists?city=${city}&gender=${gender}&race=${race}&specialty=${specialty}&modality=${modality}`,
@@ -229,14 +227,20 @@ const TherapistSearch = () => {
       <div className="therapist-search-cards">
         {therapists.map((therapist) => {
           return (
-            <div className="therapist-card" id="thereapist-card" key={therapist._id}>
+            <div
+              className="therapist-card"
+              id="thereapist-card"
+              key={therapist._id}
+            >
               <Card>
                 <Card.Body>
                   <Card.Title>{therapist.name}</Card.Title>
                   <Card.Text>{therapist.jobTitle}</Card.Text>
                   <Card.Text>{`${therapist.streetAddress} ${therapist.city} ${therapist.zipCode}`}</Card.Text>
                   <Card.Text>{`Call: ${therapist.phoneNumber}`}</Card.Text>
-                  <Link id="view-profile" to={`/therapist/${therapist._id}`}>View Profile</Link>
+                  <Link id="view-profile" to={`/therapist/${therapist._id}`}>
+                    View Profile
+                  </Link>
                 </Card.Body>
               </Card>
             </div>

@@ -11,7 +11,7 @@
   background-color: white;
   padding: 0.5rem 2rem;
   border-radius: 2.5rem;
-  margin: 0.5rem 0;
+  margin: 0rem 0;
   width: 12rem;
   border: none;
 }
@@ -21,15 +21,29 @@
 }
 
 #cancel.btn.btn-primary {
-  color: white;
-  background-color: #988282;
+  color: #988282;
+  background-color: white;
   padding: 0.5rem 2rem;
   border-radius: 2.5rem;
-  margin: 0.5rem 0;
+  margin: 0rem 0;
   width: 12rem;
   border: 1px solid white;
 }
 #cancel.btn.btn-primary:hover {
+  color: white;
+  background-color: #988282;
+}
+
+#delete-user.btn.btn-primary {
+  color: #988282;
+  background-color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 2.5rem;
+  margin: 0rem 0;
+  width: 12rem;
+  border: 1px solid white;
+}
+#delete-user.btn.btn-primary:hover {
   color: white;
   background-color: #988282;
 }

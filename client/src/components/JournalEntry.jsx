@@ -80,7 +80,7 @@ const quote = quotes[Math.floor(Math.random() * quotes.length)];
 function JournalEntry() {
   const [journalData, setJournalData] = useState(null);
   const history = useHistory();
-  const { setLoading, currentUser } = useContext(AppContext);
+  const { setLoading } = useContext(AppContext);
   console.log(journalData);
 
   const handleChange = (e) => {
