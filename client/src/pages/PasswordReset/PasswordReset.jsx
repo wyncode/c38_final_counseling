@@ -22,17 +22,18 @@ const PasswordReset = () => {
   return (
     <Container className="mainPR">
       <h1>Reset Password</h1>
-      <Form onSubmit={handleSubmit}>
+      <Form className="form" onSubmit={handleSubmit}>
         <Form.Group>
           <Form.Label>Email address</Form.Label>
           <Form.Control
             type="email"
             onChange={(event) => setEmail(event.target.value)}
           />
+          <Button id="resetpw-form-button" type="submit">Send Email</Button>
         </Form.Group>
-        <Form.Group>
-          <Button type="submit">Send Email</Button>
-        </Form.Group>
+
+
+
       </Form>
     </Container>
   );

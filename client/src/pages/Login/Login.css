@@ -1,29 +1,17 @@
 .loginMain.container {
   width: 90%;
   background-color: #edcaa7;
-  background-position: cover;
-  border: 0px;
-  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 25px;
-  max-width: 55em;
   line-height: 1.5;
   padding: 4em 2em;
-  font-family: 'ITC Avant Garde Gothic Std', 'Helvetica', 'Arial', sans-serif;
-  margin: 2rem auto;
+  font-family: 'ITC Avant Garde Gothic Std Bold', 'Helvetica', 'Arial', sans-serif;
+  margin: 3rem auto;
 }
 
-a {
-  color: #988282;
-}
-
-a:hover {
-  color: #988282;
-  text-decoration: underline;
-}
 
 .loginMain.container input {
   margin-top: 0;
@@ -34,18 +22,18 @@ h1.mb-4 {
 }
 
 #login.btn.btn-primary {
-  color: #EDCAA7;
+  color: #988282;
   background-color: white;
   padding: 0.5rem 2rem;
   border-radius: 2.5rem;
   margin: 0.5rem 0;
-  border: none;
+  background: 1px solid #988282;
 }
 
 
 #login.btn.btn-primary:hover {
-color: white;
 background-color: #988282;
+color: white
 }
 
 .swal-button {
@@ -79,13 +67,9 @@ background-color: #988282;
     margin: 3rem auto;
     width: 90%;
   }
-}
 
-
-@media only screen and (max-device-width: 375px) {
-  .loginMain {
-    margin: 3rem auto;
-    width: 90%;
+  h1.mb-4 {
+    font-size: 2rem;
   }
 }
 
@@ -93,6 +77,10 @@ background-color: #988282;
   .loginMain {
     margin: 3rem auto;
     width: 90%;
+  }
+
+  h1.mb-4 {
+    font-size: 2rem;
   }
 }
 
