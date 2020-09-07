@@ -58,11 +58,6 @@ const TherapistProfile = () => {
           <p className="finances-item">Couple & Family Counseling $30-80</p>
         </div>
       </div>
-
-      {/* This button might get deleted, don't forget to delete if it does!!  */}
-      {/* <div className="button">
-                <button className="save-therapist-button">Save Therapist</button>
-            </div> */}
     </main>
   );
 };

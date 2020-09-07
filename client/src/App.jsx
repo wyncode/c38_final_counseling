@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import './App.css';
-//uncomment this once the private routes are back in use after the front end is finalized
 import PrivateRoute from './components/PrivateRoute';
 import WelcomePage from './pages/WelcomePage/WelcomePage';
 import PasswordReset from './pages/PasswordReset/PasswordReset';
@@ -45,7 +44,7 @@ function App() {
             <Route exact path="/signup" component={SignUpPage} />
             <Route exact path="/update-password" component={PasswordUpdate} />
             <Route exact path="/login" component={Login} />
-            {/* Gotta make these routes private once the front end is finalized */}
+
             <PrivateRoute exact path="/home" component={Home} />
             <PrivateRoute exact path="/account" component={UpdateAccount} />
             <PrivateRoute
