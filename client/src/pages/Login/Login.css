@@ -1,19 +1,15 @@
 .loginMain.container {
   width: 90%;
   background-color: #edcaa7;
-  background-position: cover;
-  border: 0px;
-  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 25px;
-  max-width: 55em;
   line-height: 1.5;
   padding: 4em 2em;
-  font-family: 'ITC Avant Garde Gothic Std', 'Helvetica', 'Arial', sans-serif;
-  margin: 2rem auto;
+  font-family: 'ITC Avant Garde Gothic Std Bold', 'Helvetica', 'Arial', sans-serif;
+  margin: 3rem auto;
 }
 
 .loginMain.container input {
@@ -25,17 +21,17 @@ h1.mb-4 {
 }
 
 #login.btn.btn-primary {
-  color: #edcaa7;
+  color: #988282;
   background-color: white;
   padding: 0.5rem 2rem;
   border-radius: 2.5rem;
   margin: 0.5rem 0;
-  border: none;
+  background: 1px solid #988282;
 }
 
 #login.btn.btn-primary:hover {
-  color: white;
-  background-color: #988282;
+background-color: #988282;
+color: white
 }
 
 .swal-button {
@@ -69,11 +65,19 @@ h1.mb-4 {
     margin: 3rem auto;
     width: 90%;
   }
+
+  h1.mb-4 {
+    font-size: 2rem;
+  }
 }
 
 @media only screen and (max-device-width: 414px) {
   .loginMain {
     margin: 3rem auto;
     width: 90%;
+  }
+
+  h1.mb-4 {
+    font-size: 2rem;
   }
 }
