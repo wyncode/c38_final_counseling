@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import swal from 'sweetalert';
 import { Button } from 'react-bootstrap';
-import { AppContext, setLoading } from '../context/AppContext';
+import { AppContext } from '../context/AppContext';
 function DeleteButton() {
   const { setLoading } = useState(AppContext);
   // needs to be tested still
@@ -31,8 +31,7 @@ function DeleteButton() {
       style={{
         borderCcolor: '#988282;',
         color: '#988282',
-        hover: '#988282',
-        color: '988282'
+        hover: '#988282'
       }}
       onClick={handleJournalDelete}
     >

@@ -1,15 +1,13 @@
 import React, { useState, useContext } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { Container, Form, Button } from 'react-bootstrap';
 import { AppContext } from '../../context/AppContext';
+import { Container, Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 import swal from 'sweetalert';
 import './UpdateAccount.css';
 
 const UpdateAccount = ({ history }) => {
   const [formData, setFormData] = useState(null);
-  const { currentUser, setCurrentUser } = useContext(AppContext);
-
+  const { setCurrentUser } = useContext(AppContext);
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
@@ -25,6 +23,23 @@ const UpdateAccount = ({ history }) => {
       body: JSON.stringify(formData)
     });
     swal('User Updated!');
+  };
+
+  const handleDelete = () => {
+    window.confirm(
+      'Warning: this action is permanent. Are you SURE you want to delete your account forever?'
+    );
+    axios
+      .delete(`/api/users/me`, { withCredentials: true })
+      .then(() => {
+        swal('Are you sure?');
+        setCurrentUser(null);
+        sessionStorage.removeItem('user');
+        history.push('/login');
+      })
+      .catch((error) => {
+        swal('error');
+      });
   };
 
   return (
@@ -75,10 +90,12 @@ const UpdateAccount = ({ history }) => {
             Cancel
           </Button>
         </Form.Group>
+        <Form.Group className="d-flex justify-content-center">
+          <Button type="delete" onClick={handleDelete} id="delete-user">
+            Delete Account
+          </Button>
+        </Form.Group>
       </Form>
-      <Link className="mt-4" to="/login">
-        Delete Account
-      </Link>
     </Container>
   );
 };

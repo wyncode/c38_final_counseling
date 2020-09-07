@@ -29,7 +29,6 @@ const JournalList = () => {
               {journalEntries.map((entry) => (
                 <JournalCard key={entry._id} {...entry} />
               ))}
-              <JournalCard />
               <Card style={{ width: '18rem' }}></Card>
             </Card.Body>
           </Accordion.Collapse>

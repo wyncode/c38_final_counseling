@@ -7,7 +7,7 @@ import './SideDrawer/SideDrawer.css';
 
 const Logout = ({ setOpen }) => {
   const history = useHistory();
-  const { setCurrentUser, currentUser } = useContext(AppContext);
+  const { setCurrentUser } = useContext(AppContext);
 
   const handleSignOut = async () => {
     axios

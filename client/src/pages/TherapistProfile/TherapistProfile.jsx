@@ -1,11 +1,8 @@
-import React, { useState, useEffect, useContext } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './TherapistProfile.css';
-import { AppContext } from '../../context/AppContext';
 
 const TherapistProfile = () => {
-  const { currentUser } = useContext(AppContext);
   const { id } = useParams();
   const [therapist, setTherapist] = useState({});
 
@@ -14,7 +11,7 @@ const TherapistProfile = () => {
       .then((res) => res.json())
       .then((data) => setTherapist(data))
       .catch((error) => console.log('Error???: ', error));
-  }, []);
+  }, [id]);
   console.log(therapist);
   return (
     <main className="therapist-profile">

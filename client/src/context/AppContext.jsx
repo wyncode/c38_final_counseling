@@ -1,5 +1,4 @@
 import React, { createContext, useState, useEffect } from 'react';
-import axios from 'axios';
 
 const AppContext = createContext();
 
@@ -8,7 +7,6 @@ const AppContextProvider = ({ children }) => {
     sessionStorage.getItem('user') || null // TODO fix this if there's time.
   );
   const [loading, setLoading] = useState(false);
-  const [journalList, setJournalList] = useState(null);
   const user = sessionStorage.getItem('user');
 
   useEffect(() => {
