@@ -25,7 +25,7 @@ h1.mb-4 {
 }
 
 #login.btn.btn-primary {
-  color: #EDCAA7;
+  color: #edcaa7;
   background-color: white;
   padding: 0.5rem 2rem;
   border-radius: 2.5rem;
@@ -33,10 +33,9 @@ h1.mb-4 {
   border: none;
 }
 
-
 #login.btn.btn-primary:hover {
-color: white;
-background-color: #988282;
+  color: white;
+  background-color: #988282;
 }
 
 .swal-button {
@@ -65,7 +64,6 @@ background-color: #988282;
   border-color: white;
 }
 
-
 @media only screen and (max-device-width: 375px) {
   .loginMain {
     margin: 3rem auto;
@@ -79,4 +77,3 @@ background-color: #988282;
     width: 90%;
   }
 }
-
