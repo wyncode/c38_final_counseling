@@ -1,6 +1,5 @@
 const sgMail = require('@sendgrid/mail');
 const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
-
 sgMail.setApiKey(SENDGRID_API_KEY);
 
 const sendWelcomeEmail = (email) => {
@@ -23,13 +22,11 @@ const sendCancellationEmail = (email, name) => {
     })
     .catch((error) => console.log(error.response.body.errors));
 };
-
 const forgotPasswordEmail = (email, token) => {
   const exampleHTMLEmail = `
   <div>Click the link below to reset your password</div>
   <a target="_blank" rel="noopener noreferrer" href="${process.env.URL}/api/password/${token}">Reset Password</a>
   `;
-
   sgMail.send({
     to: email,
     from: `${process.env.FROM_EMAIL}`,
@@ -38,7 +35,6 @@ const forgotPasswordEmail = (email, token) => {
     html: exampleHTMLEmail
   });
 };
-
 module.exports = {
   sendWelcomeEmail,
   sendCancellationEmail,
