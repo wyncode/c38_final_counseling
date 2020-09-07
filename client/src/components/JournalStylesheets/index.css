@@ -265,3 +265,36 @@ div.accordion {
   }
   
 }
+
+@media only screen and (max-device-width: 375px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0.5rem;
+    text-align: center;
+  }
+
+  #journalpage {
+    height: 70rem;
+  }
+
+  h1#journaltitle {
+    text-align: center;
+    margin: 2rem 0;
+  }
+  
+  .quotecontainer {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-top: 3rem;
+  }
+
+
+
+}
+
+@media only screen and (max-device-width: 414px) {
+
+}
