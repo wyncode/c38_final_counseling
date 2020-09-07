@@ -13,7 +13,7 @@ const WelcomePage = () => {
     <main className="backgroundimage">
       <section className="section1">
         <div className="logo">
-          <img src={Logo} alt="Mind Passage" />
+          <img id="logo" src={Logo} alt="Mind Passage" />
         </div>
         <div className="button">
           <div className="newUserButton">
@@ -40,7 +40,7 @@ const WelcomePage = () => {
           <h2 className="how">
             {/* added scroll link so user is more likely to view bottom portion of page */}
             <ScrollLink to="anchor" smooth={true}>
-              <img src={how} alt="HOW IT WORKS" />
+              <img id="how-img" src={how} alt="HOW IT WORKS" />
             </ScrollLink>
           </h2>
         </div>
@@ -55,21 +55,24 @@ const WelcomePage = () => {
             a collective uprising demanding justice for marginalized
             communities, we are in urgent need of attending to our mental
             hygiene. We've created this app to create accessibility to those
-            struggling to find affordable support. In our directory you'll find
-            professionals in your area offering sliding-scale treatment based on
-            your specific needs while offering additional free resources for
-            those who are not quite ready to meet their therapist. We strive to
-            keep you engaged in your healing process with daily reminders and a
-            profile page that will keep track of your moods and journal entries.
-            <div className="signUpButton">
-              <Link to="/signup">
-                <img src={signUpButton} alt="Sign Up Button" />
-              </Link>
-            </div>
-          </h5>
+            struggling to find affordable support.<br></br><br></br>
+
+              In our directory you'll find professionals in your area offering
+              sliding-scale treatment based on your specific needs while
+              offering additional free resources for those who are not quite
+              ready to meet their therapist. We strive to keep you engaged in
+              your healing process with daily reminders and a profile page that
+              will keep track of your moods and journal entries.
+            </h5>
+          <div className="signUpButton">
+            <Link to="/signup">
+              <img src={signUpButton} alt="Sign Up Button" />
+            </Link>
+          </div>
+
         </div>
       </section>
-    </main>
+    </main >
   );
 };
 export default WelcomePage;

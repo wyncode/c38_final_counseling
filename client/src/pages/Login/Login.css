@@ -16,15 +16,6 @@
   margin: 2rem auto;
 }
 
-a {
-  color: #988282;
-}
-
-a:hover {
-  color: #988282;
-  text-decoration: underline;
-}
-
 .loginMain.container input {
   margin-top: 0;
 }
@@ -72,13 +63,6 @@ background-color: #988282;
   color: white;
   background-color: #988282;
   border-color: white;
-}
-
-@media only screen and (max-device-width: 375px) {
-  .loginMain {
-    margin: 3rem auto;
-    width: 90%;
-  }
 }
 
 

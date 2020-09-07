@@ -1,23 +1,23 @@
 .backgroundimage {
-  margin: 0px;
-  height: 100%;
   background-image: url('./Doorman_with_blob.svg');
   background-repeat: no-repeat;
-  background-size: 60%;
+  background-size: 50%;
   background-position: right bottom;
   font-family: 'Helvetica', 'Arial', sans-serif;
+  overflow: hidden;
 }
+
 .section1 {
   margin-bottom: 0px;
 }
+
 .logo {
   height: 80px;
   display: flex;
-  justify-content: flex-start;
   background-repeat: no-repeat;
   margin-top: 130pt;
-  /* margin-left: 75pt; */
 }
+
 .loginWelcomeButton {
   width: 5px;
   background-repeat: no-repeat;
@@ -25,26 +25,32 @@
   margin-top: 5pt;
   margin-left: 75pt;
 }
+
 .loginWelcomeButton:hover {
   opacity: 0.8;
 }
+
 .newUserButton {
   background-repeat: no-repeat;
   background-position: left;
   margin-top: 20pt;
   margin-left: 75pt;
 }
+
 .newUserButton:hover {
   opacity: 0.8;
 }
+
 .signUpButton {
   background-repeat: no-repeat;
   background-position: left;
   margin-top: 50pt;
 }
+
 .signUpButton:hover {
   opacity: 0.8;
 }
+
 .findyourtherapist {
   font-family: avenir next;
   font-size: 30pt;
@@ -55,6 +61,7 @@
   margin-left: 75pt;
   margin-top: 50pt;
 }
+
 .headerdescription {
   font-family: 'ITC Avant Garde Gothic Std Bold', sans-serif;
   color: #edcaa7;
@@ -64,6 +71,7 @@
   margin-left: 75pt;
   margin-top: 10pt;
 }
+
 .how {
   font-family: avenir next;
   color: #edcaa7;
@@ -74,11 +82,13 @@
   margin-left: 75pt;
   margin-top: 40pt;
 }
+
 .how:hover {
   opacity: 0.8;
 }
+
 .welcome {
-  font-family: ITC Avant Garde Gothic Std;
+  font-family: 'ITC Avant Garde Gothic Std Bold', sans-serif;
   font-size: 25pt;
   font-weight: bold;
   color: #edcaa7;
@@ -87,8 +97,8 @@
   margin-left: 75pt;
   margin-top: 130pt;
 }
+
 .description {
-  /* display: flex; */
   min-height: 100vh;
   font-family: avenir next;
   color: #edcaa7;
@@ -101,10 +111,7 @@
   padding-bottom: 0px;
 }
 
-.section2 {
-  /* display: flex; */
-  justify-content: space-between;
-}
+
 
 .welcomFooterImage {
   display: flex;
@@ -120,4 +127,213 @@
 .section3 {
   display: flex;
   height: fit-content;
+}
+
+/* Media Queries: iPhone, iPhone X */
+@media only screen and (max-device-width: 375px) {
+  .section1 {
+    margin: 0 auto;
+  }
+
+  .backgroundimage {
+    background-size: 90%;
+  }
+
+  .logo{
+    margin-top: 0;
+  }
+  div.logo img{
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .button {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    margin: 3rem auto;
+  }
+
+  .button img{
+    margin: 0.2rem 0;
+  }
+
+  p.findyourtherapist {
+    font-size: 2.2rem;
+    width: 100%;
+    margin: 1rem auto;
+    text-align: center;
+    line-height: 3rem;
+  }
+
+  .headerdescription{
+    margin: 1rem auto;
+    width: 100%;
+  }
+
+  .headerdescription h3 {
+    width: 90%;
+    margin: 0 auto;
+    line-height: 1.7rem;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  h2.how {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+ }
+
+ .section2 {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+ }
+
+ p.welcome {
+   width: 90%;
+   margin: 0.5rem auto;
+   text-align: center;
+   font-size: 2rem;
+   line-height: 2.5rem;
+ }
+
+ .description {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20rem;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+ .description h5 {
+  width: 100%;
+ }
+
+ .signUpButton {
+  margin-top: 2rem;
+  margin-bottom: 10rem;
+ }
+
+ 
+ .newUserButton, .loginWelcomeButton {
+    margin-left: 0;
+    margin-top: 0;
+  }
+}
+
+/* Media Queries: iPhone Plus */
+@media only screen and (max-device-width: 414px) {
+  .section1 {
+    margin: 4rem auto;
+  }
+
+  .backgroundimage {
+    background-size: 90%;
+  }
+
+  .logo{
+    margin-top: 0;
+  }
+  div.logo img{
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .button {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    margin: 4rem auto;
+  }
+
+  .button img{
+    margin: 0.2rem 0;
+  }
+
+  p.findyourtherapist {
+    font-size: 2.2rem;
+    width: 100%;
+    margin: 1rem auto;
+    text-align: center;
+    line-height: 3rem;
+  }
+
+  .headerdescription{
+    margin: 1rem auto;
+    width: 100%;
+  }
+
+  .headerdescription h3 {
+    width: 90%;
+    margin: 0 auto;
+    line-height: 1.7rem;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  h2.how {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+ }
+
+ .section2 {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+ }
+
+ p.welcome {
+   width: 90%;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 2rem;
+   text-align: center;
+   font-size: 2rem;
+   line-height: 2.5rem;
+ }
+
+ .description {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20rem;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+ .description h5 {
+  width: 100%;
+  font-size: 1.2rem;
+ }
+
+ .signUpButton {
+  margin-top: 2rem;
+  margin-bottom: 13rem;
+ }
+
+ 
+ .newUserButton, .loginWelcomeButton {
+    margin-left: 0;
+    margin-top: 0;
+  }
 }
