@@ -5,12 +5,12 @@ import track from './Track_Thinking_Button.svg';
 import mental from './Mental_Hygiene_Button.svg';
 import profile from './My_Profile_Button.svg';
 import journalButton from './Journal_Button.svg';
-import cory from './NEW_Cory_footer.svg';
 import './Home.css';
+import Footer from '../../components/Footer/Footer';
 
 // could not find working api so created an array of quotes and added Math.floor(math.random()) function
 const quotes = [
-  '"Life shrinks or expands in proportion to one`s courage."  -Anais Nin',
+  '"Life shrinks or expands in proportion to one`s courage." -Anais Nin',
   '"We don`t see things as they are, we see them as we are." -Anais Nin',
   '"Throw your dreams into space like a kite, and you do not know what it will bring back, a new life, a new friend, a new love, a new country." -Anais Nin',
   '"We do not grow absolutely, chronologically. We grow sometimes in one dimension, and not in another; unevenly. We grow partially. We are relative. We are mature in one realm, childish in another. The past, present, and future mingle and pull us backward, forward, or fix us in the present. We are made up of layers, cells, constellations."-Anais Nin',
@@ -87,56 +87,52 @@ function Home() {
     window.location.reload(false);
   }
   return (
-    <main className="mainHome">
-      <div className="quote">
-        <p>
-          <div>
-            <button className="stayinspired" onClick={refreshPage}>
-              Stay Inspired
+    <>
+      <main className="mainHome">
+        <div className="quote">
+
+          <em>{quote}</em>
+          <button className="stayinspired" onClick={refreshPage}>
+            Stay Inspired
             </button>
-          </div>
-        </p>
-        <em>{quote}</em>
-      </div>
-      <div className="lacasita">
-        <div className="contain">
-          <div className="container">
-            <div className="profile">
-              <Link to="/account">
-                <img src={profile} alt="My Profile" />
-              </Link>
+
+        </div>
+        <div className="lacasita">
+          <div className="contain">
+            <div className="container">
+              <div className="profile">
+                <Link to="/account">
+                  <img src={profile} alt="My Profile" />
+                </Link>
+              </div>
+              <div className="journalButton">
+                <Link to="/calendar">
+                  <img src={journalButton} alt="My Journal" />
+                </Link>
+              </div>
             </div>
-            <div className="journalButton">
-              <Link to="/calendar">
-                <img src={journalButton} alt="My Journal" />
-              </Link>
-            </div>
-          </div>
-          <div className="container2">
-            <div className="find">
-              <Link to="/therapist-search">
-                <img src={find} alt="Find My Therapist" />
-              </Link>
-            </div>
-            <div className="track">
-              <Link to="/unhealthy-thinking">
-                <img src={track} alt="Unhealthy Thinking" />
-              </Link>
-            </div>
-            <div className="mental">
-              <Link to="/mental-hygiene">
-                <img src={mental} alt="Mental Hygiene" />
-              </Link>
+            <div className="container2">
+              <div className="find">
+                <Link to="/therapist-search">
+                  <img src={find} alt="Find My Therapist" />
+                </Link>
+              </div>
+              <div className="track">
+                <Link to="/unhealthy-thinking">
+                  <img src={track} alt="Unhealthy Thinking" />
+                </Link>
+              </div>
+              <div className="mental">
+                <Link to="/mental-hygiene">
+                  <img src={mental} alt="Mental Hygiene" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div className="container3">
-        <div className="cory">
-          <img src={cory} alt="Dedicated to Cory" />
-        </div>
-      </div>
-    </main>
+      </main>
+      <Footer />
+    </>
   );
 }
 
