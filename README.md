@@ -1,23 +1,41 @@
 # Mind Passage
-
+![Mind Passage Logo](https://res.cloudinary.com/garzon/image/upload/v1599578546/MindPassage/Mind_Passage_Logo-ReadMeFile-02_so2ckq.png "Mind Passage Logo")
 Welcome to Mind Passage. Our goal is to provide users with a place to find theraphists, and mental health tips. While allowing our user's to release how they feel with our Journal.
 
-#Specific features include:
--User's can keep track of their emotional state by acessing the calendar page which allows the users to submit journal entrys.
--The user can use our Seach feature to find a cheap and local Therapsit by a number of different factors such as Speciality, Treament type and more.
--health tips
+## Screenshot
+![Welcome Page](https://res.cloudinary.com/garzon/image/upload/v1599577448/MindPassage/1_o9ypkf.png "Screenshot of Welcome Page")
+![Home Page](https://res.cloudinary.com/garzon/image/upload/v1599577448/MindPassage/2_ahxccg.png "Screenshot of Home Page")
+![Find Therapist](https://res.cloudinary.com/garzon/image/upload/v1599577448/MindPassage/3_qhmk59.png "Screenshot of Find Therapist Page")
+![Journal Calendar](https://res.cloudinary.com/garzon/image/upload/v1599578288/MindPassage/6_aydqrb.png "Screenshot of Journal Calendar")
+![Journal Entry](https://res.cloudinary.com/garzon/image/upload/v1599578288/MindPassage/7_ucf841.png "Screenshot of Journal Entry Page")
+![Mental Hygiene](https://res.cloudinary.com/garzon/image/upload/v1599577448/MindPassage/4_tc64jf.png "Screenshot of Mental Hygiene Page")
+![Unhealthy Thinking](https://res.cloudinary.com/garzon/image/upload/v1599577449/MindPassage/5_jhx9ie.png "Screenshot of Unhealthy Thinking Page")
 
-#Further Goals:
--A more fleshed out user profile
--Allowing the user to keep track of their favortie Therapist
--Creating a dissucsion board to allow our users to chat with one another and help each other.
--adding more health tips and reminders
+## Specific features include:
+- User's can keep track of their emotional state by acessing the calendar page which allows the users to submit journal entrys.
+- The user can use our Seach feature to find a cheap and local Therapsit by a number of different factors such as Speciality, Treament type and more.
+- health tips
 
-#MERN Stack
--MongoDB to store data  
--Express for our server
--React for our front end
--Node.js as our runtime.
+## Further Goals:
+- A more fleshed out user profile
+- Allowing the user to keep track of their favortie Therapist
+- Creating a dissucsion board to allow our users to chat with one another and help each other.
+- adding more health tips and reminders
+
+## APIs & Frameworks
+We integrated several APIs and frameworks into our site:
+
+
+- React-calendar as our calendar framework.
+- Sendgrid for our email functionality.
+- Bootstrap for the front end components and design.
+- To track login information, we used JWT-based token authentication, bcrypt for password hashing, and Passport for user authentication.
+
+## MERN Stack:
+- MongoDB to store data  
+- Express for our server
+- React for our front end
+- Node.js as our runtime.
 
 ---
 
@@ -68,11 +86,18 @@ NOTE: Heroku specifically runs `npm start`, so don't remove that from your packa
 
 ---
 
-#### #Meet The Team:
+## Meet The Team:
 
-- Diana Canelon
-- Jorge Silva
-- Natalia Molina
-- Angelica Garzon
+- Diana Canelon  is a Full Stack Web Developer with 5+ years of experience in e-commerce and graphic design. Her past experiences plus her new skillset make her a valuable asset to any team. check  her out at 
+[GitHub Profile](http://github.com/dianaccanelon)
+
+- Jorge Silva  A USN Veteran with a mechanical background, Jorge's prior experience allows him to adapt quickly to any team dynamic, as well coming up with some creative solutions.check him out at 
+[GitHub Profile](http://github.com/Jorge1772)
+
+- Natalia  is a multi-faceted professional with extensive experience in media and creative direction. This experience has benefited her to thrive in her new skillset as a web developer making her an asset to any team. check her out at 
+[GitHub Profile](http://github.com/talialina)
+
+- Angelica Garzon joined Wyncode to learn how to use coding as a tool for creation. With 3+ years of design experience, she is ready to compliment your team as a front end developer.
+[GitHub Profile](http://github.com/amgarz0n)
 
 ---
